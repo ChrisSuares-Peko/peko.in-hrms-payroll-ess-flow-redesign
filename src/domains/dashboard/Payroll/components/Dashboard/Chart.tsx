@@ -48,9 +48,7 @@ const Chart = ({ reference }: ChartInterfaceProps) => {
                     <Typography.Text className="text-lg font-medium">
                         Payroll Costs by Month
                     </Typography.Text>
-                    {/* <Typography.Text className="text-xs text-gray-500">
-                        {`AED ${formatNumberWithLocalString(data?.reduce((acc, curr) => acc + curr.totalSalary, 0) || 0)}`}
-                    </Typography.Text> */}
+                    {/* PROTOTYPE-FLOW: commented-out AED total removed (India-only, amounts are ₹). */}
                 </Flex>
                 <Select
                     size="small"

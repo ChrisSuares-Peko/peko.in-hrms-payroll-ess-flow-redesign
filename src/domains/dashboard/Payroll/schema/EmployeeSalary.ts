@@ -2,11 +2,7 @@ import * as Yup from 'yup';
 
 import { emailRegex } from '@utils/regex';
 
-export const payrollGratuitySchema = Yup.object().shape({
-    basicSalary: Yup.number().required('Please enter basic salary'),
-    fromDate: Yup.string().required('Please enter first working day'),
-    toDate: Yup.string().required('Please enter last working day'),
-});
+// PROTOTYPE-FLOW: payrollGratuitySchema removed with the UAE end-of-service gratuity calculator.
 export const payrollOvertimeSchema = Yup.object().shape({
     employeeId: Yup.string().required('Please select an employee'),
     extraHours: Yup.number()

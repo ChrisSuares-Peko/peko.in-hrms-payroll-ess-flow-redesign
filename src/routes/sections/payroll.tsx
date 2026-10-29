@@ -40,7 +40,7 @@ const EmployeeOnboardSuccessPage = lazy(
     () => import('@src/domains/dashboard/Payroll/pages/EmployeeOnboardSuccessPage')
 );
 
-const WpsRegistration = lazy(() => import('@src/domains/dashboard/Payroll/pages/WpsRegistration'));
+// PROTOTYPE-FLOW: WPS registration page removed (UAE Wage Protection System; India-only payroll).
 const EmployeeDetails = lazy(() => import('@src/domains/dashboard/Payroll/pages/EmployeeDetails'));
 const EmployeeReimbursementPage = lazy(
     () => import('@src/domains/dashboard/Payroll/pages/EmployeeReimbursement')
@@ -177,7 +177,6 @@ export const payrollRoutes = [
         element: <EmployeeOnboardSuccessPage />,
         path: `${paths.payroll.employees}/${paths.payroll.employeeAdded}`,
     },
-    { element: <WpsRegistration />, path: paths.payroll.wpsRegistration },
 
     {
         element: <EmployeeDetails />,

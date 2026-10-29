@@ -1,17 +1,4 @@
-import { Dayjs } from 'dayjs';
-
-// gratuity calculator
-export type gratuityCalculatePayload = {
-    userId?: number;
-    userType?: string;
-    fromDate: string | Dayjs;
-    toDate: string | Dayjs;
-    basicSalary: number;
-};
-export type gratuityCalculateResponse = {
-    gratuity: string;
-    yearsOfExperience: number;
-};
+// PROTOTYPE-FLOW: UAE gratuity calculator types removed (India-only payroll).
 // increment
 
 export type getDeductionResponse = {

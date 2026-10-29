@@ -156,7 +156,7 @@ export type progressResponse = {
     progress: string;
     holidays: boolean;
     hrSettings: boolean;
-    setUpWps: boolean;
+    // PROTOTYPE-FLOW: setUpWps removed (UAE WPS flag, unused).
     hasBasicSalaryComponent: boolean;
     basicSalaryAmount: number;
     hasCompanyProfile: boolean;

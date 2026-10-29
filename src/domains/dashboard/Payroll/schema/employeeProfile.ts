@@ -2,7 +2,6 @@ import dayjs from 'dayjs';
 import moment from 'moment';
 import * as Yup from 'yup';
 
-import { ibanRegex } from '@utils/regex';
 
 const noStartSpace = /^[^\s].*$/;
 const noEndSpace = /^.*[^\s]$/;
@@ -435,34 +434,7 @@ export const bankSchema = Yup.object().shape({
         .matches(/^[A-Za-z]{4}\d{7}$/, 'Please enter a valid IFSC code'),
 });
 
-export const editBankSchema = Yup.object().shape({
-    beneficiaryName: Yup.string()
-        .required('Pleaase enter  name of the employee')
-        .matches(/^[^\s].*$/, 'Beneficiary name cannot start with a space')
-
-        .min(3, 'Beneficiary name must be atleast 3 characters')
-        .nullable(),
-    accountNumber: Yup.string()
-        .required('Please enter account number of the employee ')
-        .min(15, 'Account number must be atleast 15 characters'),
-    bankName: Yup.string()
-        .required('Please enter bank name of the employee')
-        .matches(/^[^\s].*$/, 'Bank name cannot start with a space')
-
-        .min(3, 'Bank name must be atleast 3 characters'),
-    swiftCode: Yup.string()
-        .nullable()
-        .matches(
-            /^[a-zA-Z0-9]{5,}$/,
-            'Swift Code must be at least 5 characters long and contain only letters and numbers'
-        ),
-    ibanNumber: Yup.string()
-        .required('Please enter 23 digit IBAN number of the employee starting with AE')
-        .matches(ibanRegex, 'Please enter a valid IBAN starting with AE'),
-    routingCode: Yup.string()
-        .matches(/^[a-zA-Z0-9]{9,10}$/, 'Routing code must be 9 to 10 characters')
-        .nullable(),
-});
+// PROTOTYPE-FLOW: editBankSchema removed — UAE bank form (IBAN starting with AE, SWIFT, routing code); India uses account number + IFSC.
 
 export const offBoardSchema = Yup.object().shape({
     lastWorkingDay: Yup.string().required('Please last working day of the employee'),
