@@ -36,7 +36,12 @@
             "@domains/*": ["src/domains/*"]
         }
     },
-    "exclude": ["node_modules", "vite.config.mts"],
+    "exclude": [
+        "node_modules",
+        "vite.config.mts",
+        // PROTOTYPE-SETUP: backend-reference is read-only backend source, never type-checked with the frontend
+        "backend-reference"
+    ],
     "include": [
         "**/*.ts",
         "**/*.tsx",

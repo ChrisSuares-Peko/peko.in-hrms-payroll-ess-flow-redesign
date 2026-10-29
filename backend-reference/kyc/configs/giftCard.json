@@ -1,0 +1,29 @@
+{
+  "staging": {
+    "baseUrl": "https://sandbox.woohoo.in",
+    "clientId": "9568c11e9e989adfadb1816f099c4c4d",
+    "username": "pekoapisandboxb2b@woohoo.in",
+    "password": "REDACTED",
+    "clientSecret": "REDACTED",
+    "authorizationCode": "fcb7f12f05ef860ef4ecf10ac6c339c3",
+    "token": "REDACTED"
+  },
+  "local": {
+    "baseUrl": "https://sandbox.woohoo.in",
+    "clientId": "9568c11e9e989adfadb1816f099c4c4d",
+    "username": "pekoapisandboxb2b@woohoo.in",
+    "password": "REDACTED",
+    "clientSecret": "REDACTED",
+    "authorizationCode": "fcb7f12f05ef860ef4ecf10ac6c339c3",
+    "token": "REDACTED"
+  },
+  "production": {
+    "baseUrl": "https://sandbox.woohoo.in",
+    "clientId": "9568c11e9e989adfadb1816f099c4c4d",
+    "username": "pekoapisandboxb2b@woohoo.in",
+    "password": "REDACTED",
+    "clientSecret": "REDACTED",
+    "authorizationCode": "79299454a06d1c32806d4b7777df357b",
+    "token": "REDACTED"
+  }
+}

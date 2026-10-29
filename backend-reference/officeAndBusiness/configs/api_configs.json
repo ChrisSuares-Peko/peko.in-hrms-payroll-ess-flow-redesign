@@ -1,0 +1,20 @@
+{
+  "systemSettings": {
+    "brandName": "Peko Platforms Private Limited",
+    "supportEmail": "support@peko.one",
+    "supportPhone": "+971567169844"
+  },
+  "SMS_API": {
+    "API_URL": "https://enterprise.smsgupshup.com/GatewayAPI/rest",
+    "USERNAME": "2000210976",
+    "PASSWORD": "REDACTED",
+    "SENDER_ID": "cash31"
+  },
+  "RML_SMS_API": {
+    "USERNAME": "PekoTrans",
+    "PASSWORD": "REDACTED",
+    "URL": "http://sms.rmlconnect.net/bulksms/bulksms",
+    "SENDER_ID": "Peko",
+    "BULK_SENDER_ID": "AD-PEKO"
+  }
+}

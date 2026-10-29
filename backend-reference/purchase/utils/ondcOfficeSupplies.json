@@ -1,0 +1,810 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Office-supply product-to-category mapping for an ONDC buyer application.",
+  "important_note": "ONDC does not currently expose one dedicated Office Supplies retail domain. ondc_category below is a recommended buyer-app classification/search label, not a guaranteed protocol taxonomy enum. Preserve the exact category_id and category descriptor received in each on_search catalog.",
+  "domains": {
+    "ONDC:RET10": "Grocery",
+    "ONDC:RET14": "Electronics",
+    "ONDC:RET15": "Appliances",
+    "ONDC:RET16": "Home & Kitchen",
+    "ONDC:RET1B": "Hardware and Industrial",
+    "ONDC:RET1E": "Packaging Products"
+  },
+  "default_cities_note": "Cities the scheduler pre-fetches every run; Top Deals is served ONLY for these ONDC city codes. Codes are STD-based (leading zero, e.g. std:080).",
+  "default_cities": [
+    { "name": "Delhi", "code": "std:011" },
+    { "name": "Mumbai", "code": "std:022" },
+    { "name": "Bangalore", "code": "std:080" },
+    { "name": "Chennai", "code": "std:044" },
+    { "name": "Kolkata", "code": "std:033" },
+    { "name": "Hyderabad", "code": "std:040" },
+    { "name": "Pune", "code": "std:020" },
+    { "name": "Ahmedabad", "code": "std:079" },
+    { "name": "Jaipur", "code": "std:0141" },
+    { "name": "Surat", "code": "std:0261" },
+    { "name": "Lucknow", "code": "std:0522" },
+    { "name": "Kanpur", "code": "std:0512" },
+    { "name": "Nagpur", "code": "std:0712" },
+    { "name": "Indore", "code": "std:0731" },
+    { "name": "Bhopal", "code": "std:0755" },
+    { "name": "Patna", "code": "std:0612" },
+    { "name": "Vadodara", "code": "std:0265" },
+    { "name": "Ludhiana", "code": "std:0161" },
+    { "name": "Agra", "code": "std:0562" },
+    { "name": "Nashik", "code": "std:0253" },
+    { "name": "Varanasi", "code": "std:0542" },
+    { "name": "Amritsar", "code": "std:0183" },
+    { "name": "Allahabad (Prayagraj)", "code": "std:0532" },
+    { "name": "Ranchi", "code": "std:0651" },
+    { "name": "Coimbatore", "code": "std:0422" },
+    { "name": "Vijayawada", "code": "std:0866" },
+    { "name": "Visakhapatnam", "code": "std:0891" },
+    { "name": "Chandigarh", "code": "std:0172" },
+    { "name": "Mysore", "code": "std:0821" },
+    { "name": "Gurgaon", "code": "std:0124" },
+    { "name": "Ghaziabad (Noida)", "code": "std:0120" },
+    { "name": "Faridabad", "code": "std:0129" },
+    { "name": "Kochi", "code": "std:0484" },
+    { "name": "Thiruvananthapuram", "code": "std:0471" },
+    { "name": "Kozhikode", "code": "std:0495" },
+    { "name": "Thrissur", "code": "std:0487" },
+    { "name": "Madurai", "code": "std:0452" },
+    { "name": "Tiruchirappalli", "code": "std:0431" },
+    { "name": "Salem", "code": "std:0427" },
+    { "name": "Jodhpur", "code": "std:0291" },
+    { "name": "Udaipur", "code": "std:0294" },
+    { "name": "Raipur", "code": "std:0771" },
+    { "name": "Bhubaneswar", "code": "std:0674" },
+    { "name": "Guwahati", "code": "std:0361" },
+    { "name": "Dehradun", "code": "std:0135" },
+    { "name": "Jamshedpur", "code": "std:0657" },
+    { "name": "Gwalior", "code": "std:0751" },
+    { "name": "Jabalpur", "code": "std:0761" },
+    { "name": "Aurangabad", "code": "std:0240" },
+    { "name": "Rajkot", "code": "std:0281" }
+  ],
+  "products": [
+    {
+      "product": "Ballpoint Pen",
+      "local_category": "Writing Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["ballpoint pen", "pen"]
+    },
+    {
+      "product": "Gel Pen",
+      "local_category": "Writing Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["gel pen"]
+    },
+    {
+      "product": "Fountain Pen",
+      "local_category": "Writing Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["fountain pen"]
+    },
+    {
+      "product": "Permanent Marker",
+      "local_category": "Writing Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["permanent marker", "marker pen"]
+    },
+    {
+      "product": "Whiteboard Marker",
+      "local_category": "Writing Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["whiteboard marker"]
+    },
+    {
+      "product": "Highlighter",
+      "local_category": "Writing Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["highlighter pen", "highlighter"]
+    },
+    {
+      "product": "Pencil",
+      "local_category": "Writing Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["pencil"]
+    },
+    {
+      "product": "Mechanical Pencil",
+      "local_category": "Writing Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["mechanical pencil"]
+    },
+    {
+      "product": "Pencil Lead",
+      "local_category": "Writing Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["pencil lead", "mechanical pencil lead"]
+    },
+    {
+      "product": "Eraser",
+      "local_category": "Writing Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["eraser"]
+    },
+    {
+      "product": "Pencil Sharpener",
+      "local_category": "Writing Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["pencil sharpener", "sharpener"]
+    },
+    {
+      "product": "Correction Pen",
+      "local_category": "Writing Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["correction pen", "white ink pen"]
+    },
+    {
+      "product": "Correction Tape",
+      "local_category": "Writing Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["correction tape"]
+    },
+    {
+      "product": "A4 Copier Paper",
+      "local_category": "Paper Products",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Paper Products",
+      "search_terms": ["A4 paper", "copier paper", "printer paper"]
+    },
+    {
+      "product": "A3 Copier Paper",
+      "local_category": "Paper Products",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Paper Products",
+      "search_terms": ["A3 paper", "copier paper"]
+    },
+    {
+      "product": "Notebook",
+      "local_category": "Paper Products",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["notebook", "writing notebook"]
+    },
+    {
+      "product": "Writing Pad",
+      "local_category": "Paper Products",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["writing pad", "notepad"]
+    },
+    {
+      "product": "Spiral Notebook",
+      "local_category": "Paper Products",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["spiral notebook"]
+    },
+    {
+      "product": "Office Register",
+      "local_category": "Paper Products",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["office register", "ledger register"]
+    },
+    {
+      "product": "Sticky Notes",
+      "local_category": "Paper Products",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["sticky notes", "memo notes"]
+    },
+    {
+      "product": "Index Cards",
+      "local_category": "Paper Products",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["index cards"]
+    },
+    {
+      "product": "Envelope",
+      "local_category": "Paper Products",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Paper Products",
+      "search_terms": ["office envelope", "paper envelope"]
+    },
+    {
+      "product": "Adhesive Label",
+      "local_category": "Paper Products",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["adhesive label", "sticker label"]
+    },
+    {
+      "product": "Thermal Paper Roll",
+      "local_category": "Paper Products",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Printer Accessories",
+      "search_terms": ["thermal paper roll", "receipt paper roll", "POS paper roll"]
+    },
+    {
+      "product": "Photo Paper",
+      "local_category": "Paper Products",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Printer Accessories",
+      "search_terms": ["photo paper", "glossy printer paper"]
+    },
+    {
+      "product": "Box File",
+      "local_category": "Files and Organization",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Office Organization",
+      "search_terms": ["box file", "office file"]
+    },
+    {
+      "product": "Ring Binder",
+      "local_category": "Files and Organization",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Office Organization",
+      "search_terms": ["ring binder", "binder file"]
+    },
+    {
+      "product": "Display File",
+      "local_category": "Files and Organization",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Office Organization",
+      "search_terms": ["display file", "presentation file"]
+    },
+    {
+      "product": "Document Folder",
+      "local_category": "Files and Organization",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Office Organization",
+      "search_terms": ["document folder", "file folder"]
+    },
+    {
+      "product": "Expanding Folder",
+      "local_category": "Files and Organization",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Office Organization",
+      "search_terms": ["expanding folder", "accordion file"]
+    },
+    {
+      "product": "Clipboard",
+      "local_category": "Files and Organization",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Office Organization",
+      "search_terms": ["clipboard", "writing board"]
+    },
+    {
+      "product": "Sheet Protector",
+      "local_category": "Files and Organization",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Office Organization",
+      "search_terms": ["sheet protector", "document sleeve"]
+    },
+    {
+      "product": "Desk Organizer",
+      "local_category": "Files and Organization",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Office Organization",
+      "search_terms": ["desk organizer", "office organizer"]
+    },
+    {
+      "product": "Pen Stand",
+      "local_category": "Files and Organization",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Office Organization",
+      "search_terms": ["pen stand", "pen holder"]
+    },
+    {
+      "product": "Letter Tray",
+      "local_category": "Files and Organization",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Office Organization",
+      "search_terms": ["letter tray", "document tray"]
+    },
+    {
+      "product": "Storage Box",
+      "local_category": "Files and Organization",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Home Storage and Organization",
+      "search_terms": ["office storage box", "document storage box"]
+    },
+    {
+      "product": "Stapler",
+      "local_category": "Fastening Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["stapler", "office stapler"]
+    },
+    {
+      "product": "Staple Pins",
+      "local_category": "Fastening Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["staple pins", "staples"]
+    },
+    {
+      "product": "Staple Remover",
+      "local_category": "Fastening Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["staple remover"]
+    },
+    {
+      "product": "Paper Clips",
+      "local_category": "Fastening Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["paper clips"]
+    },
+    {
+      "product": "Binder Clips",
+      "local_category": "Fastening Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["binder clips", "foldback clips"]
+    },
+    {
+      "product": "Rubber Bands",
+      "local_category": "Fastening Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["rubber bands"]
+    },
+    {
+      "product": "Hole Punch",
+      "local_category": "Fastening Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["hole punch", "paper punch"]
+    },
+    {
+      "product": "Glue Stick",
+      "local_category": "Adhesives and Cutting",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["glue stick", "adhesive stick"]
+    },
+    {
+      "product": "Transparent Tape",
+      "local_category": "Adhesives and Cutting",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["transparent tape", "clear tape"]
+    },
+    {
+      "product": "Double-Sided Tape",
+      "local_category": "Adhesives and Cutting",
+      "ondc_domain": "ONDC:RET1B",
+      "ondc_category": "Adhesives and Tapes",
+      "search_terms": ["double sided tape"]
+    },
+    {
+      "product": "Packing Tape",
+      "local_category": "Adhesives and Cutting",
+      "ondc_domain": "ONDC:RET1E",
+      "ondc_category": "Packaging Supplies",
+      "search_terms": ["packing tape", "carton sealing tape"]
+    },
+    {
+      "product": "Tape Dispenser",
+      "local_category": "Adhesives and Cutting",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["tape dispenser"]
+    },
+    {
+      "product": "Scissors",
+      "local_category": "Adhesives and Cutting",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["office scissors", "paper scissors"]
+    },
+    {
+      "product": "Utility Cutter",
+      "local_category": "Adhesives and Cutting",
+      "ondc_domain": "ONDC:RET1B",
+      "ondc_category": "Hand Tools",
+      "search_terms": ["utility cutter", "box cutter"]
+    },
+    {
+      "product": "Paper Trimmer",
+      "local_category": "Adhesives and Cutting",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Office Equipment",
+      "search_terms": ["paper trimmer", "paper cutter"]
+    },
+    {
+      "product": "Ruler",
+      "local_category": "Adhesives and Cutting",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["ruler", "scale"]
+    },
+    {
+      "product": "Printer",
+      "local_category": "Printing Supplies",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Printers and Scanners",
+      "search_terms": ["printer", "office printer"]
+    },
+    {
+      "product": "Scanner",
+      "local_category": "Printing Supplies",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Printers and Scanners",
+      "search_terms": ["document scanner", "office scanner"]
+    },
+    {
+      "product": "Ink Cartridge",
+      "local_category": "Printing Supplies",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Printer Accessories",
+      "search_terms": ["ink cartridge", "printer ink"]
+    },
+    {
+      "product": "Toner Cartridge",
+      "local_category": "Printing Supplies",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Printer Accessories",
+      "search_terms": ["toner cartridge", "printer toner"]
+    },
+    {
+      "product": "Printer Drum",
+      "local_category": "Printing Supplies",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Printer Accessories",
+      "search_terms": ["printer drum", "imaging drum"]
+    },
+    {
+      "product": "Barcode Label Roll",
+      "local_category": "Printing Supplies",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Printer Accessories",
+      "search_terms": ["barcode label roll", "thermal label roll"]
+    },
+    {
+      "product": "Laminating Machine",
+      "local_category": "Printing Supplies",
+      "ondc_domain": "ONDC:RET15",
+      "ondc_category": "Office Appliances",
+      "search_terms": ["laminating machine", "laminator"]
+    },
+    {
+      "product": "Laminating Pouch",
+      "local_category": "Printing Supplies",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Office Supplies",
+      "search_terms": ["laminating pouch", "lamination sheet"]
+    },
+    {
+      "product": "Binding Machine",
+      "local_category": "Printing Supplies",
+      "ondc_domain": "ONDC:RET15",
+      "ondc_category": "Office Appliances",
+      "search_terms": ["binding machine", "comb binding machine"]
+    },
+    {
+      "product": "Keyboard",
+      "local_category": "Computer Accessories",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Computer Accessories",
+      "search_terms": ["computer keyboard", "keyboard"]
+    },
+    {
+      "product": "Mouse",
+      "local_category": "Computer Accessories",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Computer Accessories",
+      "search_terms": ["computer mouse", "wireless mouse"]
+    },
+    {
+      "product": "Mouse Pad",
+      "local_category": "Computer Accessories",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Computer Accessories",
+      "search_terms": ["mouse pad", "mouse mat"]
+    },
+    {
+      "product": "Webcam",
+      "local_category": "Computer Accessories",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Computer Accessories",
+      "search_terms": ["webcam", "computer camera"]
+    },
+    {
+      "product": "Headset",
+      "local_category": "Computer Accessories",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Audio Accessories",
+      "search_terms": ["office headset", "computer headset"]
+    },
+    {
+      "product": "USB Hub",
+      "local_category": "Computer Accessories",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Computer Accessories",
+      "search_terms": ["USB hub"]
+    },
+    {
+      "product": "USB Flash Drive",
+      "local_category": "Computer Accessories",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Storage Devices",
+      "search_terms": ["USB flash drive", "pen drive"]
+    },
+    {
+      "product": "External Hard Drive",
+      "local_category": "Computer Accessories",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Storage Devices",
+      "search_terms": ["external hard drive", "portable hard disk"]
+    },
+    {
+      "product": "Memory Card",
+      "local_category": "Computer Accessories",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Storage Devices",
+      "search_terms": ["memory card", "micro SD card"]
+    },
+    {
+      "product": "HDMI Cable",
+      "local_category": "Computer Accessories",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Cables and Connectors",
+      "search_terms": ["HDMI cable"]
+    },
+    {
+      "product": "USB Cable",
+      "local_category": "Computer Accessories",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Cables and Connectors",
+      "search_terms": ["USB cable", "data cable"]
+    },
+    {
+      "product": "Ethernet Cable",
+      "local_category": "Computer Accessories",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Networking Accessories",
+      "search_terms": ["ethernet cable", "LAN cable"]
+    },
+    {
+      "product": "Laptop Stand",
+      "local_category": "Computer Accessories",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Computer Accessories",
+      "search_terms": ["laptop stand"]
+    },
+    {
+      "product": "Monitor Stand",
+      "local_category": "Computer Accessories",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Computer Accessories",
+      "search_terms": ["monitor stand", "monitor riser"]
+    },
+    {
+      "product": "Extension Board",
+      "local_category": "Electrical Accessories",
+      "ondc_domain": "ONDC:RET1B",
+      "ondc_category": "Electrical Supplies",
+      "search_terms": ["extension board", "power strip"]
+    },
+    {
+      "product": "UPS",
+      "local_category": "Electrical Accessories",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Computer Accessories",
+      "search_terms": ["UPS", "uninterruptible power supply"]
+    },
+    {
+      "product": "Calculator",
+      "local_category": "Desk Equipment",
+      "ondc_domain": "ONDC:RET14",
+      "ondc_category": "Office Electronics",
+      "search_terms": ["calculator", "office calculator"]
+    },
+    {
+      "product": "Desk Calendar",
+      "local_category": "Desk Equipment",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["desk calendar", "table calendar"]
+    },
+    {
+      "product": "Diary",
+      "local_category": "Desk Equipment",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["office diary", "daily planner"]
+    },
+    {
+      "product": "Whiteboard",
+      "local_category": "Desk Equipment",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Office Equipment",
+      "search_terms": ["whiteboard", "office writing board"]
+    },
+    {
+      "product": "Notice Board",
+      "local_category": "Desk Equipment",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Office Equipment",
+      "search_terms": ["notice board", "cork board"]
+    },
+    {
+      "product": "Stamp Pad",
+      "local_category": "Desk Equipment",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["stamp pad", "ink pad"]
+    },
+    {
+      "product": "Rubber Stamp",
+      "local_category": "Desk Equipment",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Stationery",
+      "search_terms": ["rubber stamp", "office stamp"]
+    },
+    {
+      "product": "Courier Cover",
+      "local_category": "Mailing and Packaging",
+      "ondc_domain": "ONDC:RET1E",
+      "ondc_category": "Packaging Supplies",
+      "search_terms": ["courier cover", "shipping bag"]
+    },
+    {
+      "product": "Bubble Envelope",
+      "local_category": "Mailing and Packaging",
+      "ondc_domain": "ONDC:RET1E",
+      "ondc_category": "Packaging Supplies",
+      "search_terms": ["bubble envelope", "padded envelope"]
+    },
+    {
+      "product": "Cardboard Box",
+      "local_category": "Mailing and Packaging",
+      "ondc_domain": "ONDC:RET1E",
+      "ondc_category": "Packaging Supplies",
+      "search_terms": ["cardboard box", "shipping carton"]
+    },
+    {
+      "product": "Bubble Wrap",
+      "local_category": "Mailing and Packaging",
+      "ondc_domain": "ONDC:RET1E",
+      "ondc_category": "Packaging Supplies",
+      "search_terms": ["bubble wrap", "protective packaging"]
+    },
+    {
+      "product": "Stretch Film",
+      "local_category": "Mailing and Packaging",
+      "ondc_domain": "ONDC:RET1E",
+      "ondc_category": "Packaging Supplies",
+      "search_terms": ["stretch film", "wrapping film"]
+    },
+    {
+      "product": "Office Desk",
+      "local_category": "Office Furniture",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Furniture",
+      "search_terms": ["office desk", "computer table"]
+    },
+    {
+      "product": "Office Chair",
+      "local_category": "Office Furniture",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Furniture",
+      "search_terms": ["office chair", "computer chair"]
+    },
+    {
+      "product": "Visitor Chair",
+      "local_category": "Office Furniture",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Furniture",
+      "search_terms": ["visitor chair", "office guest chair"]
+    },
+    {
+      "product": "Filing Cabinet",
+      "local_category": "Office Furniture",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Furniture",
+      "search_terms": ["filing cabinet", "file cabinet"]
+    },
+    {
+      "product": "Bookshelf",
+      "local_category": "Office Furniture",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Furniture",
+      "search_terms": ["bookshelf", "office bookcase"]
+    },
+    {
+      "product": "Drawer Unit",
+      "local_category": "Office Furniture",
+      "ondc_domain": "ONDC:RET16",
+      "ondc_category": "Furniture",
+      "search_terms": ["drawer unit", "office drawer"]
+    },
+    {
+      "product": "Tissue Paper",
+      "local_category": "Cleaning and Pantry",
+      "ondc_domain": "ONDC:RET10",
+      "ondc_category": "Cleaning and Household",
+      "search_terms": ["tissue paper", "facial tissue"]
+    },
+    {
+      "product": "Paper Towel",
+      "local_category": "Cleaning and Pantry",
+      "ondc_domain": "ONDC:RET10",
+      "ondc_category": "Cleaning and Household",
+      "search_terms": ["paper towel", "kitchen towel"]
+    },
+    {
+      "product": "Handwash",
+      "local_category": "Cleaning and Pantry",
+      "ondc_domain": "ONDC:RET10",
+      "ondc_category": "Cleaning and Household",
+      "search_terms": ["handwash", "liquid hand wash"]
+    },
+    {
+      "product": "Hand Sanitizer",
+      "local_category": "Cleaning and Pantry",
+      "ondc_domain": "ONDC:RET10",
+      "ondc_category": "Cleaning and Household",
+      "search_terms": ["hand sanitizer", "sanitizer"]
+    },
+    {
+      "product": "Surface Cleaner",
+      "local_category": "Cleaning and Pantry",
+      "ondc_domain": "ONDC:RET10",
+      "ondc_category": "Cleaning and Household",
+      "search_terms": ["surface cleaner", "disinfectant cleaner"]
+    },
+    {
+      "product": "Garbage Bag",
+      "local_category": "Cleaning and Pantry",
+      "ondc_domain": "ONDC:RET10",
+      "ondc_category": "Cleaning and Household",
+      "search_terms": ["garbage bag", "dustbin bag"]
+    },
+    {
+      "product": "Disposable Cup",
+      "local_category": "Cleaning and Pantry",
+      "ondc_domain": "ONDC:RET10",
+      "ondc_category": "Household Supplies",
+      "search_terms": ["disposable cup", "paper cup"]
+    },
+    {
+      "product": "Tea",
+      "local_category": "Cleaning and Pantry",
+      "ondc_domain": "ONDC:RET10",
+      "ondc_category": "Beverages",
+      "search_terms": ["tea", "tea bags"]
+    },
+    {
+      "product": "Coffee",
+      "local_category": "Cleaning and Pantry",
+      "ondc_domain": "ONDC:RET10",
+      "ondc_category": "Beverages",
+      "search_terms": ["coffee", "instant coffee"]
+    },
+    {
+      "product": "Sugar",
+      "local_category": "Cleaning and Pantry",
+      "ondc_domain": "ONDC:RET10",
+      "ondc_category": "Grocery Staples",
+      "search_terms": ["sugar"]
+    },
+    {
+      "product": "Electric Kettle",
+      "local_category": "Cleaning and Pantry",
+      "ondc_domain": "ONDC:RET15",
+      "ondc_category": "Kitchen Appliances",
+      "search_terms": ["electric kettle"]
+    }
+  ]
+}

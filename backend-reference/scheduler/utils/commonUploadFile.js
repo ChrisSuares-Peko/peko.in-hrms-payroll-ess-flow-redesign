@@ -1,0 +1,123 @@
+const { v4: uuidv4 } = require("uuid");
+const serviceAccount = require("../configs/firebase-private.json");
+const firebaseAdmin = require("firebase-admin");
+const admin = firebaseAdmin.initializeApp({
+  credential: firebaseAdmin.credential.cert(serviceAccount),
+});
+const bucketName = "gs://peko-storage.appspot.com";
+const storageRef = admin.storage().bucket(bucketName);
+const fs = require("fs");
+const { NODE_ENV } = process.env;
+
+async function uploadFile(base64Data, filePath, fileFormat, maxSize) { 
+  const buffer = Buffer.from(base64Data);
+  const fileSize = buffer.length / (1024 * 1024);
+
+  if (fileSize > maxSize) {
+    throw new Error(`Image size exceeds, maximum size is ${maxSize}MB`);
+  }
+  
+  let uniqueId = uuidv4();
+  let base64String = base64Data;
+  let base64Image = base64String;
+  const dir = `./public/images`;
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, {
+      recursive: true,
+    });
+  }
+  let localFilePath = `${dir}/${uniqueId}.${fileFormat}`;
+  let fsPromise = fs.promises;
+  await fsPromise.writeFile(localFilePath, base64Image, {
+    encoding: "base64",
+  });
+  const destination = `${NODE_ENV}/${filePath}/${uniqueId}.${fileFormat}`;
+  await storageRef.upload(localFilePath, {
+    predefinedAcl: "publicRead",
+    destination: destination,
+    metadata: {
+      metadata: {
+        firebaseStorageDownloadTokens: uniqueId,
+      },
+    },
+  });
+  fs.unlinkSync(localFilePath);
+  let fileUrl =
+    "https://firebasestorage.googleapis.com/v0/b/" +
+    bucketName.split("//")[1] +
+    "/o/" +
+    encodeURIComponent(destination) +
+    "?alt=media&token=" +
+    uniqueId;
+  return fileUrl;
+}
+
+async function deleteFile(fileUrl) {
+  const storagePath = extractStoragePathFromUrl(fileUrl)
+  const file = storageRef.file(storagePath);
+  try {
+    await file.delete();
+    return { success: true, message: `File ${storagePath} deleted successfully.` };
+  } catch (error) {
+    return { success: false, message: `Failed to delete file: ${error.message}` };
+  }
+}
+
+//upload excel document
+async function uploadExcelDocument(base64Data, type, fileFormat) {
+
+
+  let base64String = base64Data;
+  let base64Image = base64String;
+
+  const dir = `./public/bulk-docs`;
+  if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, {
+          recursive: true,
+      });
+  }
+  //let fileFormat = base64Data.split(';')[0].split('/')[1]
+  let filePath = `${dir}/${type}.${fileFormat}`;
+
+  let fsPromise = fs.promises;
+  await fsPromise.writeFile(filePath, base64Image, {
+      encoding: 'base64'
+  });
+
+  let uniqueId = uuidv4();
+  const destination = `${type}.${fileFormat}`;
+
+   // Check if the file already exists in Firebase Storage
+   const fileExists = await storageRef
+   .file(destination)
+   .exists();
+   console.log("🚀 ~ uploadExcelDocument ~ fileExists:", fileExists)
+
+
+  await storageRef.upload(filePath, {
+      predefinedAcl: 'publicRead',
+      destination: destination,
+      metadata: {
+          metadata: {
+              firebaseStorageDownloadTokens: uniqueId
+          }
+      }
+  });
+
+  fs.unlinkSync(filePath);
+
+  let fileUrl = `https://firebasestorage.googleapis.com/v0/b/${bucketName.split('//')[1]}/o/${encodeURIComponent(destination)}?alt=media&token=${uniqueId}`;
+  return fileUrl;
+}
+
+function extractStoragePathFromUrl(url) {
+  const regex = /\/o\/(.+?)\?alt=media/;
+  const match = decodeURIComponent(url).match(regex);
+  return match ? match[1] : null;
+}
+
+module.exports = {
+  uploadFile,
+  deleteFile,
+  uploadExcelDocument
+}

@@ -1,0 +1,3040 @@
+[
+  {
+    "destination": "Oman",
+    "country_id": 167,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Cambodia",
+    "country_id": 38,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Armenia",
+    "country_id": 11,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Georgia",
+    "country_id": 82,
+    "visa_types": [
+      "evisa",
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Sri Lanka",
+    "country_id": 210,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Azerbaijan",
+    "country_id": 15,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Uzbekistan",
+    "country_id": 238,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Benin",
+    "country_id": 23,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Laos",
+    "country_id": 122,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Myanmar",
+    "country_id": 152,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Kyrgyzstan",
+    "country_id": 121,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Turkey",
+    "country_id": 227,
+    "visa_types": [
+      "stickervisa",
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Taiwan",
+    "country_id": 217,
+    "visa_types": [
+      "stickervisa",
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Thailand",
+    "country_id": 220,
+    "visa_types": [
+      "stickervisa",
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "United Arab Emirates",
+    "country_id": 233,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Ethiopia",
+    "country_id": 71,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Antigua and Barbuda",
+    "country_id": 9,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Vietnam",
+    "country_id": 241,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Uganda",
+    "country_id": 231,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Peru",
+    "country_id": 174,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Bulgaria",
+    "country_id": 34,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Tanzania",
+    "country_id": 219,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Qatar",
+    "country_id": 180,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Tajikistan",
+    "country_id": 218,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Hong Kong",
+    "country_id": 100,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Papua New Guinea",
+    "country_id": 172,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Greece",
+    "country_id": 86,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Iceland",
+    "country_id": 102,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "France",
+    "country_id": 76,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Belgium",
+    "country_id": 21,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Bangladesh",
+    "country_id": 18,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Covering letter",
+        "description": "Dummy description for Covering letter",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Bosnia and Herzegovina",
+    "country_id": 28,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Cover letter",
+        "description": "Dummy description for Cover letter",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Brazil",
+    "country_id": 31,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Singapore",
+    "country_id": 200,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Representative Submission",
+        "description": "Dummy description for Representative Submission",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Passport Pickup and Drop-off",
+        "description": "Dummy description for Passport Pickup and Drop-off",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Norway",
+    "country_id": 166,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Ukraine",
+    "country_id": 232,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "South Africa",
+    "country_id": 206,
+    "visa_types": [
+      "stickervisa",
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Czech Republic",
+    "country_id": 58,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Egypt",
+    "country_id": 65,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "One Vasco submission",
+        "description": "Dummy description for One Vasco submission",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Passport Pickup and Drop-off",
+        "description": "Dummy description for Passport Pickup and Drop-off",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Sweden",
+    "country_id": 214,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Japan",
+    "country_id": 112,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "One Vasco submission",
+        "description": "Dummy description for One Vasco submission",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Passport Pickup and Drop-off",
+        "description": "Dummy description for Passport Pickup and Drop-off",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Israel",
+    "country_id": 109,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Germany",
+    "country_id": 83,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Latvia",
+    "country_id": 123,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Hungary",
+    "country_id": 101,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Poland",
+    "country_id": 177,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Spain",
+    "country_id": 209,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "United States of America",
+    "country_id": 236,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Passport Pickup and Drop-off",
+        "description": "Dummy description for Passport Pickup and Drop-off",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Switzerland",
+    "country_id": 215,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Italy",
+    "country_id": 110,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Slovakia",
+    "country_id": 202,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Netherlands",
+    "country_id": 156,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Finland",
+    "country_id": 75,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Australia",
+    "country_id": 13,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Philippines",
+    "country_id": 175,
+    "visa_types": [
+      "stickervisa",
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Republic of Korea",
+    "country_id": 119,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Argentina",
+    "country_id": 10,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Denmark",
+    "country_id": 60,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Mexico",
+    "country_id": 143,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Ireland",
+    "country_id": 107,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Canada",
+    "country_id": 40,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Malaysia",
+    "country_id": 134,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Mali",
+    "country_id": 136,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "South Sudan",
+    "country_id": 208,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "United Kingdom",
+    "country_id": 234,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "UKVI Account Creation",
+        "description": "Dummy description for UKVI Account Creation",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Malawi",
+    "country_id": 133,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Gabon",
+    "country_id": 80,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Morocco",
+    "country_id": 150,
+    "visa_types": [
+      "stickervisa",
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Croatia",
+    "country_id": 54,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Russia",
+    "country_id": 182,
+    "visa_types": [
+      "stickervisa",
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Saudi Arabia",
+    "country_id": 195,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Gambia",
+    "country_id": 81,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "New Zealand",
+    "country_id": 158,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Kenya",
+    "country_id": 116,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Togo",
+    "country_id": 222,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Colombia",
+    "country_id": 48,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Zambia",
+    "country_id": 247,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Moldova",
+    "country_id": 145,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Botswana",
+    "country_id": 29,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Algeria",
+    "country_id": 3,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Lebanon",
+    "country_id": 124,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Representative submission",
+        "description": "Dummy description for Representative submission",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Passport Pickup and Drop-off",
+        "description": "Dummy description for Passport Pickup and Drop-off",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Ghana",
+    "country_id": 84,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Eritrea",
+    "country_id": 68,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Suriname",
+    "country_id": 212,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Serbia",
+    "country_id": 197,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Namibia",
+    "country_id": 153,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Sudan",
+    "country_id": 211,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Guatemala",
+    "country_id": 91,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Indonesia",
+    "country_id": 104,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Maldives",
+    "country_id": 135,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Tunisia",
+    "country_id": 226,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Portugal",
+    "country_id": 178,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Republic of the Congo",
+    "country_id": 51,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Rwanda",
+    "country_id": 183,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Djibouti",
+    "country_id": 61,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Nigeria",
+    "country_id": 161,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Uruguay",
+    "country_id": 237,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Guinea",
+    "country_id": 93,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Romania",
+    "country_id": 181,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "China",
+    "country_id": 45,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "One Vasco submission",
+        "description": "Dummy description for One Vasco submission",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Passport Pickup and Drop-off",
+        "description": "Dummy description for Passport Pickup and Drop-off",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Luxembourg",
+    "country_id": 130,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Belarus",
+    "country_id": 20,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Lithuania",
+    "country_id": 129,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Malta",
+    "country_id": 137,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Estonia",
+    "country_id": 69,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Slovenia",
+    "country_id": 203,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Cyprus",
+    "country_id": 57,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Bahrain",
+    "country_id": 17,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Mongolia",
+    "country_id": 147,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Mozambique",
+    "country_id": 151,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Madagascar",
+    "country_id": 132,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Equatorial Guinea",
+    "country_id": 67,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Sierra Leone",
+    "country_id": 199,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Zimbabwe",
+    "country_id": 248,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Libya",
+    "country_id": 127,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Guyana",
+    "country_id": 95,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Nepal",
+    "country_id": 155,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Seychelles",
+    "country_id": 198,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Kuwait",
+    "country_id": 120,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Burkina Faso",
+    "country_id": 35,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Chad",
+    "country_id": 43,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Anguilla",
+    "country_id": 7,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Somalia",
+    "country_id": 205,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Cameroon",
+    "country_id": 39,
+    "visa_types": [
+      "evisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Greenland",
+    "country_id": 87,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  },
+  {
+    "destination": "Austria",
+    "country_id": 14,
+    "visa_types": [
+      "stickervisa"
+    ],
+    "visa_categories": [
+      "Business",
+      "Tourist"
+    ],
+    "add_on": [
+      {
+        "name": "Premium Service Booking",
+        "description": "Dummy description for Premium Service Booking",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Application Kit",
+        "description": "Dummy description for Application Kit",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Covering Letter",
+        "description": "Dummy description for Covering Letter",
+        "price": 150,
+        "price_type": "per_person"
+      },
+      {
+        "name": "Meet-and-greet services.",
+        "description": "Dummy description for Meet-and-greet services.",
+        "price": 150,
+        "price_type": "per_person"
+      }
+    ],
+    "residency": "India",
+    "nationality": "India",
+    "residencyCode": "103",
+    "nationalityCode": "103"
+  }
+]

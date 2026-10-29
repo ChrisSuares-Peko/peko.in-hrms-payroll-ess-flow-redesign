@@ -1,0 +1,44 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  GCP_PROJECT_ID: 'peko-in'
+  IMAGE_NAME: 'api-gateway'
+  IMAGE_TAG: '$(Build.BuildId)'
+  CONTEXT_PATH: 'api-gateway'
+  SERVICE_ACCOUNT_EMAIL: 'azure-pipelines-publisher@peko-in.iam.gserviceaccount.com'
+  GCR_REGISTRY: 'asia-south1-docker.pkg.dev'
+
+steps:
+- task: DownloadSecureFile@1
+  name: jsonKeyFile
+  inputs:
+    secureFile: 'peko-in-gcp.json'
+
+- script: |
+    echo "Cleaning up PATH..."
+    export PATH=$(echo $PATH | sed -e 's|/usr/lib/google-cloud-sdk/bin:||g')
+    echo "Authenticating with Google Cloud..."
+    gcloud auth activate-service-account --key-file=$(jsonKeyFile.secureFilePath)
+    gcloud config set project $(GCP_PROJECT_ID)
+  displayName: 'Authenticate with Google Cloud'
+
+- script: |
+    echo "Granting permissions to the service account"
+    gcloud projects add-iam-policy-binding $(GCP_PROJECT_ID) \
+      --member="serviceAccount:$(SERVICE_ACCOUNT_EMAIL)" \
+      --role="roles/artifactregistry.writer"
+  displayName: 'Grant Permissions to Service Account'
+
+- script: |
+    echo "Building Docker image"
+    docker build -t $(GCR_REGISTRY)/$(GCP_PROJECT_ID)/$(IMAGE_NAME):$(IMAGE_TAG) -f $(DOCKERFILE_PATH) $(CONTEXT_PATH)
+  displayName: 'Build Docker Image'
+
+- script: |
+    echo "Pushing Docker image to Google Container Registry"
+    docker push $(GCR_REGISTRY)/$(GCP_PROJECT_ID)/$(IMAGE_NAME):$(IMAGE_TAG)
+  displayName: 'Push Docker Image to GCR'

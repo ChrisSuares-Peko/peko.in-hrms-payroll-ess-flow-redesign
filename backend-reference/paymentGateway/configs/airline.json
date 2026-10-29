@@ -1,0 +1,12 @@
+{
+  "staging": {
+    "USERNAME": "Onttest",
+    "PASSWORD": "REDACTED",
+    "API_URL": "https://xmloutapi.tboair.com"
+  },
+  "production": {
+    "USERNAME": "Onttest",
+    "PASSWORD": "REDACTED",
+    "API_URL": "https://xmloutapi.tboair.com"
+  }
+}

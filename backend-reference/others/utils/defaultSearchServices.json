@@ -1,0 +1,193 @@
+[
+     {
+          "name": "Bill Payments",
+          "tags": ["bills", "utilities", "finance", "payment"],
+          "pathKey": "billPayments"
+     },
+     {
+          "name": "Mobile Recharge & Bills",
+          "tags": ["prepaid", "postpaid", "mobile", "payment"],
+          "pathKey": "mobileRecharge"
+     },
+     {
+          "name": "Corporate Travel",
+          "tags": ["travel", "business", "transportation", "flights", "airline"],
+          "pathKey": "corporateTravel"
+     },
+     {
+          "name": "Payroll",
+          "tags": ["salary", "employees", "hr", "payments"],
+          "pathKey": "payroll"
+     },
+     {
+          "name": "Office Supplies",
+          "tags": ["ecommerce", "stationary", "office", "supplies"],
+          "pathKey": "officeSupplies"
+     },
+     {
+          "name": "Softwares",
+          "tags": ["software", "subscriptions", "tools", "services"],
+          "pathKey": "subscriptions"
+     },
+     {
+          "name": "Logistics",
+          "tags": ["delivery", "shipping", "logistics", "transport"],
+          "pathKey": "logistics"
+     },
+     {
+          "name": "Gift Cards",
+          "tags": ["gifts", "vouchers", "cards", "rewards"],
+          "pathKey": "giftCards"
+     },
+     {
+          "name": "Marketplace",
+          "tags": ["marketplace", "platform", "services", "vendors"],
+          "pathKey": "connect"
+     },
+     {
+          "name": "Works",
+          "tags": ["freelance", "services", "tasks", "projects"],
+          "pathKey": "works"
+     },
+     {
+          "name": "Invoicing",
+          "tags": ["billing", "finance", "documents", "invoice"],
+          "pathKey": "invoicing"
+     },
+     {
+          "name": "Zero Carbon",
+          "tags": ["sustainability", "eco", "carbon", "green"],
+          "pathKey": "zeroCarbon"
+     },
+     {
+          "name": "Reports",
+          "tags": ["documents", "analysis", "finance", "data"],
+          "pathKey": "reports"
+     },
+     {
+          "name": "Need Help",
+          "tags": ["support", "faq", "help", "customer-service"],
+          "pathKey": "needHelp"
+     },
+     {
+          "name": "Profile",
+          "tags": ["user", "settings", "account", "personal"],
+          "pathKey": "profile"
+     },
+     {
+          "name": "Business Documents",
+          "tags": ["legal", "documents", "business", "registration"],
+          "pathKey": "businessDocs"
+     },
+     {
+          "name": "WhatsApp for Business",
+          "tags": ["messaging", "communication", "whatsapp", "business"],
+          "pathKey": "whatsappForBusiness"
+     },
+     {
+          "name": "E-Sign",
+          "tags": ["signature", "digital", "documents", "sign"],
+          "pathKey": "eSign"
+     },
+     {
+          "name": "Office Address",
+          "tags": ["address", "business", "location", "setup"],
+          "pathKey": "officeAddress"
+     },
+     {
+          "name": "Hotels",
+          "tags": ["stay", "travel", "accommodation", "booking"],
+          "pathKey": "corporateTravel"
+     },
+     {
+          "name": "Notifications",
+          "tags": ["alerts", "updates", "messages", "reminders"],
+          "pathKey": "notifications"
+     },
+     {
+          "name": "Peko Credit",
+          "tags": ["credit", "finance", "peko", "loans"],
+          "pathKey": "pekoCredit"
+     },
+     {
+          "name": "Hub",
+          "tags": ["cloud", "platform", "services", "hub"],
+          "pathKey": "pekoCloud"
+     },
+     {
+          "name": "Settings",
+          "tags": ["preferences", "account", "configuration", "user"],
+          "pathKey": "settings"
+     },
+     {
+          "name": "Subscription Plans",
+          "tags": ["subscription", "pricing", "tiers", "services"],
+          "pathKey": "plans"
+     },
+     {
+          "name": "Peko Connect",
+          "tags": ["network", "connect", "platform", "integration"],
+          "pathKey": "pekoConnect"
+     },
+     {
+          "name": "Hike",
+          "tags": ["salary", "raise", "compensation", "increase"],
+          "pathKey": "hike"
+     },
+     {
+          "name": "Business Emails",
+          "tags": ["email", "domain", "communication", "business"],
+          "pathKey": "emailDomain"
+     },
+     {
+          "name": "Verification Suite",
+          "tags": ["verify", "pan", "suite", "verification"],
+          "pathKey": "verificationSuite"
+     },
+     {
+          "name": "Turbo",
+          "tags": ["turbo", "vehicle", "driver", "assistant"],
+          "pathKey": "turbo"
+     },
+     {
+          "name": "Domain & Hosting",
+          "tags": ["domain", "hosting", "dns", "website", "vps", "shared hosting", "server", "registration", "titan", "google", "workspace", "email"],
+          "pathKey": "domainHosting"
+     },
+     {
+          "name": "Business Registration",
+          "tags": ["business", "registration", "company", "incorporation", "formation", "startup", "entity", "legal", "llp", "pvt ltd", "private limited", "opc", "proprietorship", "partnership"],
+          "pathKey": "businessRegistration"
+     },
+    {
+  "name": "Government Services",
+  "tags": [
+    "government",
+    "registration",
+    "license",
+    "gst",
+    "pan",
+    "tan",
+    "epf",
+    "esic",
+    "professional tax",
+    "shop establishment",
+    "fssai",
+    "drug license",
+    "trade license",
+    "msme",
+    "udyam",
+    "iec",
+    "labour",
+    "compliance",
+    "certificate",
+    "tax",
+    "business",
+    "legal",
+    "regulatory",
+    "approval",
+    "permit"
+  ],
+  "pathKey": "governmentServices"
+}
+]

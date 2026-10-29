@@ -1,0 +1,320 @@
+{
+  "Login": [
+    {
+      "question": "How do I create a Peko account?",
+      "answer": "To create a Peko account, you will need to provide your name, email address, and phone number. You will also need to create a password and agree to the Peko Terms of Service."
+    },
+    {
+      "question": "What information do I need to provide when creating a Peko account?",
+      "answer": "When creating a Peko account, you will need to provide your name, email address, and phone number. You will also need to create a password and agree to the Peko Terms of Service."
+    },
+    {
+      "question": "How do I verify my Peko account?",
+      "answer": "To verify your Peko account, you will need to click on the verification link that we sent to your email address or an OTP will be generated and sent to your email. Enter the OTP and verify your account."
+    },
+    {
+      "question": "How do I reset my Peko password?",
+      "answer": "To reset your Peko password, go to the Peko website and click on the 'Login' button, then enter your registered email address and click on the 'Forgot Password?' link. Enter your registered email address again, check your email for a password reset link, click on the password reset link, and create a new password."
+    }
+  ],
+  "Utility Payments": [
+    {
+      "question": "How can I make bill payments using the Peko platform?",
+      "answer": "Log in to your Peko account, navigate to the payments section, and select the bill payment option. Enter the necessary details, such as the biller's name, account number, and amount to be paid. Click 'Submit,' and your payment will be processed securely."
+    },
+    {
+      "question": "What if I need to view or download my bill payment history?",
+      "answer": "You can download or view your bill payment history from the Peko dashboard by following these steps. Log in to your account and go to the 'Dashboard' section, then navigate to the payment history section. You can view a detailed list of all your past bill payments."
+    },
+    {
+      "question": "Will Peko send me a notification in advance of my subscription renewal date or due bill payment?",
+      "answer": "Yes, Peko sends you timely reminders before your subscription renewal dates. This ensures that you are aware of upcoming payments."
+    },
+    {
+      "question": "Are my bill payment transactions safe and secure on Peko?",
+      "answer": "Yes, we prioritize the security and confidentiality of our customer’s data."
+    },
+    {
+      "question": "What is beneficiary management on Peko?",
+      "answer": "Beneficiary management involves the process of identifying and managing the beneficiaries for different services other financial transactions. Peko offers a seamless platform to manage these beneficiaries efficiently."
+    },
+    {
+      "question": "How can Peko help in beneficiary management?",
+      "answer": "Peko provides a single platform for managing beneficiary details, facilitating instant vendor payments, and ensuring ease of tracking various payouts and expenses related to beneficiaries."
+    },
+    {
+      "question": "How do I add a beneficiary to my Peko account?",
+      "answer": "To add a beneficiary to your Peko account, you will need to log into your account and click on the 'Beneficiaries' tab. You will then need to provide the service provider name, beneficiary name, and phone number/account number."
+    },
+    {
+      "question": "What information do I need to add a beneficiary?",
+      "answer": "To add a beneficiary to your Peko account, you will need to provide the service provider name, beneficiary name, and phone number/account number."
+    },
+    {
+      "question": "Is beneficiary management secure on Peko?",
+      "answer": "Yes, Peko prioritizes security and ensures that all beneficiary management activities are conducted with the utmost security measures in place."
+    },
+    {
+      "question": "How do I edit a beneficiary's information?",
+      "answer": "To edit a beneficiary's information, you will need to log into your account and click on the 'Beneficiaries' tab. You will then need to click on the 'Edit' button next to the beneficiary's name."
+    }
+  ],
+  "Gift Cards": [
+    {
+      "question": "Does Peko provide options for purchasing gift cards?",
+      "answer": "Yes, Peko offers the convenience of purchasing gift cards through its platform, making it easier for businesses to manage gifting needs for employees or clients."
+    },
+    {
+      "question": "What types of gift cards are available on Peko?",
+      "answer": "Peko offers a range of gift card options including popular brands and customizable gift card solutions to suit various gifting requirements."
+    },
+    {
+      "question": "How do I purchase gift cards using Peko?",
+      "answer": "To purchase gift cards using Peko, you will need to log into your account and click on the 'Gift Cards' tab. You will then need to select the gift card denomination you want and pay for it."
+    },
+    {
+      "question": "Can I send gift cards to others?",
+      "answer": "Yes, you can send gift cards to others by entering their email address at checkout."
+    },
+    {
+      "question": "How long does it take to deliver a gift card?",
+      "answer": "The delivery time for a gift card can vary depending on the type of gift card and the delivery method. However, in general, digital gift cards are delivered to the recipient's email inbox within a few minutes, while physical gift cards may take 3-5 business days to arrive."
+    }
+  ],
+  "Cashback": [
+    {
+      "question": "Does Peko offer cashback rewards specifically for my small business?",
+      "answer": "Yes, Peko rewards every expense and payment made through its platform with cash back, which can be utilized to purchase carbon credits."
+    },
+    {
+      "question": "How can I redeem my instant cash back?",
+      "answer": "Once you have accumulated cashback in your Peko account, you can easily redeem it for future payments or use it to support your business's sustainability goals. Peko rewards every expense and payment made through its platform with cash back, which can be utilized to purchase carbon credits."
+    }
+  ],
+  "Orders": [
+    {
+      "question": "How can I track the status of my order on Peko?",
+      "answer": "You can track your order once it has been dispatched. An email will be sent with a link, and you can also track it from your account by selecting the 'Orders' section. Here, you will find a list of all your orders along with their current status."
+    },
+    {
+      "question": "Can I make changes to my order after it has been placed?",
+      "answer": "Yes, you can make changes to your order, depending on its current status. If your order has not yet been processed or shipped, you may be able to edit certain details such as the shipping address, quantity of items, or add/remove items. However, if your order has already been processed or shipped, it may not be possible to make changes."
+    },
+    {
+      "question": "Can I cancel my order?",
+      "answer": "Yes, you can cancel your order. Please note that you can cancel your order if it has not been processed or shipped."
+    },
+    {
+      "question": "How do I cancel my order on Peko?",
+      "answer": "Log in to your account and go to the 'Orders' section. Find the specific order you wish to cancel and click on it to view the order details. If the order is eligible for cancellation, you will see an option to cancel it. If you encounter any issues, feel free to reach out to our customer support for help."
+    },
+    {
+      "question": "I haven’t received my order yet. What should I do?",
+      "answer": "We apologize for any inconvenience caused. Please double-check the tracking information provided for your order to see if there are any updates or delays. If you are still concerned or need further assistance, please contact our customer support team. We will investigate the issue and provide you with the necessary information or resolve any delivery-related problems promptly."
+    },
+    {
+      "question": "How long does it take for my order to be delivered?",
+      "answer": "Orders in India, once shipped, are typically delivered in 7 – 14 business days. Delivery time may vary depending on the shipping address and other factors (public holidays, extreme weather conditions, etc.)"
+    }
+  ],
+  "Mobile Recharge": [
+    {
+      "question": "My recharge has failed. What should I do?",
+      "answer": "If your recharge transaction failed, please try again after a few minutes. Sometimes temporary system issues can cause a failure.\n\nIf the issue continues, contact our support team at reach@peko.one with the following details so we can help you:\n\n- Mobile number\n- Network provider\n- Screenshot of the error message\n- Date and time of the attempt\n\nOur team will check the transaction status and guide you on next steps."
+    },
+    {
+      "question": "I was charged but my recharge didn't go through. Will I get a refund?",
+      "answer": "If the amount was debited from your account but the recharge was not completed, please contact support so we can investigate.\n\nPlease share the following with our support team at reach@peko.one:\n\n- Mobile number\n- Transaction ID\n- Payment reference (UTR number)\n- Screenshot showing the debit\n\nIf our investigation confirms that the transaction failed due to our systems or that you are otherwise entitled to a refund under the applicable terms, any refund will be processed in accordance with our refund policy. We will inform you of the applicable timeline once confirmed."
+    },
+    {
+      "question": "My recharge shows successful but my balance hasn't updated",
+      "answer": "This can sometimes happen due to a delay from the network provider's side.\n\nPlease wait 10-15 minutes and check your balance again. If it still hasn't updated, reach out to our support team at reach@peko.one with:\n\n- Mobile number\n- Transaction ID\n- Screenshot of the successful recharge\n- Screenshot of your current mobile balance\n\nWe will coordinate with the relevant service provider to verify the transaction status. If our investigation confirms that the recharge was not delivered and you are otherwise entitled to a refund under the applicable terms, any refund will be processed in accordance with our refund policy. Resolution may depend on the service provider’s response and may take longer in some cases."
+    }
+  ],
+  "Bill Payments": [
+    {
+      "question": "My bill payment has failed. What should I do?",
+      "answer": "If a bill payment failed during processing, please check whether the amount was debited from your wallet. If no amount was deducted, you can simply retry the payment.\n\nIf the issue repeats, please share the following with support at reach@peko.one:\n\n- Bill ID\n- Transaction ID\n- Amount\n- Date and time\n- Screenshot of the error\n\nWe will check the payment status from our end and assist you."
+    },
+    {
+      "question": "My payment was successful but the biller hasn't received it",
+      "answer": "Some billers may take 30-60 minutes to confirm and update payments on their end.\n\nIf the payment still doesn't reflect after this time, please share:\n\n- Bill ID\n- Transaction ID\n- Amount\n- Screenshot of the successful payment\n\nWe will coordinate with the relevant service provider to verify the payment status and update you. If our investigation confirms that the payment was not delivered and you are entitled to a refund under the applicable terms, the refund will be processed in accordance with our refund policy. Resolution may depend on the service provider’s response and may take some time."
+    },
+    {
+      "question": "An employee is unable to make a bill payment",
+      "answer": "This could be due to an inactive account, applied restrictions, or insufficient wallet balance.\n\nPlease check:\n\n- Whether the employee's account is active on the platform\n- Whether the wallet has sufficient balance\n- Whether any spending limits have been applied\n\nIf the issue persists, contact support with the employee details, account details, bill type, and a screenshot of the error. You can email us at reach@peko.one. Please note we may request additional information if required to investigate the issue."
+    },
+    {
+      "question": "My payment was declined due to wallet balance or spending limit",
+      "answer": "Payments may be declined if your wallet balance is insufficient or if a daily/monthly spending limit has been exceeded.\n\nTo resolve this:\n\n- Check your current wallet balance on the dashboard\n- Review any spending limits configured for the employee or company\n- Top up the wallet or request a limit adjustment from your admin\n\nIf you need help adjusting limits, contact support with your Company ID, Wallet ID, and the transaction amount. Limit adjustments are subject to applicable company policies, account verification, and risk checks."
+    },
+    {
+      "question": "I see a mismatch in the amount I was billed",
+      "answer": "If the billed amount doesn't match what you expected, the difference may be due to service fees, GST, or convenience charges.\n\nTo investigate, please share:\n\n- Invoice copy\n- Bill ID\n- Transaction ID\n- Screenshot showing the discrepancy\n\nWe will verify the charges and correct any errors. We may request additional information if required to complete the investigation. If a billing error is confirmed and you are entitled to a refund under the applicable terms, any refund will be processed in accordance with our refund policy."
+    },
+    {
+      "question": "How do I download my bill payment invoice?",
+      "answer": "You can download your GST invoice directly from the platform:\n\n- Go to your Dashboard\n- Click on Recent Transactions\n- Select the bill payment\n- Click Download Invoice\n\nIf you are unable to find the invoice, share the Bill ID with support and we will help."
+    }
+  ],
+  "Corporate Travel": [
+    {
+      "question": "I'm unable to book a flight or hotel. What should I do?",
+      "answer": "If a booking failed, please check:\n\n- Your wallet balance has sufficient funds\n- No spending limits are blocking the transaction\n\nIf the issue persists, contact support at reach@peko.one with:\n\n- Employee account details\n- Screenshot of the error\n- Travel details (destination, dates, number of travelers)"
+    },
+    {
+      "question": "My travel booking request is stuck in pending",
+      "answer": "If your booking request isn't moving forward, our team will check the confirmation status in the system and re-trigger any pending confirmations.\n\nPlease share the following at reach@peko.one:\n\n- Request details\n- Account details\n- Screenshot of the request status\n\nWe will provide an update as soon as reasonably practicable."
+    },
+    {
+      "question": "How do I modify an existing booking?",
+      "answer": "You can modify your booking directly from the platform:\n\n- Go to Corporate Travel → Manage Booking\n- Open Upcoming Tickets\n- Select the booking you want to change\n- Click Modify Booking\n- Review any applicable charges and confirm\n\nPlease note that modification charges may apply depending on the airline or hotel policy."
+    },
+    {
+      "question": "How do I cancel a booking?",
+      "answer": "To cancel a confirmed booking:\n\n- Go to Corporate Travel → Manage Booking\n- Open Upcoming Tickets\n- Select the booking\n- Click Cancel Booking\n- Review cancellation charges and confirm\n\nOnce cancelled, any refund is subject to the applicable airline, hotel, or travel provider’s cancellation policy. We will share the refund timeline where available."
+    },
+    {
+      "question": "I cancelled my booking but haven't received my refund yet",
+      "answer": "Refunds are subject to the applicable airline, hotel, or travel provider’s cancellation policy, and processing times depend on the relevant travel provider. If your eligible refund has not arrived within the expected timeline, please share the following with support:\n\n- Booking ID\n- Cancellation date\n\nWe will check the refund status with the relevant provider and update you on the expected timeline where available."
+    },
+    {
+      "question": "How do I download my travel invoice?",
+      "answer": "To download your GST invoice:\n\n- Go to your Dashboard\n- Click on Recent Transactions\n- Select the booking\n- Click Download GST Invoice\n\nIf you need the invoice but cannot find it, share your Booking ID and Company GST details with support."
+    }
+  ],
+  "Verification Suite": [
+    {
+      "question": "My PAN verification failed. What should I do?",
+      "answer": "PAN verification may fail if the PAN number entered is incorrect or if there's a temporary issue with the verification service.\n\nPlease double-check the PAN number you entered and retry. If the issue continues, share the following with our support team at reach@peko.one:\n\n- PAN number\n- Screenshot of the error\n\nIf our investigation determines that the failure resulted from an issue within our systems and you are otherwise entitled to a refund under the applicable terms, any refund will be processed in accordance with our refund policy.\n\nPlease note that confirming the cause may require input from our verification service provider, so this could take some time."
+    },
+    {
+      "question": "Aadhaar OKYC verification failed",
+      "answer": "Aadhaar OKYC verification may fail due to incorrect details or a temporary service issue.\n\nPlease verify that the Aadhaar number entered is accurate, then retry. If the problem persists, contact support at reach@peko.one with:\n\n- Aadhaar number\n- Transaction ID\n- Screenshot of the error\n\nRefund eligibility will be determined after investigation and in accordance with the applicable service terms. If our investigation determines that the failure resulted from an issue within our systems, any refund will be processed in accordance with our refund policy.\n\nPlease note that confirming the cause may require input from our verification service provider, so this could take some time."
+    },
+    {
+      "question": "Bank account verification failed",
+      "answer": "Bank verification may fail if the account number or IFSC code is entered incorrectly, or if the bank is temporarily unavailable.\n\nPlease verify your account details and retry. If the issue continues, share the following details at reach@peko.one:\n\n- Account number\n- IFSC code\n- Transaction ID\n- Screenshot of the error\n\nRefund eligibility will be determined after investigation and in accordance with the applicable service terms."
+    },
+    {
+      "question": "GST verification failed",
+      "answer": "GST verification may fail if the GSTIN entered is incorrect or inactive.\n\nPlease confirm your GSTIN is accurate and active on the GST portal, then retry. If the problem persists, contact support at reach@peko.one with:\n\n- GSTIN\n- Transaction ID\n- Screenshot of the error\n\nRefund eligibility will be determined after investigation and in accordance with the applicable service terms. If our investigation determines that the failure resulted from an issue within our systems, any refund will be processed in accordance with our refund policy.\n\nPlease note that confirming the cause may require input from our verification service provider, so this could take some time."
+    }
+  ],
+  "WhatsApp for Business": [
+    {
+      "question": "I'm unable to complete WhatsApp Business setup",
+      "answer": "Setup issues can occur if your business verification on Meta is not yet approved, or if the phone number has been previously registered on another WhatsApp account.\n\nPlease share the following with our support team at reach@peko.one:\n\n- Account details\n- WhatsApp number\n- Current setup stage\n- Screenshot of the error\n\nWe will check your business verification status and number eligibility."
+    },
+    {
+      "question": "I'm not receiving the OTP for number verification",
+      "answer": "OTP issues can occur if the phone number is already linked to another WhatsApp account.\n\nPlease verify:\n\n- The number is not registered on another WhatsApp account\n- You selected the correct verification method (SMS or call)\n\nIf the OTP still doesn't arrive, share your phone number, country code, and a screenshot of the error with our support team at reach@peko.one."
+    },
+    {
+      "question": "My messages are not being delivered to recipients",
+      "answer": "Message delivery can fail due to unapproved templates, exceeded messaging limits, or a low WhatsApp quality rating.\n\nPlease check:\n\n- Whether the template you're using is approved\n- Your current messaging limit and quality rating in the dashboard\n\nIf the issue continues, share the Message ID, template name, recipient number, and a screenshot with support at reach@peko.one."
+    }
+  ],
+  "Turbo": [
+    {
+      "question": "My vehicle is not showing in the dashboard",
+      "answer": "If a vehicle you've added isn't appearing in the dashboard or tracking view, it may be due to an incorrect GPS mapping or an inactive status.\n\nPlease share the following with support at reach@peko.one:\n\n- Company ID\n- Vehicle number\n- Screenshot of the dashboard\n\nWe will verify the vehicle status and GPS mapping."
+    },
+    {
+      "question": "A driver is not linked to the correct vehicle",
+      "answer": "If a driver is mapped to the wrong vehicle, please share the following at reach@peko.one:\n\n- Driver ID\n- Vehicle ID\n- Screenshot of the mapping section\n\nOur team will verify the assignment and update it accordingly."
+    },
+    {
+      "question": "Trip data is not appearing in the system",
+      "answer": "Missing trip data may be due to a GPS sync issue or inactive GPS device.\n\nPlease share the following at reach@peko.one:\n\n- Vehicle ID\n- Trip date range\n- Screenshot\n\nWe will check the GPS sync status and assist with a manual data sync if needed."
+    }
+  ],
+  "eSign": [
+    {
+      "question": "I'm unable to upload a document for eSign",
+      "answer": "Please ensure your document meets the following requirements:\n\n- Format: PDF only\n- Size: Under 20MB\n\nIf your file meets these requirements and the upload still fails, clear your browser cache and try again using a supported browser (Chrome, Firefox, or Edge).\n\nIf the issue persists, share your Company ID, a screenshot of the error, file size, and format with support at reach@peko.one."
+    },
+    {
+      "question": "The signer is unable to complete the digital signature",
+      "answer": "Signing failures can happen due to expired signing links or authentication issues.\n\nPlease check:\n\n- Whether the signing link has expired\n- Whether the signer completed OTP/email verification\n\nIf the issue continues, share the Order ID, signer email/phone, and screenshot of the error with support at reach@peko.one. We may resend the signing link if needed."
+    },
+    {
+      "question": "My document is stuck in \"Awaiting Signature\" status",
+      "answer": "This usually means the signer has not yet opened or completed the signing link.\n\nPlease check:\n\n- Whether the signer received and opened the link\n- Whether the link has expired\n\nYou can resend the signing notification from the platform. If the status still doesn't update after the signer completes signing, share the Order ID and signer details with support at reach@peko.one."
+    }
+  ],
+  "Payroll": [
+    {
+      "question": "I'm unable to upload payroll on the platform",
+      "answer": "Payroll upload issues are usually related to file format or size.\n\nPlease ensure:\n\n- The file format is correct\n- The file size is within acceptable limits\n\nIf the upload still fails, share a screenshot of the error with support at reach@peko.one. If the issue appears to require technical investigation, our tech team will review it and we aim to provide an update within 24 business hours."
+    },
+    {
+      "question": "I'm unable to add a new employee",
+      "answer": "If adding an employee fails, please ensure all details are entered in the correct format.\n\nIf the issue persists, share a screenshot of the error with support at reach@peko.one. We will check the issue and may escalate to tech if needed. We aim to provide an update within 24 business hours."
+    },
+    {
+      "question": "I accidentally offboarded an employee. Can this be reversed?",
+      "answer": "We understand this can happen. Currently, re-onboarding requires system-level support from our team.\n\nPlease contact support immediately with the employee details at reach@peko.one. We will coordinate internally and provide an update as soon as reasonably practicable."
+    },
+    {
+      "question": "I'm unable to add a customized salary component",
+      "answer": "Custom salary components must align with India's compliance requirements.\n\nPlease ensure the component structure is compliant and try again. If the issue continues, share a screenshot of the error with support at reach@peko.one. We may escalate to tech if needed and aim to provide an update within 24 business hours."
+    },
+    {
+      "question": "How do I edit employee details (salary, spelling, date of joining)?",
+      "answer": "You can update employee details directly from the platform:\n\n- Go to Dashboard\n- Click on Payroll\n- Navigate to Employees → Active Employees\n- Select the employee from the list\n- Edit the required details and save\n\nThis allows you to update salary, name spelling, date of joining, and other details."
+    },
+    {
+      "question": "I'm unable to offboard an employee",
+      "answer": "If the offboarding process fails, please share a screenshot of the error with our support team at reach@peko.one.\n\nWe will check the issue and may escalate to tech if needed. We aim to provide an update within 24 business hours."
+    }
+  ],
+  "eSIM": [
+    {
+      "question": "Does my device support eSIM?",
+      "answer": "eSIM works on most modern smartphones, but not all devices support it. Your device must also be SIM-unlocked (not locked to a specific carrier).\n\nTo check compatibility:\n\n- Confirm your device model and OS version\n- Make sure your device is not SIM-locked (iOS: Settings → General → About → Network Provider Lock)\n\nIf you're unsure, share your device model with our support team at reach@peko.one and we'll confirm."
+    },
+    {
+      "question": "Can I use my physical SIM and eSIM at the same time?",
+      "answer": "Yes, most modern devices support Dual SIM functionality. You can use your physical SIM for calls and SMS while using the eSIM for mobile data.\n\nPlease note that the eSIM provides data only - it does not include a phone number, voice calls, or SMS. You can use apps like WhatsApp, Skype, or Teams for calling and messaging over data."
+    },
+    {
+      "question": "When should I activate my eSIM?",
+      "answer": "We recommend activating your eSIM before you travel, as activation requires an internet connection.\n\nAlternatively, you can activate it using WiFi at the airport after landing. Make sure to enable Data Roaming once you reach your destination."
+    },
+    {
+      "question": "Does my eSIM plan cover my destination country?",
+      "answer": "Coverage depends on the package you purchased (country-specific, regional, or global).\n\nPlease share your destination country with support and we can confirm whether it is covered under your plan."
+    },
+    {
+      "question": "My eSIM shows \"No Service\" after installation",
+      "answer": "Please try the following steps:\n\n- Enable Mobile Data and Data Roaming\n- Turn off WiFi and restart your device\n- Toggle network mode: LTE → 3G → LTE\n- Switch to manual network selection and test available networks\n- Temporarily remove your physical SIM and restart\n\nIf the issue persists after these steps, share your device model, current country, and a screenshot of your eSIM settings with support at reach@peko.one. We will escalate to our tech team."
+    },
+    {
+      "question": "I'm getting an error while installing my eSIM",
+      "answer": "Please ensure:\n\n- Your device supports eSIM\n- Your device OS is up to date\n- You're connected to stable WiFi during installation\n- You have not exceeded 5 installation attempts (this is the limit)\n\nIf installation attempts are exceeded, contact support with your device model, OS version, and screenshot of the error at reach@peko.one. We may arrange a profile replacement."
+    },
+    {
+      "question": "My eSIM shows signal but I can't browse the internet",
+      "answer": "If your device shows network signal but the internet isn't working, please contact our support team at reach@peko.one with:\n\n- Device model\n- Country you're currently in\n- Screenshot of your APN settings\n\nWe will escalate this to our tech team for investigation and troubleshooting."
+    },
+    {
+      "question": "Are there any country-specific restrictions I should know about?",
+      "answer": "Yes, a few countries have specific restrictions:\n\n- Russia: Roaming data is restricted for the first 24 hours after network registration. Service resumes automatically.\n- UAE: eSIM cannot be purchased or downloaded within the UAE. We recommend installing your eSIM before traveling to the UAE.\n\nAdditional country-specific restrictions may apply. Please contact support before travelling if you are unsure."
+    }
+  ],
+  "General": [
+    {
+      "question": "How do I contact Peko support?",
+      "answer": "You can reach us through:\n\n- Phone: 022 489 30373\n- WhatsApp: +91 88 9901 0222\n- Email: reach@peko.one\n- Chatbot: Available on the Peko website and platform\n\nOur support team is available to help you with any issues."
+    },
+    {
+      "question": "What information should I have ready when contacting support?",
+      "answer": "To help us resolve your issue faster, please have the following ready:\n\n- Transaction ID or Order ID\n- Screenshot of the error message\n- Your account or company details\n- Date and time the issue occurred\n\nThe more details you provide upfront, the faster we can help."
+    },
+    {
+      "question": "What is the refund policy?",
+      "answer": "Refunds may be available where permitted under the applicable service terms and where our investigation confirms eligibility, including for the following services:\n\n- Mobile recharge (debit without recharge, successful but not credited)\n- Bill payments (incorrect billing, payment not reflected)\n- Verification Suite (PAN, Aadhaar OKYC, bank, GST verification failures)\n\nRefund timelines will be communicated by support once eligibility is verified."
+    }
+  ]
+}

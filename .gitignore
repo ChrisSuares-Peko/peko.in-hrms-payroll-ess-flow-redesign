@@ -37,3 +37,5 @@ package-lock.json
 .env.*
 .vercel
 .vscode
+# PROTOTYPE-SETUP: backend-reference is read-only reference; its env files must never be committed
+backend-reference/**/.env*

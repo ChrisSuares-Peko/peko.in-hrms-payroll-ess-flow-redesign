@@ -1,0 +1,158 @@
+{
+  "context": {
+    "domain": "ONDC:RET10",
+    "action": "on_issue",
+    "timestamp": "2026-08-17T09:22:22.408Z",
+    "transaction_id": "47ea7e53-0779-46e9-9019-ba428ac570ff",
+    "message_id": "2b10889f-7e9d-4814-a776-909d0fed8009",
+    "bap_id": "uatinapi.pekoapp.com",
+    "bap_uri": "https://uatinapi.pekoapp.com/api/v1/webhook/ondc/purchase",
+    "ttl": "PT30S",
+    "bpp_id": "workbench.ondc.tech",
+    "bpp_uri": "https://workbench.ondc.tech/api-service/ONDC:RET10/1.2.5/seller",
+    "country": "IND",
+    "city": "std:011",
+    "core_version": "1.2.5"
+  },
+  "message": {
+    "issue": {
+      "id": "485d1b2a-bc87-4d82-8faf-2df695b3a983",
+      "status": "RESOLVED",
+      "level": "ISSUE",
+      "created_at": "2026-08-17T09:19:52.730Z",
+      "updated_at": "2026-08-17T09:22:22.408Z",
+      "expected_response_time": { "duration": "PT2H" },
+      "expected_resolution_time": { "duration": "P1D" },
+      "refs": [
+        { "ref_type": "ORDER", "ref_id": "ORD123" },
+        { "ref_type": "PROVIDER", "ref_id": "P1" },
+        { "ref_type": "FULFILLMENT", "ref_id": "F1" },
+        {
+          "ref_type": "ITEM",
+          "ref_id": "I1",
+          "tags": [
+            {
+              "descriptor": { "code": "message.order.items" },
+              "list": [
+                { "descriptor": { "code": "quantity.selected.count" }, "value": "1" }
+              ]
+            }
+          ]
+        }
+      ],
+      "actors": [
+        {
+          "id": "58ee02df-9584-4ba6-8647-14273e0fcaa5",
+          "type": "CONSUMER",
+          "info": {
+            "person": { "name": "Faris A" },
+            "contact": { "phone": "9876543210", "email": "faris.a@peko.one" },
+            "org": { "name": "uatinapi.pekoapp.com::ONDC:RET10" }
+          }
+        },
+        {
+          "id": "uatinapi.pekoapp.com",
+          "type": "INTERFACING_NP",
+          "info": {
+            "person": { "name": "Faris A" },
+            "contact": { "phone": "9876543210", "email": "faris.a@peko.one" },
+            "org": { "name": "uatinapi.pekoapp.com::ONDC:RET10" }
+          }
+        },
+        {
+          "id": "NP2",
+          "type": "COUNTERPARTY_NP",
+          "info": {
+            "org": { "name": "workbench.ondc.tech::ONDC:RET10" },
+            "contact": { "phone": "9999994039", "email": "sellerapp@interface.com" },
+            "person": { "name": "Jane Doe" }
+          }
+        },
+        {
+          "id": "NP2-GRO",
+          "type": "COUNTERPARTY_NP_GRO",
+          "info": {
+            "org": { "name": "workbench.ondc.tech::ONDC:RET10" },
+            "contact": { "phone": "9999994039", "email": "sellerapp@interface.com" },
+            "person": { "name": "Grievance Officer BNP" }
+          }
+        }
+      ],
+      "source_id": "58ee02df-9584-4ba6-8647-14273e0fcaa5",
+      "complainant_id": "uatinapi.pekoapp.com",
+      "respondent_ids": ["NP2"],
+      "resolver_ids": ["NP2"],
+      "descriptor": {
+        "code": "ITM002",
+        "short_desc": "Issue with product quality",
+        "long_desc": "Item received is damaged / not as described",
+        "additional_desc": {
+          "url": "https://example.com/issue-details",
+          "content_type": "text/html"
+        },
+        "images": [
+          {
+            "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+            "size_type": "xs"
+          },
+          {
+            "url": "https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png",
+            "size_type": "xs"
+          }
+        ]
+      },
+      "last_action_id": "fef64723-d97d-458f-afb5-cee39ef8fe42",
+      "actions": [
+        {
+          "id": "b931f406-e5bc-4ec3-aa60-789f71ca42fd",
+          "descriptor": {
+            "code": "OPEN",
+            "short_desc": "Item received is damaged / not as described"
+          },
+          "updated_at": "2026-08-17T09:19:52.730Z",
+          "action_by": "uatinapi.pekoapp.com",
+          "actor_details": { "name": "Faris A" }
+        },
+        {
+          "id": "f02f7a4c-088b-4c82-9529-ffeade7d21d5",
+          "descriptor": { "code": "PROCESSING", "short_desc": "Complaint created" },
+          "updated_at": "2026-08-17T09:19:53.445Z",
+          "action_by": "NP2",
+          "actor_details": { "name": "mock-person" }
+        },
+        {
+          "id": "94071a9d-f8ab-4b24-a636-64a6f41495ac",
+          "ref_id": "R5",
+          "ref_type": "RESOLUTIONS",
+          "descriptor": {
+            "code": "RESOLUTION_PROPOSED",
+            "short_desc": "Resolution is proposed"
+          },
+          "updated_at": "2026-08-17T09:19:55.952Z",
+          "action_by": "NP2",
+          "actor_details": { "name": "mock-person" }
+        },
+        {
+          "id": "fef64723-d97d-458f-afb5-cee39ef8fe42",
+          "ref_id": "R5",
+          "ref_type": "RESOLUTIONS",
+          "descriptor": { "code": "RESOLVED", "short_desc": "Complaint is Resolved" },
+          "updated_at": "2026-08-17T09:22:22.408Z",
+          "action_by": "NP2",
+          "actor_details": { "name": "mock-person" }
+        }
+      ],
+      "resolutions": [
+        {
+          "id": "R5",
+          "descriptor": {
+            "code": "NO_ACTION",
+            "short_desc": "No further action required for resolving this complaint."
+          },
+          "updated_at": "2026-08-17T09:19:55.952Z",
+          "proposed_by": "NP2"
+        }
+      ]
+    }
+  }
+}

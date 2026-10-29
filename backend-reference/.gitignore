@@ -1,0 +1,29 @@
+users/node_modules
+api-gateway/node_modules
+purchase/node_modules
+kyc/node_modules
+officeAndBusiness/node_modules
+others/node_modules
+payment/node_modules
+travel/node_modules
+sharedServices/node_modules
+node_modules/
+.idea
+**/.env
+
+**/.env.local
+# dotenvx private decryption keys — never commit
+**/.env.keys
+.claude/
+paymentGateway/package-lock.json
+sharedServices/package-lock.json
+payment/configs/serviceAccountKey.json
+paymentGateway/configs/serviceAccountKey.json
+
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+# corporateCard local-only docs
+corporateCard/docs/
+corporateCard/.env.example

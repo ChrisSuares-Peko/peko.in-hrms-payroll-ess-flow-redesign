@@ -1,0 +1,93 @@
+const corporateUser = require('../../../entities/corporateUser');
+const { updateWeeklyReport } = require('../../corporateUser');
+
+jest.mock('../../../entities/corporateUser', () => ({
+  findOne: jest.fn(), // Mock `findOne` method
+  update: jest.fn(),   // Mock `update` method
+}));
+
+describe('updateWeeklyReport', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('should successfully update the weeklyReport and return the updated user', async () => {
+    // Mock findOne to return a user with a weekly report
+    corporateUser.findOne.mockResolvedValue({
+      weeklyReport: { currentStatus: 'oldStatus' },
+    });
+
+    // Mock update to resolve with a mock update result
+    corporateUser.update.mockResolvedValue([1]); 
+
+    const result = await updateWeeklyReport(1, { newStatus: 'newStatus' });
+
+    expect(corporateUser.findOne).toHaveBeenCalledWith({
+      where: {
+        credentialId: 1,
+      },
+    });
+
+    expect(corporateUser.update).toHaveBeenCalledWith(
+      { weeklyReport: { currentStatus: 'oldStatus', newStatus: 'newStatus' } },
+      {
+        where: {
+          credentialId: 1,
+        },
+      }
+    );
+
+    expect(result).toEqual([1]);
+  });
+
+  it('should handle the case where no user is found for the given id', async () => {
+    // Mock findOne to return null (user not found)
+    corporateUser.findOne.mockResolvedValue(null);
+
+    await expect(updateWeeklyReport(1, { newStatus: 'newStatus' }))
+      .rejects.toThrow('Failed to update weeklyReport'); 
+
+    expect(corporateUser.update).not.toHaveBeenCalled();
+  });
+
+  it('should throw an error if the update fails', async () => {
+    // Mock findOne to return a valid user
+    corporateUser.findOne.mockResolvedValue({
+      weeklyReport: { currentStatus: 'oldStatus' },
+    });
+
+    // Mock update to reject with an error
+    corporateUser.update.mockRejectedValue(new Error('Database Error'));
+
+    await expect(updateWeeklyReport(1, { newStatus: 'newStatus' })).rejects.toThrow('Failed to update weeklyReport');
+  });
+
+  it('should handle invalid data gracefully', async () => {
+    // Mock findOne to return a valid user
+    corporateUser.findOne.mockResolvedValue({
+      weeklyReport: { currentStatus: 'oldStatus' },
+    });
+
+    // Mock update to resolve with a successful result
+    corporateUser.update.mockResolvedValue([1]); 
+
+    const result = await updateWeeklyReport(1, {});
+
+    expect(corporateUser.findOne).toHaveBeenCalledWith({
+      where: {
+        credentialId: 1,
+      },
+    });
+
+    expect(corporateUser.update).toHaveBeenCalledWith(
+      { weeklyReport: { currentStatus: 'oldStatus' } },
+      {
+        where: {
+          credentialId: 1,
+        },
+      }
+    );
+
+    expect(result).toEqual([1]);
+  });
+});

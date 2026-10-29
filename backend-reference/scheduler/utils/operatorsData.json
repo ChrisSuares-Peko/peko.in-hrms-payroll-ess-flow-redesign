@@ -1,0 +1,137 @@
+{
+  "postpaid": {
+    "accessKey": "bbps_telecom_postpaid",
+    "category": "Telecom Payments",
+    "type": "Telecom Payments"
+  },
+  "prepaid": {
+    "accessKey": "REDACTED",
+    "transactionCategory": "Mobile Recharge & Bills",
+    "category": "Telecom Payments",
+    "type": "Telecom Payments"
+  },
+  "broadband": {
+    "accessKey": "bbps_utility_broadband",
+    "category": "Utility Payments",
+    "type": "Broadband"
+  },
+  "education": {
+    "accessKey": "bbps_utility_education",
+    "category": "Utility Payments",
+    "type": "Education Fees"
+  },
+  "electricity": {
+    "accessKey": "bbps_utility_electricity",
+    "category": "Utility Payments",
+    "type": "Electricity"
+  },
+  "landline": {
+    "accessKey": "bbps_utility_landline",
+    "category": "Utility Payments",
+    "type": "Landline"
+  },
+  "lpg": {
+    "accessKey": "bbps_utility_lpg",
+    "category": "Utility Payments",
+    "type": "LPG Cylinder"
+  },
+  "pipedGas": {
+    "accessKey": "bbps_utility_pipedgas",
+    "category": "Utility Payments",
+    "type": "Piped Gas"
+  },
+  "water": {
+    "accessKey": "bbps_utility_water",
+    "category": "Utility Payments",
+    "type": "Water"
+  },
+  "flight": {
+    "accessKey": "tbo_airline",
+    "category": "Travel"
+  },
+  "hotel": {
+    "accessKey": "hotels_api",
+    "category": "Travel"
+  },
+  "e-commerce": {
+    "accessKey": "ecommerce",
+    "category": "Office Supplies"
+  },
+  "logistics": {
+    "accessKey": "shipment_services",
+    "category": "Shipment Services"
+  },
+  "subscription": {
+    "accessKey": "subscription_payments",
+    "category": "Subscriptions"
+  },
+  "giftCard": {
+    "accessKey": "quickcilver",
+    "category": "Gift Cards/Vouchers"
+  },
+  "workspace": {
+    "accessKey": "workspace",
+    "category": "Office Address"
+  },
+  "carbonFootprints": {
+    "accessKey": "carbon_footprint",
+    "category": "Others"
+  },
+  "cashFreePaymentGateway": {
+    "accessKey": "cashfree_pg"
+  },
+  "razorpayPaymentGateway": {
+    "accessKey": "razorpay_pg"
+  },
+  "mswipePaymentGateway": {
+    "accessKey": "mswipe_pg"
+  },
+  "cashFreeOndc": {
+    "accessKey": "cashfree_ondc"
+  },
+  "billavenue": {
+    "accessKey": "billavenue",
+    "category": "Utility Payments"
+  },
+  "eSIM": {
+    "accessKey": "esim",
+    "category": "Travel",
+    "type": "Travel Esim"
+  },
+  "eSIMTunz": {
+    "accessKey": "esim_tunz",
+    "category": "Travel",
+    "type": "Travel Esim"
+  },
+  "xoxoday": {
+    "accessKey": "xoxoday",
+    "category": "Gift Cards/Vouchers"
+  },
+  "domainHosting": {
+    "accessKey": "REDACTED",
+    "category": "Domain & Hosting"
+  },
+  "niPaymentGateway": {
+    "accessKey": "REDACTED",
+    "category": "Payment Gateway"
+  },
+  "whatsAppForBusiness": {
+    "accessKey": "REDACTED",
+    "category": "WhatsApp for Business"
+  },
+  "currencyExchangeRate": {
+    "accessKey": "currency_exchange_rate"
+  },
+  "cashfreeSubscriptions": {
+    "accessKey": "cashfree_subscriptions",
+    "category": "Subscriptions"
+  },
+  "carReport": {
+    "accessKey": "car_report",
+    "type": "Car Report"
+  },
+  "pekoPos": {
+    "accessKey": "peko_pos",
+    "category": "Others"
+  }
+}

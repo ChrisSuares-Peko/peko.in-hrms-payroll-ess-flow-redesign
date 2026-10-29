@@ -1,0 +1,29 @@
+const credential = require('./../entities/credential')
+// const sequelize = require('sequelize')
+// const moment = require('moment')
+require("sequelize");
+
+
+
+const findOneCredential = async (params, attributes = undefined) => {
+    try {
+        return await credential.findOne({
+            where: {
+                id: params.id
+            },
+            attributes
+        })
+    } catch (error) {
+        console.log(error)
+    } finally {
+        console.log("CREDENTIAL FIND ONE ROUTE CALLED")
+    }
+}
+
+
+
+module.exports = {
+   
+    findOneCredential,
+   
+}

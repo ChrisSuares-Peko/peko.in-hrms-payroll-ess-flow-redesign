@@ -1,0 +1,446 @@
+{
+  "billavenue": {
+    "accessKey": "billavenue",
+    "category": "Utility Payments",
+    "type": "Utility Payments"
+  },
+  "globalBusinessSetup": {
+    "accessKey": "global_business_setup",
+    "category": "Global Business Setup",
+    "type": "Global Business Setup"
+  },
+  "postpaid": {
+    "accessKey": "bbps_telecom_postpaid",
+    "category": "Mobile Recharge & Bills",
+    "type": "Telecom Payments"
+  },
+  "otme": {
+    "accessKey": "bbps_telecom_otme",
+    "category": "Mobile Recharge & Bills",
+    "type": "Telecom Payments"
+  },
+  "prepaid": {
+    "accessKey": "REDACTED",
+    "category": "Mobile Recharge & Bills",
+    "type": "Telecom Payments"
+  },
+  "broadband": {
+    "accessKey": "bbps_utility_broadband",
+    "category": "Utility Payments",
+    "type": "Broadband"
+  },
+  "cable": {
+    "accessKey": "bbps_utility_cable",
+    "category": "Utility Payments",
+    "type": "Cable"
+  },
+  "education": {
+    "accessKey": "bbps_utility_education",
+    "category": "Utility Payments",
+    "type": "Education Fees"
+  },
+  "electricity": {
+    "accessKey": "bbps_utility_electricity",
+    "category": "Utility Payments",
+    "type": "Electricity"
+  },
+  "landline": {
+    "accessKey": "bbps_utility_landline",
+    "category": "Utility Payments",
+    "type": "Landline"
+  },
+  "lpg": {
+    "accessKey": "bbps_utility_lpg",
+    "category": "Utility Payments",
+    "type": "LPG Cylinder"
+  },
+  "pipedGas": {
+    "accessKey": "bbps_utility_pipedgas",
+    "category": "Utility Payments",
+    "type": "Piped Gas"
+  },
+  "water": {
+    "accessKey": "bbps_utility_water",
+    "category": "Utility Payments",
+    "type": "Water"
+  },
+  "fastag": {
+    "accessKey": "bbps_utility_fastag",
+    "category": "Utility Payments",
+    "type": "Fastag"
+  },
+  "challan": {
+    "accessKey": "droom_traffic_challan",
+    "category": "Utility Payments",
+    "type": "Traffic Challan"
+  },
+  "carReport": {
+    "accessKey": "car_report",
+    "category": "Turbo",
+    "type": "Car Report"
+  },
+  "dth": {
+    "accessKey": "bbps_utility_dth",
+    "category": "Utility Payments",
+    "type": "DTH"
+  },
+  "creditCard": {
+    "accessKey": "REDACTED",
+    "category": "Financial Services",
+    "type": "Credit Card"
+  },
+  "deposite": {
+    "accessKey": "bbps_financial_deposite",
+    "category": "Financial Services",
+    "type": "Recurring Deposite"
+  },
+  "donations": {
+    "accessKey": "bbps_financial_donations",
+    "category": "Financial Services",
+    "type": "Donations"
+  },
+  "loanRepayment": {
+    "accessKey": "REDACTED",
+    "category": "Financial Services",
+    "type": "Loan Repayment"
+  },
+  "municipalServices": {
+    "accessKey": "REDACTED",
+    "category": "Financial Services",
+    "type": "Municipal Services"
+  },
+  "municipalTaxes": {
+    "accessKey": "REDACTED",
+    "category": "Financial Services",
+    "type": "Municipal Taxes"
+  },
+  "rental": {
+    "accessKey": "bbps_financial_rental",
+    "category": "Financial Services",
+    "type": "Rental"
+  },
+  "car": {
+    "accessKey": "bbps_insurance_car",
+    "category": "Insurances",
+    "type": "Car Insurance"
+  },
+  "bike": {
+    "accessKey": "bbps_insurance_bike",
+    "category": "Insurances",
+    "type": "Bike Insurance"
+  },
+  "life": {
+    "accessKey": "bbps_insurance_life",
+    "category": "Insurance",
+    "type": "Life Insurance"
+  },
+  "clubs": {
+    "accessKey": "bbps_other_clubs",
+    "category": "Other Services",
+    "type": "Clubs & Associations"
+  },
+  "hospitals": {
+    "accessKey": "bbps_other_hospitals",
+    "category": "Other Services",
+    "type": "Hospital & Pathology"
+  },
+  "housingSociety": {
+    "accessKey": "REDACTED",
+    "category": "Other Services",
+    "type": "Housing Society"
+  },
+  "bbps_subscriptions": {
+    "accessKey": "bbps_other_subscription",
+    "category": "Other Services",
+    "type": "Subscription Fees"
+  },
+  "health": {
+    "accessKey": "bbps_insurance",
+    "category": "Insurances",
+    "type": "Health Insurance"
+  },
+  "ncmc": {
+    "accessKey": "bbps_other_ncmc",
+    "category": "Other Services",
+    "type": "NCMC"
+  },
+  "nps": {
+    "accessKey": "bbps_other_nps",
+    "category": "Other Services",
+    "type": "NPS"
+  },
+  "prepaidMeter": {
+    "accessKey": "REDACTED",
+    "category": "Other Services",
+    "type": "Prepaid Meter"
+  },
+  "flight": {
+    "accessKey": "tbo_airline",
+    "category": "Travel"
+  },
+  "hotel": {
+    "accessKey": "hotels_api",
+    "category": "Travel"
+  },
+  "e-commerce": {
+    "accessKey": "ecommerce",
+    "category": "Office Supplies"
+  },
+  "logistics": {
+    "accessKey": "shipment_services",
+    "category": "Shipment Services"
+  },
+  "subscription": {
+    "accessKey": "subscription_payments",
+    "category": "Subscriptions"
+  },
+  "giftCard": {
+    "accessKey": "gift-card",
+    "category": "Gift Cards/Vouchers"
+  },
+  "xoxoday": {
+    "accessKey": "xoxoday",
+    "category": "Gift Cards/Vouchers"
+  },
+  "workspace": {
+    "accessKey": "workspace",
+    "category": "Office Address"
+  },
+  "carbonFootprints": {
+    "accessKey": "carbon_footprint",
+    "category": "Others"
+  },
+  "leadGeneration": {
+    "accessKey": "lead_generator"
+  },
+  "paytmPaymentGateway": {
+    "accessKey": "paytm_gateway"
+  },
+  "whatsAppForBusiness": {
+    "accessKey": "REDACTED"
+  },
+  "pekoWorks": {
+    "accessKey": "peko_works"
+  },
+  "subscriptionPlans": {
+    "accessKey": "purchase_subscription"
+  },
+  "email_domain_service": {
+    "accessKey": "email_domain_service"
+  },
+  "ecommerceStore": {
+    "accessKey": "ecommerce_store",
+    "category": "Others"
+  },
+  "pekoPos": {
+    "accessKey": "peko_pos",
+    "category": "Others"
+  },
+  "hike": {
+    "accessKey": "hike_service"
+  },
+  "cashFreePaymentGateway": {
+    "accessKey": "cashfree_pg"
+  },
+  "ccAvenuePaymentGateway": {
+    "accessKey": "ccavenue_pg"
+  },
+  "mswipePaymentGateway": {
+    "accessKey": "mswipe_pg"
+  },
+  "cashFreeOndc": {
+    "accessKey": "cashfree_ondc"
+  },
+  "airPayPaymentGateway": {
+    "accessKey": "airpay_pg"
+  },
+  "razorpayPaymentGateway": {
+    "accessKey": "razorpay_pg"
+  },
+  "eSIM": {
+    "accessKey": "esim",
+    "category": "Travel",
+    "type": "Travel Esim"
+  },
+  "eSIMTunz": {
+    "accessKey": "esim_tunz",
+    "category": "Travel",
+    "type": "Travel Esim"
+  },
+  "pekoWallet": {
+    "accessKey": "peko_wallet"
+  },
+  "cashFreeSubscriptions": {
+    "accessKey": "cashfree_subscriptions"
+  },
+  "domainAndHosting": {
+    "accessKey": "domain_and_hosting",
+    "category": "Domain and Hosting"
+  },
+  "softwares": {
+    "accessKey": "software_service",
+    "category": "Softwares"
+  },
+  "companyIncorporation": {
+    "accessKey": "company_incorporation",
+    "category": "Corporate Services"
+  },
+  "visa": {
+    "accessKey": "visa_api",
+    "category": "Travel",
+    "type": "Visa Services"
+  },
+  "eSign": {
+    "accessKey": "REDACTED",
+    "category": "Others"
+  },
+  "verificationSuite": {
+    "accessKey": "verification_suite",
+    "category": "Verification Suite"
+  },
+  "hub": {
+    "accessKey": "pekoCloud",
+    "category": "Others"
+  },
+  "payroll": {
+    "accessKey": "peko_payroll",
+    "category": "Others"
+  },
+  "turbo": {
+    "accessKey": "peko_garage",
+    "category": "Others"
+  },
+  "eInvoice": {
+    "accessKey": "alankit_einvoice",
+    "category": "Invoicing"
+  },
+  "businessRegistration": {
+    "accessKey": "business_registration",
+    "category": "Corporate Services"
+  },
+  "governmentServices": {
+    "accessKey": "gov_services",
+    "category": "Others"
+  },
+  "gst-registration": {
+    "accessKey": "govt_gst_registration",
+    "category": "Government Services"
+  },
+  "pt-registration": {
+    "accessKey": "govt_pt_registration",
+    "category": "Government Services"
+  },
+  "shop-establishment-license": {
+    "accessKey": "govt_shop_establishment",
+    "category": "Government Services"
+  },
+  "tan-registration": {
+    "accessKey": "govt_tan_registration",
+    "category": "Government Services"
+  },
+  "epf-registration": {
+    "accessKey": "govt_epf_registration",
+    "category": "Government Services"
+  },
+  "esi-registration": {
+    "accessKey": "govt_esi_registration",
+    "category": "Government Services"
+  },
+  "pan-registration": {
+    "accessKey": "govt_pan_registration",
+    "category": "Government Services"
+  },
+  "gst-composition-scheme": {
+    "accessKey": "govt_gst_composition",
+    "category": "Government Services"
+  },
+  "msme-registration": {
+    "accessKey": "govt_msme_registration",
+    "category": "Government Services"
+  },
+  "trademark-registration": {
+    "accessKey": "govt_trademark_registration",
+    "category": "Government Services"
+  },
+  "startup-india": {
+    "accessKey": "govt_startup_india",
+    "category": "Government Services"
+  },
+  "iso-certification": {
+    "accessKey": "govt_iso_certification",
+    "category": "Government Services"
+  },
+  "fssai-basic": {
+    "accessKey": "govt_fssai_basic",
+    "category": "Government Services"
+  },
+  "fssai-state": {
+    "accessKey": "govt_fssai_state",
+    "category": "Government Services"
+  },
+  "fssai-central": {
+    "accessKey": "govt_fssai_central",
+    "category": "Government Services"
+  },
+  "drug-license-retail": {
+    "accessKey": "govt_drug_license_retail",
+    "category": "Government Services"
+  },
+  "drug-license-wholesale": {
+    "accessKey": "govt_drug_license_wholesale",
+    "category": "Government Services"
+  },
+  "drug-manufacturing": {
+    "accessKey": "govt_drug_manufacturing",
+    "category": "Government Services"
+  },
+  "12a-80g-registration": {
+    "accessKey": "govt_12a_80g",
+    "category": "Government Services"
+  },
+  "fcra-registration": {
+    "accessKey": "govt_fcra_registration",
+    "category": "Government Services"
+  },
+  "trade-license": {
+    "accessKey": "govt_trade_license",
+    "category": "Government Services"
+  },
+  "fire-safety-noc": {
+    "accessKey": "govt_fire_safety_noc",
+    "category": "Government Services"
+  },
+  "pcb-consent": {
+    "accessKey": "govt_pcb_consent",
+    "category": "Government Services"
+  },
+  "factory-license": {
+    "accessKey": "govt_factory_license",
+    "category": "Government Services"
+  },
+  "rera-promoter": {
+    "accessKey": "govt_rera_promoter",
+    "category": "Government Services"
+  },
+  "rera-agent": {
+    "accessKey": "govt_rera_agent",
+    "category": "Government Services"
+  },
+  "iec-registration": {
+    "accessKey": "govt_iec_registration",
+    "category": "Government Services"
+  },
+  "dsc": {
+    "accessKey": "govt_dsc",
+    "category": "Government Services"
+  },
+  "corporateCards": {
+    "accessKey": "corporate_cards",
+    "category": "Corporate Cards",
+    "type": "Corporate Cards"
+  },
+  "bus": {
+    "accessKey": "bus_tickets",
+    "category": "Travel"
+  }
+}

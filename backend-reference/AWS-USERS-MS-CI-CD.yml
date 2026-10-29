@@ -1,0 +1,86 @@
+trigger:
+  branches:
+   include: 
+    - staging
+  paths:
+    include:
+      - users/*
+
+variables:
+  AWS_REGION: 'ap-south-1'            # <— Mumbai
+  ECR_REPO: 'users'
+  ECS_CLUSTER: 'peko-cluster'
+  ECS_SERVICE: 'peko-web-svc'
+  CONTAINER_NAME: 'web'
+  DOCKERFILE: 'users/dockerfile'
+  CONTEXT: 'users'
+  IMAGE_TAG: '$(Build.BuildId)'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+- stage: BuildPush
+  displayName: Build & Push to ECR
+  jobs:
+  - job: BuildAndPush
+    steps:
+    - checkout: self
+      clean: true
+
+    - task: Bash@3
+      displayName: Install AWS CLI + jq
+      inputs:
+        targetType: inline
+        script: |
+          sudo apt-get update -y
+          sudo apt-get install -y unzip jq
+          curl -sSL "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o awscliv2.zip
+          unzip -q awscliv2.zip
+          sudo ./aws/install --update
+          aws --version
+
+    # ---------- Auth (pick ONE) ----------
+    # [A] OIDC service connection via AWS Toolkit
+    # - task: AWSShellScript@1
+    #   inputs:
+    #     awsCredentials: 'REDACTED'
+    #     regionName: '$(AWS_REGION)'
+    #     scriptType: 'inline'
+    #     inlineScript: 'aws sts get-caller-identity'
+
+    # [B] Access keys (Variable Group secrets)
+    - task: Bash@3
+      displayName: Configure AWS creds
+      env:
+        AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
+        AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)
+      inputs:
+        targetType: inline
+        script: |
+          aws configure set region $(AWS_REGION)
+          aws sts get-caller-identity
+
+    - task: Bash@3
+      displayName: Login to ECR
+      inputs:
+        targetType: inline
+        script: |
+          ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+          aws ecr get-login-password --region $(AWS_REGION) \
+            | docker login --username AWS --password-stdin ${ACCOUNT_ID}.dkr.ecr.$(AWS_REGION).amazonaws.com
+          echo "ACCOUNT_ID=$ACCOUNT_ID" >> $(Pipeline.Workspace)/env.out
+
+    - task: Bash@3
+      displayName: Docker build & push
+      inputs:
+        targetType: inline
+        script: |
+          source $(Pipeline.Workspace)/env.out
+          IMAGE_URI="${ACCOUNT_ID}.dkr.ecr.$(AWS_REGION).amazonaws.com/$(ECR_REPO)"
+          DOCKER_BUILDKIT=1 docker build -f $(DOCKERFILE) -t ${IMAGE_URI}:$(IMAGE_TAG) $(CONTEXT)
+          docker push ${IMAGE_URI}:$(IMAGE_TAG)
+          docker tag ${IMAGE_URI}:$(IMAGE_TAG) ${IMAGE_URI}:latest
+          docker push ${IMAGE_URI}:latest
+          echo "IMAGE_URI=${IMAGE_URI}:$(IMAGE_TAG)" >> $(Pipeline.Workspace)/env.out
+

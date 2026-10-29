@@ -1,0 +1,39 @@
+{
+  "production": {
+    "users": "https://users-ms-473183714713.asia-south1.run.app",
+    "others": "https://others-ms-473183714713.asia-south1.run.app",
+    "purchase": "https://purchase-ms-473183714713.asia-south1.run.app",
+    "officeAndBusiness": "https://officeandbusiness-t6c4hufy5a-el.a.run.app",
+    "payment": "https://payment-ms-473183714713.asia-south1.run.app",
+    "payroll": "https://payroll-ms-473183714713.asia-south1.run.app",
+    "travel": "https://travel-ms-473183714713.asia-south1.run.app",
+    "paymentGateway": "https://paymentgateway-ms-473183714713.asia-south1.run.app",
+    "kyc": "https://kyc-ms-473183714713.asia-south1.run.app"
+  },
+  "staging": {
+    "users": "https://users-4rt7hbmkfq-el.a.run.app",
+    "others": "https://others-ms-4rt7hbmkfq-el.a.run.app",
+    "purchase": "https://purchase-4rt7hbmkfq-el.a.run.app",
+    "officeAndBusiness": "https://officeandbusiness-4rt7hbmkfq-el.a.run.app",
+    "payment": "https://payment-4rt7hbmkfq-el.a.run.app",
+    "payroll": "https://payroll-4rt7hbmkfq-el.a.run.app",
+    "travel": "https://travel-4rt7hbmkfq-el.a.run.app",
+    "paymentGateway": "https://paymentgateway-4rt7hbmkfq-el.a.run.app",
+    "kyc": "https://kyc-4rt7hbmkfq-el.a.run.app",
+    "scheduler": "https://scheduler-4rt7hbmkfq-el.a.run.app",
+    "corporateCard": "https://corporatecard-4rt7hbmkfq-el.a.run.app"
+  },
+  "local": {
+    "users": "http://localhost:4445",
+    "others": "http://localhost:4444",
+    "purchase": "http://localhost:4446",
+    "officeAndBusiness": "http://localhost:4449",
+    "payment": "http://localhost:4447",
+    "travel": "http://localhost:4448",
+    "payroll": "http://localhost:4450",
+    "paymentGateway": "http://localhost:4442",
+    "kyc": "http://localhost:4443",
+    "scheduler": "http://localhost:4450",
+    "corporateCard": "http://localhost:4478"
+  }
+}

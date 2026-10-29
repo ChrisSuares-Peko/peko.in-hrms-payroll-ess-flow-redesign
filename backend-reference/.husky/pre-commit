@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Prevent cross-service imports between microservices
+bash scripts/check-cross-imports.sh
+
+# Lint only the staged files in each changed service (fast — not a full-repo lint)
+bash scripts/lint-staged-services.sh

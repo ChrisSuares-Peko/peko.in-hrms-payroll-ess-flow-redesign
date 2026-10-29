@@ -1,0 +1,28 @@
+# Use an official Node.js runtime as a base image
+FROM node:24.14.1
+
+# Set the environment variable for the time zone
+ENV TZ=Asia/Kolkata
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Install tzdata and set the time zone
+RUN apt-get update && apt-get install -y tzdata \
+    && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Copy package.json and package-lock.json to the working directory.
+COPY package*.json ./
+
+# Install app dependencies
+RUN npm install
+
+# Bundle app source
+COPY . .
+
+# Expose the port the app runs on
+EXPOSE 4453
+
+# Define the command to run your app
+CMD ["sh", "-c", "npm run migrate && npm run start:prod"]

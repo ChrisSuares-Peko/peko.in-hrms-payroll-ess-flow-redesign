@@ -1,0 +1,7 @@
+exports.BCRYPT_SALT_ROUNDS = 10;
+
+exports.RESET_PASSWORD_TOKEN_EXPIRY_HOURS = 24;
+
+exports.PLURAL_GATEWAY_ACCESS_KEY = "plural_gateway";
+
+exports.PLURAL_GATEWAY_SERVICE_TYPE = "3";

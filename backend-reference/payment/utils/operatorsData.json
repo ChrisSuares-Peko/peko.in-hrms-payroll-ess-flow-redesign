@@ -1,0 +1,245 @@
+{
+  "billavenue": {
+    "accessKey": "billavenue",
+    "category": "Utility Payments",
+    "type": "Utility Payments"
+  },
+  "postpaid": {
+    "accessKey": "bbps_telecom_postpaid",
+    "category": "Mobile Recharge & Bills",
+    "type": "Telecom Payments"
+  },
+  "prepaid": {
+    "accessKey": "REDACTED",
+    "category": "Mobile Recharge & Bills",
+    "type": "Telecom Payments"
+  },
+  "otme": {
+    "accessKey": "bbps_telecom_otme",
+    "category": "Mobile Recharge & Bills",
+    "type": "Telecom Payments"
+  },
+  "broadband": {
+    "accessKey": "bbps_utility_broadband",
+    "category": "Utility Payments",
+    "type": "Broadband"
+  },
+  "cable": {
+    "accessKey": "bbps_utility_cable",
+    "category": "Utility Payments",
+    "type": "Cable"
+  },
+  "dth": {
+    "accessKey": "bbps_utility_dth",
+    "category": "Utility Payments",
+    "type": "DTH"
+  },
+  "education": {
+    "accessKey": "bbps_utility_education",
+    "category": "Utility Payments",
+    "type": "Education Fees"
+  },
+  "electricity": {
+    "accessKey": "bbps_utility_electricity",
+    "category": "Utility Payments",
+    "type": "Electricity"
+  },
+  "landline": {
+    "accessKey": "bbps_utility_landline",
+    "category": "Utility Payments",
+    "type": "Landline"
+  },
+  "lpg": {
+    "accessKey": "bbps_utility_lpg",
+    "category": "Utility Payments",
+    "type": "LPG Cylinder"
+  },
+  "pipedGas": {
+    "accessKey": "bbps_utility_pipedgas",
+    "category": "Utility Payments",
+    "type": "Piped Gas"
+  },
+  "water": {
+    "accessKey": "bbps_utility_water",
+    "category": "Utility Payments",
+    "type": "Water"
+  },
+  "fastag": {
+    "accessKey": "bbps_utility_fastag",
+    "category": "Utility Payments",
+    "type": "Fastag"
+  },
+  "challan": {
+    "accessKey": "droom_traffic_challan",
+    "category": "Utility Payments",
+    "type": "Traffic Challan"
+  },
+  "carReport": {
+    "accessKey": "car_report",
+    "category": "Turbo",
+    "type": "Car Report"
+  },
+  "creditCard": {
+    "accessKey": "REDACTED",
+    "category": "Financial Services",
+    "type": "Credit Card"
+  },
+  "deposite": {
+    "accessKey": "bbps_financial_deposite",
+    "category": "Financial Services",
+    "type": "Recurring Deposite"
+  },
+  "donations": {
+    "accessKey": "bbps_financial_donations",
+    "category": "Financial Services",
+    "type": "Donations"
+  },
+  "loanRepayment": {
+    "accessKey": "REDACTED",
+    "category": "Financial Services",
+    "type": "Loan Repayment"
+  },
+  "municipalServices": {
+    "accessKey": "REDACTED",
+    "category": "Financial Services",
+    "type": "Municipal Services"
+  },
+  "municipalTaxes": {
+    "accessKey": "REDACTED",
+    "category": "Financial Services",
+    "type": "Municipal Taxes"
+  },
+  "rental": {
+    "accessKey": "bbps_financial_rental",
+    "category": "Financial Services",
+    "type": "Rental"
+  },
+  "car": {
+    "accessKey": "bbps_insurance_car",
+    "category": "Insurances",
+    "type": "Car Insurance"
+  },
+  "bike": {
+    "accessKey": "bbps_insurance_bike",
+    "category": "Insurances",
+    "type": "Bike Insurance"
+  },
+  "health": {
+    "accessKey": "bbps_insurance",
+    "category": "Insurances",
+    "type": "Health Insurance"
+  },
+  "life": {
+    "accessKey": "bbps_insurance_life",
+    "category": "Insurance",
+    "type": "Life Insurance"
+  },
+  "clubs": {
+    "accessKey": "bbps_other_clubs",
+    "category": "Other Services",
+    "type": "Clubs & Associations"
+  },
+  "hospitals": {
+    "accessKey": "bbps_other_hospitals",
+    "category": "Other Services",
+    "type": "Hospital & Pathology"
+  },
+  "housingSociety": {
+    "accessKey": "REDACTED",
+    "category": "Other Services",
+    "type": "Housing Society"
+  },
+  "bbps_subscriptions": {
+    "accessKey": "bbps_other_subscription",
+    "category": "Other Services",
+    "type": "Subscription Fees"
+  },
+  "ncmc": {
+    "accessKey": "bbps_other_ncmc",
+    "category": "Other Services",
+    "type": "NCMC"
+  },
+  "nps": {
+    "accessKey": "bbps_other_nps",
+    "category": "Other Services",
+    "type": "NPS"
+  },
+  "prepaidMeter": {
+    "accessKey": "REDACTED",
+    "category": "Other Services",
+    "type": "Prepaid Meter"
+  },
+  "flight": {
+    "accessKey": "tbo_airline",
+    "category": "Travel"
+  },
+  "hotel": {
+    "accessKey": "hotels_api",
+    "category": "Travel"
+  },
+  "e-commerce": {
+    "accessKey": "ecommerce",
+    "category": "Office Supplies"
+  },
+  "logistics": {
+    "accessKey": "shipment_services",
+    "category": "Shipment Services"
+  },
+  "subscription": {
+    "accessKey": "subscription_payments",
+    "category": "Subscriptions"
+  },
+  "giftCard": {
+    "accessKey": "quickcilver",
+    "category": "Gift Cards/Vouchers"
+  },
+  "workspace": {
+    "accessKey": "workspace",
+    "category": "Office Address"
+  },
+  "carbonFootprints": {
+    "accessKey": "carbon_footprint",
+    "category": "Others"
+  },
+  "cashFreePaymentGateway": {
+    "accessKey": "cashfree_pg"
+  },
+  "mswipePaymentGateway": {
+    "accessKey": "mswipe_pg"
+  },
+  "ccAvenuePaymentGateway": {
+    "accessKey": "ccavenue_pg"
+  },
+  "razorpayPaymentGateway": {
+    "accessKey": "razorpay_pg"
+  },
+  "paymentLinks": {
+    "accessKey": "quick_links"
+  },
+  "payout": {
+    "accessKey": "vendor_payouts"
+  },
+  "nupayCollections": {
+    "accessKey": "nupay_collections"
+  },
+  "pan": {
+    "accessKey": "pan_verify",
+    "category": "Verification Suite",
+    "type": "PAN"
+  },
+  "bank_account_verify": {
+    "accessKey": "bank_account_verify",
+    "category": "Verification Suite",
+    "type": "Bank Account"
+  },
+  "eSIM": {
+    "accessKey": "esim",
+    "category": "Travel",
+    "type": "Travel Esim"
+  },
+  "eSIMTunz": {
+    "accessKey": "esim_tunz",
+    "category": "Travel",
+    "type": "Travel Esim"
+  }
+}

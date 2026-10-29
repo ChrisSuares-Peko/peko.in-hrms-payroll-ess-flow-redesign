@@ -1,0 +1,804 @@
+[
+  {
+    "category": "Stationery",
+    "subcategory": "Pens & Pencils",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "pen",
+      "ball pen",
+      "gel pen",
+      "ink pen",
+      "fountain pen",
+      "marker pen",
+      "pencil",
+      "mechanical pencil",
+      "lead pencil",
+      "colored pencil",
+      "erasable pen",
+      "stylus pen"
+    ]
+  },
+  {
+    "category": "Stationery",
+    "subcategory": "Markers & Highlighters",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "marker",
+      "permanent marker",
+      "whiteboard marker",
+      "cd marker",
+      "highlighter",
+      "fluorescent marker",
+      "paint marker",
+      "chalk marker"
+    ]
+  },
+  {
+    "category": "Stationery",
+    "subcategory": "Correction",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "correction pen",
+      "correction tape",
+      "white ink",
+      "whitener",
+      "eraser",
+      "ink remover"
+    ]
+  },
+  {
+    "category": "Stationery",
+    "subcategory": "Notebooks & Notepads",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "notebook",
+      "notepad",
+      "journal",
+      "writing pad",
+      "spiral notebook",
+      "exercise book",
+      "memo pad",
+      "register"
+    ]
+  },
+  {
+    "category": "Stationery",
+    "subcategory": "Sticky Notes",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "sticky note",
+      "post it",
+      "memo note",
+      "note pad",
+      "page marker",
+      "index tab"
+    ]
+  },
+  {
+    "category": "Stationery",
+    "subcategory": "Diaries & Planners",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "diary",
+      "planner",
+      "organizer",
+      "daily planner",
+      "weekly planner",
+      "monthly planner",
+      "agenda"
+    ]
+  },
+  {
+    "category": "Stationery",
+    "subcategory": "Copier Paper",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "a4 paper",
+      "copy paper",
+      "printer paper",
+      "photocopy paper",
+      "bond paper",
+      "ream paper"
+    ]
+  },
+  {
+    "category": "Stationery",
+    "subcategory": "Files & Folders",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "file",
+      "folder",
+      "document folder",
+      "ring binder",
+      "lever arch",
+      "display book",
+      "portfolio"
+    ]
+  },
+  {
+    "category": "Stationery",
+    "subcategory": "Clips & Pins",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "paper clip",
+      "binder clip",
+      "push pin",
+      "drawing pin",
+      "thumb pin",
+      "clip"
+    ]
+  },
+  {
+    "category": "Stationery",
+    "subcategory": "Tape & Glue",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "tape",
+      "cello tape",
+      "adhesive tape",
+      "glue",
+      "gum",
+      "glue stick",
+      "super glue"
+    ]
+  },
+  {
+    "category": "Stationery",
+    "subcategory": "Envelopes",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "envelope",
+      "mailing cover",
+      "courier cover",
+      "document envelope"
+    ]
+  },
+  {
+    "category": "Stationery",
+    "subcategory": "Staplers & Punches",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "stapler",
+      "staple pin",
+      "paper punch",
+      "hole punch",
+      "stapling machine"
+    ]
+  },
+  {
+    "category": "Stationery",
+    "subcategory": "Scissors",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "scissor",
+      "scissors",
+      "paper cutter",
+      "craft scissors"
+    ]
+  },
+  {
+    "category": "Stationery",
+    "subcategory": "Desk Organisers",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "desk organizer",
+      "pen stand",
+      "desk tray",
+      "document tray",
+      "table organizer"
+    ]
+  },
+  {
+    "category": "Office Equipment",
+    "subcategory": "Calculators",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "calculator",
+      "scientific calculator",
+      "desktop calculator",
+      "financial calculator",
+      "casio calculator",
+      "citizen calculator"
+    ]
+  },
+  {
+    "category": "Office Equipment",
+    "subcategory": "Laptops & Desktops",
+    "domain": "RET14",
+    "ondcCategory": "Laptop , Desktop",
+    "keywords": [
+      "laptop",
+      "notebook pc",
+      "desktop",
+      "all in one pc",
+      "computer",
+      "gaming laptop",
+      "workstation",
+      "macbook",
+      "macbook pro",
+      "macbook air",
+      "imac",
+      "mac mini",
+      "mac studio",
+      "chromebook",
+      "thinkpad",
+      "ideapad",
+      "legion",
+      "hp laptop",
+      "hp desktop",
+      "elitebook",
+      "probook",
+      "pavilion",
+      "vivobook",
+      "zenbook",
+      "asus laptop",
+      "aspire",
+      "acer laptop",
+      "inspiron",
+      "latitude",
+      "xps",
+      "vostro",
+      "alienware",
+      "dell laptop",
+      "dell desktop",
+      "surface laptop",
+      "surface pro",
+      "surface book",
+      "lenovo laptop",
+      "mini pc",
+      "gaming pc"
+    ]
+  },
+  {
+    "category": "Office Equipment",
+    "subcategory": "Projectors",
+    "domain": "RET14",
+    "ondcCategory": "Projector , Projector Screen",
+    "keywords": [
+      "projector",
+      "led projector",
+      "laser projector",
+      "projector screen",
+      "projection screen"
+    ]
+  },
+  {
+    "category": "Office Equipment",
+    "subcategory": "Binding & Lamination",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "binding machine",
+      "spiral binding",
+      "comb binding",
+      "lamination machine",
+      "laminator",
+      "binding coil",
+      "binding spine",
+      "laminating pouch"
+    ]
+  },
+  {
+    "category": "Office Equipment",
+    "subcategory": "Shredders & Cash Counting",
+    "domain": "RET14",
+    "ondcCategory": "Computer Accessories",
+    "keywords": [
+      "paper shredder",
+      "shredder machine",
+      "cross cut shredder",
+      "cash counting machine",
+      "currency counter",
+      "note counting machine",
+      "fake note detector"
+    ]
+  },
+  {
+    "category": "Office Equipment",
+    "subcategory": "Whiteboards & Boards",
+    "domain": "RET16",
+    "ondcCategory": "Stationery",
+    "keywords": [
+      "whiteboard",
+      "notice board",
+      "pin board",
+      "bulletin board",
+      "magnetic board",
+      "display board",
+      "flip chart",
+      "chalkboard"
+    ]
+  },
+  {
+    "category": "Computer Peripherals",
+    "subcategory": "Keyboards & Mice",
+    "domain": "RET14",
+    "ondcCategory": "Keyboard , Mouse , Mousepad",
+    "keywords": [
+      "keyboard",
+      "mouse",
+      "mousepad",
+      "wireless mouse",
+      "gaming mouse",
+      "mechanical keyboard",
+      "logitech mouse",
+      "logitech keyboard",
+      "wireless keyboard",
+      "bluetooth keyboard"
+    ]
+  },
+  {
+    "category": "Computer Peripherals",
+    "subcategory": "Monitors & Stands",
+    "domain": "RET14",
+    "ondcCategory": "Monitor , Laptop Stand",
+    "keywords": [
+      "monitor",
+      "display",
+      "screen",
+      "laptop stand",
+      "monitor stand",
+      "monitor arm",
+      "curved monitor",
+      "led monitor",
+      "gaming monitor",
+      "dell monitor",
+      "samsung monitor",
+      "lg monitor"
+    ]
+  },
+  {
+    "category": "Computer Peripherals",
+    "subcategory": "Storage",
+    "domain": "RET14",
+    "ondcCategory": "Storage Drive , Pen Drive , Memory Card",
+    "keywords": [
+      "ssd",
+      "hdd",
+      "hard disk",
+      "external drive",
+      "pen drive",
+      "usb drive",
+      "memory card",
+      "micro sd",
+      "sandisk",
+      "western digital",
+      "seagate",
+      "kingston",
+      "transcend",
+      "crucial"
+    ]
+  },
+  {
+    "category": "Computer Peripherals",
+    "subcategory": "Cables & Adapters",
+    "domain": "RET14",
+    "ondcCategory": "Cable , Adapter , Charger",
+    "keywords": [
+      "cable",
+      "usb cable",
+      "hdmi cable",
+      "charging cable",
+      "adapter",
+      "power adapter",
+      "charger",
+      "converter cable",
+      "otg cable"
+    ]
+  },
+  {
+    "category": "Computer Peripherals",
+    "subcategory": "USB Hubs & Docks",
+    "domain": "RET14",
+    "ondcCategory": "Docking Station , Networking Device",
+    "keywords": [
+      "usb hub",
+      "docking station",
+      "laptop dock",
+      "port replicator",
+      "network adapter",
+      "ethernet adapter",
+      "hub"
+    ]
+  },
+  {
+    "category": "Computer Peripherals",
+    "subcategory": "Webcams & Headsets",
+    "domain": "RET14",
+    "ondcCategory": "Headset , Microphone , Camera",
+    "keywords": [
+      "webcam",
+      "web camera",
+      "headset",
+      "headphone",
+      "earphone",
+      "microphone",
+      "mic",
+      "conference camera",
+      "logitech webcam",
+      "boat headset",
+      "jbl headset",
+      "sony headset"
+    ]
+  },
+  {
+    "category": "Printers & Toner",
+    "subcategory": "Printers",
+    "domain": "RET14",
+    "ondcCategory": "Printer",
+    "keywords": [
+      "printer",
+      "inkjet printer",
+      "laser printer",
+      "all in one printer",
+      "multifunction printer",
+      "label printer",
+      "photo printer",
+      "laserjet",
+      "officejet",
+      "deskjet",
+      "pixma",
+      "imageclass",
+      "ecotank",
+      "workforce",
+      "hp printer",
+      "canon printer",
+      "epson printer",
+      "brother printer"
+    ]
+  },
+  {
+    "category": "Printers & Toner",
+    "subcategory": "Toner Cartridges",
+    "domain": "RET14",
+    "ondcCategory": "Printer Accessories",
+    "keywords": [
+      "toner",
+      "toner cartridge",
+      "laser toner",
+      "printer toner",
+      "drum toner"
+    ]
+  },
+  {
+    "category": "Printers & Toner",
+    "subcategory": "Ink Cartridges & Bottles",
+    "domain": "RET14",
+    "ondcCategory": "Printer Accessories",
+    "keywords": [
+      "ink cartridge",
+      "printer ink",
+      "ink bottle",
+      "refill ink",
+      "inkjet cartridge"
+    ]
+  },
+  {
+    "category": "Printers & Toner",
+    "subcategory": "Ribbons & Drums",
+    "domain": "RET14",
+    "ondcCategory": "Printer Accessories",
+    "keywords": [
+      "ribbon",
+      "printer ribbon",
+      "imaging drum",
+      "drum unit",
+      "fax ribbon",
+      "dot matrix ribbon"
+    ]
+  },
+  {
+    "category": "Electronics",
+    "subcategory": "Conference Audio & Speakers",
+    "domain": "RET14",
+    "ondcCategory": "Speaker , Home Audio",
+    "keywords": [
+      "speaker",
+      "bluetooth speaker",
+      "conference speaker",
+      "soundbar",
+      "home audio",
+      "pa system",
+      "audio system",
+      "jbl speaker",
+      "bose speaker",
+      "sony speaker",
+      "boat speaker"
+    ]
+  },
+  {
+    "category": "Electronics",
+    "subcategory": "CCTV & Security",
+    "domain": "RET14",
+    "ondcCategory": "Home Alarm , Sensor , Home Safe , Intercom",
+    "keywords": [
+      "cctv",
+      "cctv camera",
+      "security camera",
+      "ip camera",
+      "dvr",
+      "nvr",
+      "alarm system",
+      "door sensor",
+      "intercom",
+      "video doorbell",
+      "hikvision",
+      "cp plus",
+      "dahua"
+    ]
+  },
+  {
+    "category": "Electronics",
+    "subcategory": "Biometric & Attendance",
+    "domain": "RET14",
+    "ondcCategory": "Biometrics",
+    "keywords": [
+      "biometric device",
+      "fingerprint scanner",
+      "attendance machine",
+      "face recognition device",
+      "time attendance system",
+      "access control device"
+    ]
+  },
+  {
+    "category": "Electronics",
+    "subcategory": "Batteries",
+    "domain": "RET14",
+    "ondcCategory": "Batteries",
+    "keywords": [
+      "battery",
+      "aa battery",
+      "aaa battery",
+      "rechargeable battery",
+      "lithium battery",
+      "power bank battery",
+      "cell battery",
+      "duracell",
+      "eveready",
+      "energizer",
+      "panasonic battery"
+    ]
+  },
+  {
+    "category": "Electronics",
+    "subcategory": "Power & Extension Boards",
+    "domain": "RET14",
+    "ondcCategory": "Extension Cord , UPS",
+    "keywords": [
+      "extension board",
+      "power strip",
+      "extension cord",
+      "surge protector",
+      "ups",
+      "power backup",
+      "multi plug",
+      "apc ups",
+      "luminous ups",
+      "microtek ups"
+    ]
+  },
+  {
+    "category": "Electronics",
+    "subcategory": "Mobile Phones & Tablets",
+    "domain": "RET14",
+    "ondcCategory": "Smartphone , Tablet",
+    "keywords": [
+      "mobile phone",
+      "smartphone",
+      "iphone",
+      "ipad",
+      "android phone",
+      "samsung galaxy",
+      "galaxy phone",
+      "oneplus",
+      "xiaomi",
+      "redmi",
+      "oppo phone",
+      "vivo phone",
+      "realme phone",
+      "nokia phone",
+      "motorola phone",
+      "ipad pro",
+      "ipad air",
+      "ipad mini",
+      "android tablet",
+      "samsung tablet",
+      "tablet pc"
+    ]
+  },
+  {
+    "category": "Housekeeping",
+    "subcategory": "Cleaning Supplies",
+    "domain": "RET16 , RET10",
+    "ondcCategory": "Bins and Bathroom , Detergents and Dishwash",
+    "keywords": [
+      "cleaning liquid",
+      "floor cleaner",
+      "detergent",
+      "dishwash liquid",
+      "dishwash bar",
+      "surface cleaner",
+      "toilet cleaner",
+      "phenyl"
+    ]
+  },
+  {
+    "category": "Housekeeping",
+    "subcategory": "Mops, Brooms & Dusters",
+    "domain": "RET16",
+    "ondcCategory": "Mops, Brushes and Scrubs",
+    "keywords": [
+      "mop",
+      "broom",
+      "duster",
+      "cleaning brush",
+      "scrub",
+      "scrubber",
+      "floor wiper",
+      "cleaning cloth"
+    ]
+  },
+  {
+    "category": "Housekeeping",
+    "subcategory": "Garbage Bags",
+    "domain": "RET16",
+    "ondcCategory": "Disposables and Garbage Bags",
+    "keywords": [
+      "garbage bag",
+      "trash bag",
+      "dustbin bag",
+      "waste bag",
+      "bin liner"
+    ]
+  },
+  {
+    "category": "Housekeeping",
+    "subcategory": "Tissues & Paper Rolls",
+    "domain": "RET16",
+    "ondcCategory": "Disposables and Garbage Bags",
+    "keywords": [
+      "tissue",
+      "tissue paper",
+      "paper towel",
+      "paper roll",
+      "napkin",
+      "facial tissue",
+      "toilet roll"
+    ]
+  },
+  {
+    "category": "Housekeeping",
+    "subcategory": "Hand Wash & Sanitizers",
+    "domain": "RET18",
+    "ondcCategory": "Hand Wash , Sanitizers",
+    "keywords": [
+      "hand wash",
+      "hand sanitizer",
+      "liquid soap",
+      "sanitizer",
+      "antibacterial soap",
+      "alcohol sanitizer"
+    ]
+  },
+  {
+    "category": "Housekeeping",
+    "subcategory": "Air Fresheners",
+    "domain": "RET16",
+    "ondcCategory": "Fresheners and Repellents",
+    "keywords": [
+      "air freshener",
+      "room freshener",
+      "fragrance spray",
+      "aerosol freshener",
+      "odor eliminator",
+      "repellent spray"
+    ]
+  },
+  {
+    "category": "Pantry",
+    "subcategory": "Tea & Coffee",
+    "domain": "RET10",
+    "ondcCategory": "Tea and Coffee",
+    "keywords": [
+      "tea",
+      "coffee",
+      "tea bags",
+      "instant coffee",
+      "green tea",
+      "tea powder",
+      "coffee powder",
+      "coffee sachets"
+    ]
+  },
+  {
+    "category": "Pantry",
+    "subcategory": "Soft Drinks & Juices",
+    "domain": "RET10",
+    "ondcCategory": "Energy and Soft Drinks , Fruit Juices and Fruit Drinks",
+    "keywords": [
+      "soft drink",
+      "cold drink",
+      "juice",
+      "fruit juice",
+      "energy drink",
+      "aerated drink",
+      "beverage"
+    ]
+  },
+  {
+    "category": "Pantry",
+    "subcategory": "Packaged Water",
+    "domain": "RET10",
+    "ondcCategory": "Water",
+    "keywords": [
+      "packaged water",
+      "mineral water",
+      "water bottle",
+      "drinking water",
+      "water jar",
+      "water can"
+    ]
+  },
+  {
+    "category": "Pantry",
+    "subcategory": "Snacks & Biscuits",
+    "domain": "RET10",
+    "ondcCategory": "Snacks and Namkeen , Chocolates and Biscuits , Snacks, Dry Fruits, Nuts",
+    "keywords": [
+      "snacks",
+      "biscuit",
+      "chips",
+      "namkeen",
+      "cookies",
+      "chocolate",
+      "dry fruits",
+      "nuts"
+    ]
+  },
+  {
+    "category": "Pantry",
+    "subcategory": "Sugar, Creamer & Sachets",
+    "domain": "RET10",
+    "ondcCategory": "Salt, Sugar and Jaggery",
+    "keywords": [
+      "sugar",
+      "sugar sachet",
+      "creamer",
+      "milk powder",
+      "coffee whitener",
+      "jaggery"
+    ]
+  },
+  {
+    "category": "Pantry",
+    "subcategory": "Disposables",
+    "domain": "RET16",
+    "ondcCategory": "Party and Festive Needs",
+    "keywords": [
+      "disposable cup",
+      "paper cup",
+      "plastic cup",
+      "disposable plate",
+      "paper plate",
+      "cutlery",
+      "spoon",
+      "fork"
+    ]
+  }
+]

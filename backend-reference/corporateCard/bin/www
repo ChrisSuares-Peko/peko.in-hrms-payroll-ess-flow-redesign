@@ -1,0 +1,119 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+require('events').EventEmitter.prototype._maxListeners = 100
+const app = require('../app')
+const debug = require('debug')('corporate-card:server')
+const http = require('http')
+const sequelize = require('../configs/database')
+const { startCardOrderReconcileSweep } = require('../utils/cardOrderReconciler')
+
+/**
+ * Get port from environment and store in Express.
+ */
+const port = normalizePort(process.env.PORT || '4478')
+app.set('port', port)
+
+/**
+ * Create HTTP server.
+ */
+const server = http.createServer(app)
+
+server.listen(port, () => {
+    console.log(`Corporate Cards service is running on port ${port}`)
+})
+server.on('error', onError)
+server.on('listening', onListening)
+
+// Unref'd inside the util so it never holds the process open; cleared on shutdown.
+const reconcileSweep = startCardOrderReconcileSweep()
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+function normalizePort(val) {
+    const parsed = parseInt(val, 10)
+    if (isNaN(parsed)) {
+        // named pipe
+        return val
+    }
+    if (parsed >= 0) {
+        // port number
+        return parsed
+    }
+    return false
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+function onError(error) {
+    if (error.syscall !== 'listen') {
+        throw error
+    }
+    const bind = typeof port === 'string' ? 'Pipe ' + port : 'Port ' + port
+    switch (error.code) {
+        case 'EACCES':
+            console.error(bind + ' requires elevated privileges')
+            process.exit(1)
+            break
+        case 'EADDRINUSE':
+            console.error(bind + ' is already in use')
+            process.exit(1)
+            break
+        default:
+            throw error
+    }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+function onListening() {
+    const addr = server.address()
+    const bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port
+    debug('Listening on ' + bind)
+}
+
+/**
+ * Graceful shutdown on SIGTERM and SIGINT (Ctrl+C). Registering these handlers overrides Node's default
+ * "terminate immediately", so this MUST reliably reach process.exit(); otherwise the process lingers (the
+ * DB pool + its status interval keep the event loop alive and keep logging). We therefore:
+ *  - drop idle keep-alive sockets so server.close() isn't held open by them (Node >= 18.2),
+ *  - close the Sequelize pool,
+ *  - and arm an unconditional force-exit timer so a stuck in-flight request can never wedge shutdown.
+ */
+let shuttingDown = false
+function shutdown(signal) {
+    if (shuttingDown) return
+    shuttingDown = true
+    console.log(`Received ${signal} signal. Shutting down gracefully...`)
+
+    if (reconcileSweep) clearInterval(reconcileSweep)
+
+    // Backstop: if the graceful path stalls (a hung request, a socket that won't drain), exit anyway.
+    const forceExit = setTimeout(() => {
+        console.error('Graceful shutdown timed out — forcing exit.')
+        process.exit(1)
+    }, 10000)
+    forceExit.unref()
+
+    server.close(async () => {
+        try {
+            await sequelize.close()
+        } catch (err) {
+            console.error('Error closing DB pool:', err?.message)
+        }
+        console.log('Server and DB connections closed. Exiting...')
+        process.exit(0)
+    })
+    // Keep-alive sockets sitting idle would otherwise keep server.close() pending forever.
+    if (typeof server.closeIdleConnections === 'function') {
+        server.closeIdleConnections()
+    }
+}
+
+process.on('SIGTERM', () => shutdown('SIGTERM'))
+process.on('SIGINT', () => shutdown('SIGINT'))

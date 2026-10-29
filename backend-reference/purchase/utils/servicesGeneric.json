@@ -1,0 +1,8 @@
+
+{
+    "ecommerce": {
+        "shipping_charge": 15,
+        "max_ship_applicable_amount": 100,
+        "isVATApplicable": false
+    }
+}

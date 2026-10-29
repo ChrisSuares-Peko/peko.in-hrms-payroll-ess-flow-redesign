@@ -1,0 +1,217 @@
+{
+  "postpaid": {
+    "accessKey": "bbps_telecom_postpaid",
+    "category": "Telecom Payments",
+    "type": "Telecom Payments"
+  },
+  "prepaid": {
+    "accessKey": "REDACTED",
+    "category": "Telecom Payments",
+    "type": "Telecom Payments"
+  },
+  "broadband": {
+    "accessKey": "bbps_utility_broadband",
+    "category": "Utility Payments",
+    "type": "Broadband"
+  },
+  "education": {
+    "accessKey": "bbps_utility_education",
+    "category": "Utility Payments",
+    "type": "Education Fees"
+  },
+  "electricity": {
+    "accessKey": "bbps_utility_electricity",
+    "category": "Utility Payments",
+    "type": "Electricity"
+  },
+  "landline": {
+    "accessKey": "bbps_utility_landline",
+    "category": "Utility Payments",
+    "type": "Landline"
+  },
+  "lpg": {
+    "accessKey": "bbps_utility_lpg",
+    "category": "Utility Payments",
+    "type": "LPG Cylinder"
+  },
+  "pipedGas": {
+    "accessKey": "bbps_utility_pipedgas",
+    "category": "Utility Payments",
+    "type": "Piped Gas"
+  },
+  "water": {
+    "accessKey": "bbps_utility_water",
+    "category": "Utility Payments",
+    "type": "Water"
+  },
+  "flight": {
+    "accessKey": "tbo_airline",
+    "category": "Travel"
+  },
+  "hotel": {
+    "accessKey": "hotels_api",
+    "category": "Travel"
+  },
+  "e-commerce": {
+    "accessKey": "ecommerce",
+    "category": "Office Supplies"
+  },
+  "logistics": {
+    "accessKey": "shipment_services",
+    "category": "Shipment Services"
+  },
+  "subscription": {
+    "accessKey": "subscription_payments",
+    "category": "Subscriptions"
+  },
+  "subscriptionPlans": {
+    "accessKey": "purchase_subscription"
+  },
+  "giftCard": {
+    "accessKey": "gift-card",
+    "category": "Gift Cards/Vouchers"
+  },
+  "workspace": {
+    "accessKey": "workspace",
+    "category": "Office Address"
+  },
+  "carbonFootprints": {
+    "accessKey": "carbon_footprint",
+    "category": "Others"
+  },
+  "eSIM": {
+    "accessKey": "esim",
+    "category": "Travel",
+    "type": "Travel Esim"
+  },
+  "eSIMTunz": {
+    "accessKey": "esim_tunz",
+    "category": "Travel",
+    "type": "Travel Esim"
+  },
+  "hike": {
+    "accessKey": "hike_service"
+  },
+  "email_domain_service": {
+    "accessKey": "email_domain_service"
+  },
+  "cashFreePaymentGateway": {
+    "accessKey": "cashfree_pg"
+  },
+  "razorpayPaymentGateway": {
+    "accessKey": "razorpay_pg"
+  },
+  "mswipePaymentGateway": {
+    "accessKey": "mswipe_pg"
+  },
+  "cashFreeOndc": {
+    "accessKey": "cashfree_ondc"
+  },
+  "currencyExchangeRate": {
+    "accessKey": "currency_exchange_rate"
+  },
+  "gst-registration": {
+    "accessKey": "govt_gst_registration",
+    "category": "Government Services"
+  },
+  "professional-tax-registration": {
+    "accessKey": "govt_pt_registration",
+    "category": "Government Services"
+  },
+  "shop-establishment-license": {
+    "accessKey": "govt_shop_establishment",
+    "category": "Government Services"
+  },
+  "tan-registration": {
+    "accessKey": "govt_tan_registration",
+    "category": "Government Services"
+  },
+  "epf-registration": {
+    "accessKey": "govt_epf_registration",
+    "category": "Government Services"
+  },
+  "esi-registration": {
+    "accessKey": "govt_esi_registration",
+    "category": "Government Services"
+  },
+  "pan-registration": {
+    "accessKey": "govt_pan_registration",
+    "category": "Government Services"
+  },
+  "gst-composition-scheme": {
+    "accessKey": "govt_gst_composition",
+    "category": "Government Services"
+  },
+  "msme-udyam-registration": {
+    "accessKey": "govt_msme_registration",
+    "category": "Government Services"
+  },
+  "trademark-registration": {
+    "accessKey": "govt_trademark_registration",
+    "category": "Government Services"
+  },
+  "startup-india-recognition": {
+    "accessKey": "govt_startup_india",
+    "category": "Government Services"
+  },
+  "iso-certification": {
+    "accessKey": "govt_iso_certification",
+    "category": "Government Services"
+  },
+  "fssai-basic-registration": {
+    "accessKey": "govt_fssai_basic",
+    "category": "Government Services"
+  },
+  "fssai-state-license": {
+    "accessKey": "govt_fssai_state",
+    "category": "Government Services"
+  },
+  "fssai-central-license": {
+    "accessKey": "govt_fssai_central",
+    "category": "Government Services"
+  },
+  "drug-license": {
+    "accessKey": "govt_drug_license",
+    "category": "Government Services"
+  },
+  "drug-manufacturing-license": {
+    "accessKey": "govt_drug_manufacturing",
+    "category": "Government Services"
+  },
+  "12a-80g-registration": {
+    "accessKey": "govt_12a_80g",
+    "category": "Government Services"
+  },
+  "fcra-registration": {
+    "accessKey": "govt_fcra_registration",
+    "category": "Government Services"
+  },
+  "trade-license": {
+    "accessKey": "govt_trade_license",
+    "category": "Government Services"
+  },
+  "fire-safety-noc": {
+    "accessKey": "govt_fire_safety_noc",
+    "category": "Government Services"
+  },
+  "pollution-control-board-consent": {
+    "accessKey": "govt_pcb_consent",
+    "category": "Government Services"
+  },
+  "factory-license": {
+    "accessKey": "govt_factory_license",
+    "category": "Government Services"
+  },
+  "rera-registration": {
+    "accessKey": "govt_rera_registration",
+    "category": "Government Services"
+  },
+  "import-export-code": {
+    "accessKey": "govt_iec_registration",
+    "category": "Government Services"
+  },
+  "digital-signature-certificate": {
+    "accessKey": "govt_dsc",
+    "category": "Government Services"
+  }
+}

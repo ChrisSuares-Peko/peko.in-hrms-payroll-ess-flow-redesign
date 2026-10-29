@@ -1,0 +1,171 @@
+{
+    "version": 1,
+    "defaultRoleName": "Employee",
+    "roles": [
+        {
+            "roleName": "Admin",
+            "description": "Full control of the company's cards, members, approvals, wallet and settings.",
+            "actsAsCorporateAdmin": true,
+            "permissions": [
+                "corporate_cards.view-own-cards",
+                "corporate_cards.request-card",
+                "corporate_cards.request-limit-increase",
+                "corporate_cards.freeze-own-card",
+                "corporate_cards.request-unfreeze",
+                "corporate_cards.view-own-transactions",
+                "corporate_cards.upload-own-receipts",
+                "corporate_cards.complete-own-kyc",
+                "corporate_cards.view-dashboard",
+                "corporate_cards.view-members",
+                "corporate_cards.invite-members",
+                "corporate_cards.remove-members",
+                "corporate_cards.assign-roles",
+                "corporate_cards.create-teams",
+                "corporate_cards.view-cards",
+                "corporate_cards.issue-cards",
+                "corporate_cards.order-physical-cards",
+                "corporate_cards.freeze-cards",
+                "corporate_cards.set-limits",
+                "corporate_cards.terminate-cards",
+                "corporate_cards.view-transactions",
+                "corporate_cards.export-transactions",
+                "corporate_cards.manage-receipts",
+                "corporate_cards.approve-card-req",
+                "corporate_cards.approve-limit-increase",
+                "corporate_cards.approve-unfreeze",
+                "corporate_cards.approve-txn",
+                "corporate_cards.approve-reimb",
+                "corporate_cards.approve-vendor",
+                "corporate_cards.approve-topup",
+                "corporate_cards.view-wallet",
+                "corporate_cards.topup-wallet",
+                "corporate_cards.view-statement",
+                "corporate_cards.export-statement",
+                "corporate_cards.record-entries",
+                "corporate_cards.view-accounting",
+                "corporate_cards.export-accounting",
+                "corporate_cards.view-roles",
+                "corporate_cards.view-audit"
+            ]
+        },
+        {
+            "roleName": "Employee",
+            "description": "Self-service only: their own card, transactions, receipts and requests.",
+            "actsAsCorporateAdmin": false,
+            "permissions": [
+                "corporate_cards.view-own-cards",
+                "corporate_cards.request-card",
+                "corporate_cards.request-limit-increase",
+                "corporate_cards.freeze-own-card",
+                "corporate_cards.request-unfreeze",
+                "corporate_cards.view-own-transactions",
+                "corporate_cards.upload-own-receipts",
+                "corporate_cards.complete-own-kyc"
+            ]
+        }
+    ],
+    "catalogue": {
+        "services": [
+            {
+                "service": "Corporate Cards",
+                "accessKey": "corporate_cards",
+                "categories": [
+                    {
+                        "category": "Self-service",
+                        "permissions": [
+                            { "key": "corporate_cards.view-own-cards", "label": "View their own cards" },
+                            { "key": "corporate_cards.request-card", "label": "Request a new card" },
+                            { "key": "corporate_cards.request-limit-increase", "label": "Request a limit increase" },
+                            { "key": "corporate_cards.freeze-own-card", "label": "Freeze / unfreeze their own card" },
+                            { "key": "corporate_cards.request-unfreeze", "label": "Request an unfreeze after an admin freeze" },
+                            { "key": "corporate_cards.view-own-transactions", "label": "View & export their own transactions" },
+                            { "key": "corporate_cards.upload-own-receipts", "label": "Add receipts & comments on their own transactions" },
+                            { "key": "corporate_cards.complete-own-kyc", "label": "Complete their own KYC" }
+                        ]
+                    },
+                    {
+                        "category": "General",
+                        "permissions": [
+                            { "key": "corporate_cards.view-dashboard", "label": "View company dashboard" }
+                        ]
+                    },
+                    {
+                        "category": "Members",
+                        "permissions": [
+                            { "key": "corporate_cards.view-members", "label": "View members" },
+                            { "key": "corporate_cards.invite-members", "label": "Invite members" },
+                            { "key": "corporate_cards.remove-members", "label": "Remove members" },
+                            { "key": "corporate_cards.assign-roles", "label": "Assign roles to members" },
+                            { "key": "corporate_cards.create-teams", "label": "Create & edit teams" }
+                        ]
+                    },
+                    {
+                        "category": "Cards",
+                        "permissions": [
+                            { "key": "corporate_cards.view-cards", "label": "View all cards" },
+                            { "key": "corporate_cards.issue-cards", "label": "Issue new cards" },
+                            { "key": "corporate_cards.order-physical-cards", "label": "Order physical cards" },
+                            { "key": "corporate_cards.freeze-cards", "label": "Freeze / unfreeze any card" },
+                            { "key": "corporate_cards.set-limits", "label": "Set card spend limits & controls" },
+                            { "key": "corporate_cards.terminate-cards", "label": "Terminate cards" }
+                        ]
+                    },
+                    {
+                        "category": "Transactions",
+                        "permissions": [
+                            { "key": "corporate_cards.view-transactions", "label": "View all transactions" },
+                            { "key": "corporate_cards.export-transactions", "label": "Export all transactions" },
+                            { "key": "corporate_cards.manage-receipts", "label": "Manage receipts on any transaction" }
+                        ]
+                    },
+                    {
+                        "category": "Approvals",
+                        "permissions": [
+                            { "key": "corporate_cards.approve-card-req", "label": "Approve card issuance requests" },
+                            { "key": "corporate_cards.approve-limit-increase", "label": "Approve limit increase requests" },
+                            { "key": "corporate_cards.approve-unfreeze", "label": "Approve card unfreeze requests" },
+                            { "key": "corporate_cards.approve-txn", "label": "Approve card transactions" },
+                            { "key": "corporate_cards.approve-reimb", "label": "Approve reimbursements" },
+                            { "key": "corporate_cards.approve-vendor", "label": "Approve vendor invoices" },
+                            { "key": "corporate_cards.approve-topup", "label": "Approve card top-up requests" }
+                        ]
+                    },
+                    {
+                        "category": "Wallet",
+                        "permissions": [
+                            { "key": "corporate_cards.view-wallet", "label": "View wallet & balances" },
+                            { "key": "corporate_cards.topup-wallet", "label": "Top up wallet" }
+                        ]
+                    },
+                    {
+                        "category": "Account",
+                        "permissions": [
+                            { "key": "corporate_cards.view-statement", "label": "View account statement" },
+                            { "key": "corporate_cards.export-statement", "label": "Export account statement" },
+                            { "key": "corporate_cards.record-entries", "label": "Record account entries (top-up, fee, adjustment)" }
+                        ]
+                    },
+                    {
+                        "category": "Accounting",
+                        "permissions": [
+                            { "key": "corporate_cards.view-accounting", "label": "View accounting report" },
+                            { "key": "corporate_cards.export-accounting", "label": "Map & export to accounting software" }
+                        ]
+                    },
+                    {
+                        "category": "Settings",
+                        "permissions": [
+                            { "key": "corporate_cards.view-roles", "label": "View roles & permissions" }
+                        ]
+                    },
+                    {
+                        "category": "Audit",
+                        "permissions": [
+                            { "key": "corporate_cards.view-audit", "label": "View audit logs (read-only)" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

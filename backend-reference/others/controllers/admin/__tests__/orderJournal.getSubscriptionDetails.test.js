@@ -1,0 +1,109 @@
+jest.mock("../../../models/entities/order", () => ({}));
+jest.mock("../../../models/entities/serviceOperator", () => ({}));
+jest.mock("../../../models/entities/credential", () => ({}));
+jest.mock("../../../models/entities/vendor", () => ({}));
+jest.mock("../../../models/use-cases/chartOfAccount", () => ({ findAllByProviderAccountIds: jest.fn() }));
+jest.mock("../../../models/use-cases/credential", () => ({ findOneCredential: jest.fn() }));
+jest.mock("../../../models/use-cases/accountingPeriod", () => ({
+    loadAccountingFloor: jest.fn().mockResolvedValue("2000-01-01"),
+    goLiveWindowStart: jest.fn(() => new Date("2000-01-01T00:00:00.000Z")),
+    isBeforeGoLive: jest.fn(),
+}));
+jest.mock("../../../models/use-cases/serviceOperator", () => ({ findServiceOperatorById: jest.fn() }));
+jest.mock("../../../models/use-cases/feeDetails", () => ({
+    listFeeDetails: jest.fn(),
+    serializeFeeDetail: jest.fn(),
+}));
+jest.mock("../../../models/use-cases/subscriptionDetails", () => ({
+    listSubscriptionDetails: jest.fn(),
+    serializeSubscriptionDetail: jest.fn(),
+}));
+jest.mock("../../../utils/bull/queue/accountingQueues", () => ({ dispatchJournalRetry: jest.fn() }));
+jest.mock("../../../utils/pekoRecieptHelper", () => ({ generateInvoiceOrReceiptPdf: jest.fn() }));
+jest.mock("../../../utils/pdfHelper", () => ({ isPdfBuffer: jest.fn() }));
+jest.mock("../../../utils/loggerHelper", () => ({ customLog: jest.fn() }));
+
+const {
+    listSubscriptionDetails,
+    serializeSubscriptionDetail,
+} = require("../../../models/use-cases/subscriptionDetails");
+const { getSubscriptionDetails } = require("../orderJournal");
+
+const mockRes = () => {
+    const res = {};
+    res.status = jest.fn(() => res);
+    res.json = jest.fn(() => res);
+    return res;
+};
+
+const run = async query => {
+    listSubscriptionDetails.mockResolvedValue({ rows: [], count: 0 });
+    const req = { query };
+    const res = mockRes();
+    await getSubscriptionDetails(req, res, jest.fn());
+    return listSubscriptionDetails.mock.calls.at(-1)[0];
+};
+
+describe("getSubscriptionDetails — shared drill-down for the three Subscriptions dashboard cards", () => {
+    beforeEach(() => jest.clearAllMocks());
+
+    it("has no billingType filter by default", async () => {
+        expect((await run({ from: "2026-09-01", to: "2026-09-16" })).billingType).toBeNull();
+    });
+
+    it("passes MONTHLY/ANNUALLY through, and drops anything else", async () => {
+        expect(
+            (await run({ from: "2026-09-01", to: "2026-09-16", billingType: "MONTHLY" })).billingType
+        ).toBe("MONTHLY");
+        expect(
+            (await run({ from: "2026-09-01", to: "2026-09-16", billingType: "ANNUALLY" })).billingType
+        ).toBe("ANNUALLY");
+        expect(
+            (await run({ from: "2026-09-01", to: "2026-09-16", billingType: "WEEKLY" })).billingType
+        ).toBeNull();
+    });
+
+    it("parses partnerId to a number, and drops it when missing or invalid", async () => {
+        expect((await run({ from: "2026-09-01", to: "2026-09-16", partnerId: "55" })).partnerId).toBe(55);
+        expect((await run({ from: "2026-09-01", to: "2026-09-16" })).partnerId).toBeNull();
+    });
+
+    it("keeps the 'default' sentinel as-is for the dropdown's Default (no partner) option", async () => {
+        expect(
+            (await run({ from: "2026-09-01", to: "2026-09-16", partnerId: "default" })).partnerId
+        ).toBe("default");
+    });
+
+    it("floors a requested date earlier than go-live", async () => {
+        const { range } = await run({ from: "1999-01-01", to: "2026-09-16" });
+        expect(range).toEqual({ from: "2000-01-01 00:00:00", to: "2026-09-16 23:59:59" });
+    });
+
+    it("windows on the IST calendar day, so one picked day runs from its midnight to its last second", async () => {
+        const { range } = await run({ from: "2026-10-21", to: "2026-10-21" });
+        expect(range).toEqual({ from: "2026-10-21 00:00:00", to: "2026-10-21 23:59:59" });
+    });
+
+    it("shapes each row through serializeSubscriptionDetail and turns pekoInvoiceDetails into a documents summary", async () => {
+        const ROW = { id: 1, pekoInvoiceDetails: { corporate: { invoiceData: { a: 1 } } } };
+        listSubscriptionDetails.mockResolvedValue({ rows: [ROW], count: 1 });
+        serializeSubscriptionDetail.mockReturnValue({
+            id: 1,
+            corporateTxnId: "TXN1",
+            netRevenue: 200,
+            pekoInvoiceDetails: { corporate: { invoiceData: { a: 1 } } },
+        });
+
+        const req = { query: { from: "2026-09-01", to: "2026-09-16" } };
+        const res = mockRes();
+        await getSubscriptionDetails(req, res, jest.fn());
+
+        const [row] = res.json.mock.calls[0][0].data.result;
+        expect(row.pekoInvoiceDetails).toBeUndefined();
+        expect(row.corporateTxnId).toBe("TXN1");
+        expect(row.documents).toEqual({
+            subscriber: { invoice: true, planInvoice: false, receipt: false },
+            vendor: { invoice: false, planInvoice: false },
+        });
+    });
+});

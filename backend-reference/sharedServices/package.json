@@ -1,0 +1,62 @@
+{
+  "name": "peko-in-shared-services",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run migrate:local && dotenvx run -f .env.local -- nodemon ./bin/www",
+    "start:prod": "dotenvx run -f .env.${NODE_ENV} -- node ./bin/www",
+    "lint": "eslint .",
+    "test": "jest --detectOpenHandles",
+    "migrate": "dotenvx run -f .env.${NODE_ENV} -- sequelize-cli db:migrate",
+    "migrate:local": "dotenvx run -f .env.local -- sequelize-cli db:migrate"
+  },
+  "dependencies": {
+    "@dotenvx/dotenvx": "^2.38.2",
+    "@elastic/elasticsearch": "^8.15.0",
+    "@logtail/node": "^0.5.0",
+    "@logtail/winston": "^0.5.0",
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.1",
+    "bull": "^4.16.5",
+    "compression": "^1.7.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.21.2",
+    "helmet": "^3.12.1",
+    "ioredis": "^5.10.1",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.19.1",
+    "mysql2": "^3.11.0",
+    "redis": "^5.12.1",
+    "sequelize": "^6.37.3",
+    "uuid": "^11.1.1",
+    "winston": "^3.14.2",
+    "winston-elasticsearch": "^0.19.0",
+    "winston-loki": "^6.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-plugin-jest": "^28.11.0",
+    "jest": "^30.5.2",
+    "nodemon": "^3.1.4",
+    "sequelize-cli": "^6.6.3"
+  },
+  "overrides": {
+    "uuid": "^11.1.1",
+    "cookie": "0.7.2",
+    "@opentelemetry/core": "^2.8.0",
+    "chokidar": "^4.0.3",
+    "argparse": "^2.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/setup.js"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/routes/"
+    ]
+  }
+}

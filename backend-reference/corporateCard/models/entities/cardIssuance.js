@@ -1,0 +1,73 @@
+'use strict'
+const Sequelize = require('sequelize')
+const sequelizeConfig = require('../../configs/database/index')
+
+const cardIssuance = sequelizeConfig.define(
+    'cardIssuance',
+    {
+        id: { type: Sequelize.BIGINT, primaryKey: true, autoIncrement: true },
+        corporateId: { type: Sequelize.INTEGER, allowNull: true },
+        credentialId: { type: Sequelize.INTEGER, allowNull: true },
+        userId: { type: Sequelize.BIGINT, allowNull: true },
+        externalRequestId: { type: Sequelize.STRING, allowNull: false },
+        externalCardIdentifier: { type: Sequelize.STRING, allowNull: true },
+        cardSchemeId: { type: Sequelize.INTEGER, allowNull: true },
+        cardType: { type: Sequelize.STRING, allowNull: false, defaultValue: 'Virtual' },
+        sourceCardIssuanceId: { type: Sequelize.BIGINT, allowNull: true },
+        cardRequestId: { type: Sequelize.BIGINT, allowNull: true },
+        requestedLimit: { type: Sequelize.DECIMAL(12, 2), allowNull: true },
+        requestReason: { type: Sequelize.TEXT, allowNull: true },
+        status: { type: Sequelize.STRING, allowNull: false, defaultValue: 'PENDING' },
+        orderId: { type: Sequelize.BIGINT, allowNull: true },
+        referenceNumber: { type: Sequelize.BIGINT, allowNull: true },
+        serialNumber: { type: Sequelize.BIGINT, allowNull: true },
+        orderAmount: { type: Sequelize.DECIMAL(12, 2), allowNull: true },
+        maskedCardNumber: { type: Sequelize.STRING, allowNull: true },
+        accountNumber: { type: Sequelize.TEXT, allowNull: true },
+        cardViewLink: { type: Sequelize.TEXT, allowNull: true },
+        nameOnCard: { type: Sequelize.STRING, allowNull: true },
+        rawResponse: { type: Sequelize.TEXT, allowNull: true },
+        lastEventAt: { type: Sequelize.STRING, allowNull: true },
+        reconcileNextAt: { type: Sequelize.DATE, allowNull: true },
+        reconcileAttempts: { type: Sequelize.INTEGER, allowNull: false, defaultValue: 0 },
+        reconcileOutcome: { type: Sequelize.STRING(24), allowNull: true },
+        reconcileLastError: { type: Sequelize.STRING(255), allowNull: true },
+        vendorOrderStatus: { type: Sequelize.INTEGER, allowNull: true },
+        walletNumber: { type: Sequelize.STRING, allowNull: true },
+        walletIdempotencyKey: { type: Sequelize.STRING, allowNull: true },
+        walletLinkIdempotencyKey: { type: Sequelize.STRING, allowNull: true },
+        upiStatus: { type: Sequelize.STRING, allowNull: true },
+        cardLimit: { type: Sequelize.DECIMAL(12, 2), allowNull: true },
+        perTxnLimit: { type: Sequelize.DECIMAL(12, 2), allowNull: true },
+        limitFrequency: { type: Sequelize.STRING, allowNull: true, defaultValue: 'monthly' },
+        atmEnabled: { type: Sequelize.BOOLEAN, allowNull: false, defaultValue: false },
+        restrictedCategories: { type: Sequelize.JSON, allowNull: true },
+        limitUpdatedAt: { type: Sequelize.DATE, allowNull: true },
+        limitUpdatedByCredentialId: { type: Sequelize.INTEGER, allowNull: true },
+        cardState: { type: Sequelize.STRING, allowNull: false, defaultValue: 'ACTIVE' },
+        freezeReason: { type: Sequelize.INTEGER, allowNull: true },
+        freezeReasonNote: { type: Sequelize.STRING(255), allowNull: true },
+        frozenByRole: { type: Sequelize.STRING(20), allowNull: true },
+        stateUpdatedAt: { type: Sequelize.DATE, allowNull: true },
+        stateUpdatedByCredentialId: { type: Sequelize.INTEGER, allowNull: true },
+        shipping: { type: Sequelize.JSON, allowNull: true },
+        purchasePaymentRefId: { type: Sequelize.STRING(64), allowNull: true },
+        trackingRef: { type: Sequelize.STRING, allowNull: true },
+        resetPinLink: { type: Sequelize.TEXT, allowNull: true },
+        // Captured at issuance for the decline notice; the webhook that sends it has no session to look it up.
+        email: { type: Sequelize.STRING, allowNull: true },
+        dispatches: { type: Sequelize.JSON, allowNull: true },
+    },
+    {
+        tableName: 'cardIssuances',
+        indexes: [
+            { fields: ['externalRequestId'], unique: true, name: 'cardIssuances_externalRequestId_unique' },
+            { fields: ['externalCardIdentifier'], unique: true, name: 'cardIssuances_externalCardIdentifier_unique' },
+            { fields: ['userId'], name: 'cardIssuances_userId_idx' },
+            { fields: ['status', 'reconcileNextAt'], name: 'cardIssuances_reconcile_due_idx' },
+            { fields: ['sourceCardIssuanceId'], name: 'cardIssuances_sourceCard_idx' },
+        ],
+    }
+)
+
+module.exports = cardIssuance

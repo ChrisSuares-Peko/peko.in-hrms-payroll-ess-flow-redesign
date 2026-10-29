@@ -1,0 +1,40 @@
+# Use an official Node.js runtime as a base image
+FROM node:20.20.1
+
+# Set the environment variable for the time zone
+ENV TZ=Asia/Kolkata
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Install wkhtmltopdf
+# Debian/Ubuntu based installations, for Alpine use apk add wkhtmltopdf
+RUN apt-get update && apt-get install -y tzdata wkhtmltopdf \
+    # Clean up cache to reduce layer size
+    && apt-get clean && rm -rf /var/lib/apt/lists/* && \
+    ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
+    echo $TZ > /etc/timezone && \
+    dpkg-reconfigure -f noninteractive tzdata
+
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install app dependencies
+RUN npm install
+
+# Bundle app source
+COPY . .
+
+# 2. Create a specific temp directory if your code uses one (e.g., './temp')
+# and ensure the 'node' user owns the entire app directory
+#RUN mkdir -p /usr/src/app/temp && \
+#    chown -R node:node /usr/src/app
+
+# 3. Switch to the non-root user
+#USER node
+
+# Expose the port the 4442 app runs on
+EXPOSE 4450
+
+# Define the command to run your app
+CMD ["npm", "run", "start:prod"]

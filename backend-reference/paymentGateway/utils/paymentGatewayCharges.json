@@ -1,0 +1,63 @@
+{
+    "VISA STANDARD": {
+      "fee": "2.10"
+    },
+    "MASTERCARD/MAESTRO STANDARD": {
+      "fee": "2.10"
+    },
+    "VISA PREMIUM": {
+      "fee": "2.10"
+    },
+    "MASTERCARD PREMIUM": {
+      "fee": "2.10"
+    },
+    "MERCURY": {
+      "fee": "2.10"
+    },
+    "DINERS CLUB/DISCOVER": {
+      "fee": "3.50"
+    },
+    "JCB": {
+      "fee": "2.50"
+    },
+    "UNIONPAY": {
+      "fee": "2.50"
+    },
+    "ALIPAY": {
+      "fee": "2.50"
+    },
+    "WECHAT PAY": {
+      "fee": "2.50"
+    },
+    "MIR": {
+      "fee": "2.50"
+    },
+    "RUPAY": {
+      "fee": "2.50"
+    },
+    "NON-UAE ISSUED CARDS": {
+      "fee": "2.50"
+    },
+    "OTHER CARD SCHEMES": {
+      "fee": "2.50"
+    },
+    "MASTERCARD":{
+      "fee":"2.10"
+    },
+    "VISA":{
+      "fee":"2.10"
+    },
+    "DINERS_CLUB_INTERNATIONAL":{
+      "fee":"3.50"
+    },
+    "DISCOVER":{
+      "fee":"3.50"
+    },
+    "AMERICAN_EXPRESS":{
+      "fee":"2.50"
+    },
+    "DEFAULT":{
+      "fee":"2.50"
+    }
+  }
+  

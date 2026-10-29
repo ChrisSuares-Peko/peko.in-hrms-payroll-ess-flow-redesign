@@ -1,0 +1,233 @@
+{
+  "billavenue": {
+    "accessKey": "billavenue",
+    "category": "Bill Payments",
+    "type": "Bill Payments"
+  },
+  "globalBusinessSetup": {
+    "accessKey": "global_business_setup",
+    "category": "Global Business Setup",
+    "type": "Global Business Setup"
+  },
+  "postpaid": {
+    "accessKey": "bbps_telecom_postpaid",
+    "category": "Telecom Payments",
+    "type": "Telecom Payments"
+  },
+  "prepaid": {
+    "accessKey": "REDACTED",
+    "category": "Telecom Payments",
+    "type": "Telecom Payments"
+  },
+  "broadband": {
+    "accessKey": "bbps_utility_broadband",
+    "category": "Utility Payments",
+    "type": "Broadband"
+  },
+  "education": {
+    "accessKey": "bbps_utility_education",
+    "category": "Utility Payments",
+    "type": "Education Fees"
+  },
+  "electricity": {
+    "accessKey": "bbps_utility_electricity",
+    "category": "Utility Payments",
+    "type": "Electricity"
+  },
+  "landline": {
+    "accessKey": "bbps_utility_landline",
+    "category": "Utility Payments",
+    "type": "Landline"
+  },
+  "lpg": {
+    "accessKey": "bbps_utility_lpg",
+    "category": "Utility Payments",
+    "type": "LPG Cylinder"
+  },
+  "pipedGas": {
+    "accessKey": "bbps_utility_pipedgas",
+    "category": "Utility Payments",
+    "type": "Piped Gas"
+  },
+  "water": {
+    "accessKey": "bbps_utility_water",
+    "category": "Utility Payments",
+    "type": "Water"
+  },
+  "flight": {
+    "accessKey": "tbo_airline",
+    "category": "Travel"
+  },
+  "hotel": {
+    "accessKey": "hotels_api",
+    "category": "Travel"
+  },
+  "e-commerce": {
+    "accessKey": "ecommerce",
+    "category": "Office Supplies"
+  },
+  "logistics": {
+    "accessKey": "shipment_services",
+    "category": "Shipment Services"
+  },
+  "legalService": {
+    "accessKey": "legal_service",
+    "category": "Others"
+  },
+  "subscription": {
+    "accessKey": "subscription_payments",
+    "category": "Subscriptions"
+  },
+  "giftCard": {
+    "accessKey": "quickcilver",
+    "category": "Gift Cards/Vouchers"
+  },
+  "workspace": {
+    "accessKey": "workspace",
+    "category": "Office Address"
+  },
+  "carbonFootprints": {
+    "accessKey": "carbon_footprint",
+    "category": "Others"
+  },
+  "leadGeneration": {
+    "accessKey": "lead_generator"
+  },
+  "paymentlink": {
+    "accessKey": "payment_links"
+  },
+  "verificationSuite": {
+    "accessKey": "verification_suite",
+    "category": "Verification Suite",
+    "type": "Verification Suite"
+  },
+  "bankAccount": {
+    "accessKey": "bank_account_verify",
+    "category": "Verification Suite",
+    "type": "Bank Account"
+  },
+  "ifsc": {
+    "accessKey": "ifsc_verify",
+    "category": "Verification Suite",
+    "type": "IFSC"
+  },
+  "pan": {
+    "accessKey": "pan_verify",
+    "category": "Verification Suite",
+    "type": "PAN"
+  },
+  "aadhaarOCR": {
+    "accessKey": "aadhar_ocr_verify",
+    "category": "Verification Suite",
+    "type": "Aadhaar OCR"
+  },
+  "advancePAN": {
+    "accessKey": "advance_pan_verify",
+    "category": "Verification Suite",
+    "type": "Advance PAN"
+  },
+  "drivingLicense": {
+    "accessKey": "dl_verify",
+    "category": "Verification Suite",
+    "type": "Driving License"
+  },
+  "passport": {
+    "accessKey": "passport_verify",
+    "category": "Verification Suite",
+    "type": "Passport"
+  },
+  "voterId": {
+    "accessKey": "voter_id_verify",
+    "category": "Verification Suite",
+    "type": "Voter ID"
+  },
+  "cin": {
+    "accessKey": "cin_verify",
+    "category": "Verification Suite",
+    "type": "CIN"
+  },
+  "gstin": {
+    "accessKey": "gstin_verify",
+    "category": "Verification Suite",
+    "type": "GSTIN"
+  },
+  "gstinBusiness": {
+    "accessKey": "gst_business_verify",
+    "category": "Verification Suite",
+    "type": "GSTIN Business"
+  },
+  "gstinComplianceCheck": {
+    "accessKey": "gst_return_check",
+    "category": "Verification Suite",
+    "type": "GSTIN Return Compliance Check"
+  },
+  "panGstin": {
+    "accessKey": "gstin_pan",
+    "category": "Verification Suite",
+    "type": "Fetch GSTIN from PAN"
+  },
+  "aadharVerify": {
+    "accessKey": "aadhar_verify",
+    "category": "Verification Suite",
+    "type": "Aadhaar OKYC"
+  },
+  "corporateVerify": {
+    "accessKey": "corporate_verify",
+    "category": "Verification Suite",
+    "type": "CIN"
+  },
+  "directorCIN": {
+    "accessKey": "director_verify_cin",
+    "category": "Verification Suite",
+    "type": "Director's CIN"
+  },
+  "directorDIN": {
+    "accessKey": "director_verify_din",
+    "category": "Verification Suite",
+    "type": "Director's DIN"
+  },
+  "garage": {
+    "accessKey": "peko_garage",
+    "category": "Turbo"
+  },
+  "carReport": {
+    "accessKey": "car_report",
+    "category": "Turbo",
+    "type": "Car Report"
+  },
+  "eSign": {
+    "accessKey": "REDACTED",
+    "category": "eSign"
+  },
+  "whatsAppForBusiness": {
+    "accessKey": "REDACTED"
+  },
+  "domainAndHosting": {
+    "accessKey": "domain_and_hosting",
+    "category": "Domain and Hosting"
+  },
+  "cashFreePaymentGateway": {
+    "accessKey": "cashfree_pg"
+  },
+  "razorpayPaymentGateway": {
+    "accessKey": "razorpay_pg"
+  },
+  "mswipePaymentGateway": {
+    "accessKey": "mswipe_pg"
+  },
+  "cashFreeSubscriptions": {
+    "accessKey": "cashfree_subscriptions"
+  },
+  "eInvoice": {
+    "accessKey": "alankit_einvoice",
+    "category": "Invoicing"
+  },
+  "accounting": {
+    "accessKey": "accounting",
+    "category": "Accounting"
+  },
+  "accountingInsights": {
+    "accessKey": "accounting_insights",
+    "category": "Accounting"
+  }
+}

@@ -3,3 +3,5 @@
 **/out/*
 **/.next/*
 next.config.js
+# PROTOTYPE-SETUP: backend-reference is read-only backend source, not linted with the frontend
+backend-reference/

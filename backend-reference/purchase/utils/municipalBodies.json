@@ -1,0 +1,305 @@
+{
+  "Andhra Pradesh": [
+    "Greater Visakhapatnam Municipal Corporation (GVMC)",
+    "Vijayawada Municipal Corporation (VMC)",
+    "Guntur Municipal Corporation",
+    "Tirupati Municipal Corporation",
+    "Kurnool Municipal Corporation",
+    "Rajahmundry Municipal Corporation",
+    "Kadapa Municipal Corporation",
+    "Nellore Municipal Corporation",
+    "Eluru Municipal Corporation",
+    "Anantapur Municipal Corporation"
+  ],
+  "Arunachal Pradesh": [
+    "Itanagar Municipal Council",
+    "Naharlagun Town Committee"
+  ],
+  "Assam": [
+    "Guwahati Municipal Corporation (GMC)",
+    "Dibrugarh Municipal Board",
+    "Jorhat Municipal Board",
+    "Silchar Municipal Board",
+    "Tinsukia Municipal Board",
+    "Nagaon Municipal Board",
+    "Tezpur Municipal Board"
+  ],
+  "Bihar": [
+    "Patna Municipal Corporation (PMC)",
+    "Gaya Municipal Corporation",
+    "Bhagalpur Municipal Corporation",
+    "Muzaffarpur Municipal Corporation",
+    "Darbhanga Municipal Corporation",
+    "Begusarai Municipal Corporation",
+    "Bihar Sharif Municipal Corporation",
+    "Munger Municipal Corporation",
+    "Purnia Municipal Corporation",
+    "Arrah Municipal Corporation"
+  ],
+  "Chhattisgarh": [
+    "Raipur Municipal Corporation (RMC)",
+    "Bhilai Municipal Corporation",
+    "Durg Municipal Corporation",
+    "Bilaspur Municipal Corporation",
+    "Rajnandgaon Municipal Corporation",
+    "Korba Municipal Corporation",
+    "Raigarh Municipal Corporation",
+    "Jagdalpur Municipal Corporation"
+  ],
+  "Delhi": [
+    "Municipal Corporation of Delhi (MCD)",
+    "New Delhi Municipal Council (NDMC)",
+    "Delhi Cantonment Board"
+  ],
+  "Goa": [
+    "Corporation of the City of Panaji",
+    "Margao Municipal Council",
+    "Vasco-da-Gama Municipal Council",
+    "Mapusa Municipal Council",
+    "Ponda Municipal Council"
+  ],
+  "Gujarat": [
+    "Ahmedabad Municipal Corporation (AMC)",
+    "Surat Municipal Corporation (SMC)",
+    "Vadodara Municipal Corporation (VMC)",
+    "Rajkot Municipal Corporation (RMC)",
+    "Bhavnagar Municipal Corporation",
+    "Jamnagar Municipal Corporation",
+    "Junagadh Municipal Corporation",
+    "Gandhinagar Municipal Corporation",
+    "Anand Municipal Corporation",
+    "Nadiad Municipal Corporation",
+    "Mehsana Municipal Corporation",
+    "Morbi Municipal Corporation"
+  ],
+  "Haryana": [
+    "Faridabad Municipal Corporation",
+    "Gurugram Municipal Corporation",
+    "Panchkula Municipal Corporation",
+    "Ambala Municipal Corporation",
+    "Hisar Municipal Corporation",
+    "Rohtak Municipal Corporation",
+    "Karnal Municipal Corporation",
+    "Panipat Municipal Corporation",
+    "Yamunanagar Municipal Corporation",
+    "Sonipat Municipal Corporation"
+  ],
+  "Himachal Pradesh": [
+    "Shimla Municipal Corporation",
+    "Dharamshala Municipal Corporation",
+    "Solan Municipal Corporation",
+    "Mandi Municipal Council",
+    "Palampur Municipal Council"
+  ],
+  "Jammu & Kashmir": [
+    "Srinagar Municipal Corporation (SMC)",
+    "Jammu Municipal Corporation (JMC)",
+    "Anantnag Municipal Committee",
+    "Baramulla Municipal Committee",
+    "Sopore Municipal Committee",
+    "Pulwama Municipal Committee",
+    "Udhampur Municipal Committee",
+    "Kathua Municipal Committee"
+  ],
+  "Jharkhand": [
+    "Ranchi Municipal Corporation (RMC)",
+    "Dhanbad Municipal Corporation",
+    "Jamshedpur Notified Area Committee (JNAC)",
+    "Bokaro Steel City Municipal Corporation",
+    "Deoghar Municipal Corporation",
+    "Hazaribagh Municipal Corporation",
+    "Giridih Municipal Corporation"
+  ],
+  "Karnataka": [
+    "Bruhat Bengaluru Mahanagara Palike (BBMP)",
+    "Mysuru City Corporation (MCC)",
+    "Hubballi-Dharwad Municipal Corporation",
+    "Belagavi City Corporation",
+    "Mangaluru City Corporation",
+    "Kalaburagi Municipal Corporation",
+    "Davanagere City Municipal Council",
+    "Shivamogga City Municipal Council",
+    "Tumakuru City Municipal Council",
+    "Vijayapura City Municipal Council",
+    "Ballari City Municipal Council"
+  ],
+  "Kerala": [
+    "Thiruvananthapuram Corporation",
+    "Kochi Corporation (Cochin)",
+    "Kozhikode Corporation (Calicut)",
+    "Thrissur Corporation",
+    "Kollam Corporation",
+    "Kannur Corporation",
+    "Malappuram Municipality",
+    "Palakkad Municipality",
+    "Alappuzha Municipality",
+    "Kottayam Municipality"
+  ],
+  "Ladakh": [
+    "Leh Municipal Committee",
+    "Kargil Municipal Committee"
+  ],
+  "Lakshadweep": [
+    "Kavaratti Town Panchayat"
+  ],
+  "Madhya Pradesh": [
+    "Bhopal Municipal Corporation",
+    "Indore Municipal Corporation",
+    "Jabalpur Municipal Corporation",
+    "Gwalior Municipal Corporation",
+    "Ujjain Municipal Corporation",
+    "Rewa Municipal Corporation",
+    "Sagar Municipal Corporation",
+    "Satna Municipal Corporation",
+    "Dewas Municipal Corporation",
+    "Ratlam Municipal Corporation",
+    "Singrauli Municipal Corporation"
+  ],
+  "Maharashtra": [
+    "Municipal Corporation of Greater Mumbai (MCGM / BMC)",
+    "Pune Municipal Corporation (PMC)",
+    "Nagpur Municipal Corporation (NMC)",
+    "Thane Municipal Corporation (TMC)",
+    "Navi Mumbai Municipal Corporation (NMMC)",
+    "Pimpri-Chinchwad Municipal Corporation (PCMC)",
+    "Nashik Municipal Corporation",
+    "Aurangabad (Chhatrapati Sambhajinagar) Municipal Corporation",
+    "Solapur Municipal Corporation",
+    "Kolhapur Municipal Corporation",
+    "Amravati Municipal Corporation",
+    "Vasai-Virar Municipal Corporation",
+    "Mira-Bhayandar Municipal Corporation",
+    "Ulhasnagar Municipal Corporation",
+    "Latur Municipal Corporation",
+    "Nanded Municipal Corporation",
+    "Sangli-Miraj-Kupwad Municipal Corporation"
+  ],
+  "Manipur": [
+    "Imphal Municipal Council",
+    "Churachandpur Municipal Council",
+    "Thoubal Municipal Council"
+  ],
+  "Meghalaya": [
+    "Shillong Municipal Board",
+    "Tura Municipal Board"
+  ],
+  "Mizoram": [
+    "Aizawl Municipal Council",
+    "Lunglei Municipal Council"
+  ],
+  "Nagaland": [
+    "Kohima Municipal Council",
+    "Dimapur Municipal Council"
+  ],
+  "Odisha": [
+    "Bhubaneswar Municipal Corporation (BMC)",
+    "Cuttack Municipal Corporation (CMC)",
+    "Berhampur Municipal Corporation",
+    "Sambalpur Municipal Corporation",
+    "Rourkela Municipal Corporation",
+    "Puri Municipal Corporation",
+    "Brahmapur Municipal Corporation"
+  ],
+  "Puducherry": [
+    "Puducherry Municipality",
+    "Karaikal Municipality",
+    "Mahé Municipality",
+    "Yanam Municipality"
+  ],
+  "Punjab": [
+    "Municipal Corporation Ludhiana",
+    "Municipal Corporation Amritsar",
+    "Municipal Corporation Jalandhar",
+    "Municipal Corporation Patiala",
+    "Municipal Corporation Bathinda",
+    "Municipal Corporation Mohali (SAS Nagar)",
+    "Municipal Corporation Pathankot",
+    "Municipal Corporation Hoshiarpur"
+  ],
+  "Rajasthan": [
+    "Jaipur Municipal Corporation (Greater & Heritage)",
+    "Jodhpur Municipal Corporation (North & South)",
+    "Kota Municipal Corporation",
+    "Bikaner Municipal Corporation",
+    "Ajmer Municipal Corporation",
+    "Udaipur Municipal Corporation",
+    "Bhilwara Municipal Corporation",
+    "Alwar Municipal Corporation",
+    "Bharatpur Municipal Corporation",
+    "Sikar Municipal Corporation"
+  ],
+  "Sikkim": [
+    "Gangtok Municipal Corporation",
+    "Namchi Municipal Corporation",
+    "Gyalshing Municipal Corporation",
+    "Mangan Municipal Corporation"
+  ],
+  "Tamil Nadu": [
+    "Greater Chennai Corporation (GCC)",
+    "Coimbatore City Municipal Corporation",
+    "Madurai City Municipal Corporation",
+    "Tiruchirappalli City Municipal Corporation",
+    "Salem City Municipal Corporation",
+    "Tirunelveli City Municipal Corporation",
+    "Vellore City Municipal Corporation",
+    "Erode City Municipal Corporation",
+    "Tiruppur City Municipal Corporation",
+    "Thoothukudi Municipal Corporation",
+    "Dindigul Municipal Corporation",
+    "Kancheepuram Municipal Corporation",
+    "Hosur Municipal Corporation"
+  ],
+  "Telangana": [
+    "Greater Hyderabad Municipal Corporation (GHMC)",
+    "Warangal Municipal Corporation",
+    "Karimnagar Municipal Corporation",
+    "Nizamabad Municipal Corporation",
+    "Khammam Municipal Corporation",
+    "Ramagundam Municipal Corporation",
+    "Mahbubnagar Municipal Corporation",
+    "Nalgonda Municipal Corporation"
+  ],
+  "Tripura": [
+    "Agartala Municipal Corporation",
+    "Dharmanagar Municipal Council",
+    "Udaipur Municipal Council"
+  ],
+  "Uttar Pradesh": [
+    "Lucknow Municipal Corporation (LMC)",
+    "Kanpur Nagar Municipal Corporation",
+    "Agra Municipal Corporation",
+    "Varanasi Municipal Corporation (Nagar Nigam)",
+    "Prayagraj Municipal Corporation",
+    "Ghaziabad Municipal Corporation",
+    "Meerut Municipal Corporation",
+    "Bareilly Municipal Corporation",
+    "Aligarh Municipal Corporation",
+    "Moradabad Municipal Corporation",
+    "Saharanpur Municipal Corporation",
+    "Gorakhpur Municipal Corporation",
+    "Firozabad Municipal Corporation",
+    "Mathura-Vrindavan Municipal Corporation",
+    "Ayodhya Municipal Corporation",
+    "Noida — Gautam Buddha Nagar Municipal Corporation"
+  ],
+  "Uttarakhand": [
+    "Dehradun Municipal Corporation (Nagar Nigam)",
+    "Haridwar Municipal Corporation",
+    "Haldwani Municipal Corporation",
+    "Roorkee Municipal Corporation",
+    "Rishikesh Municipal Corporation",
+    "Kashipur Municipal Corporation"
+  ],
+  "West Bengal": [
+    "Kolkata Municipal Corporation (KMC)",
+    "Howrah Municipal Corporation",
+    "Asansol Municipal Corporation",
+    "Siliguri Municipal Corporation",
+    "Chandannagore Municipal Corporation",
+    "Durgapur Municipal Corporation",
+    "Bidhan Nagar Municipal Corporation",
+    "Barrackpore Municipal Corporation",
+    "Burdwan (Purba Bardhaman) Municipality",
+    "Darjeeling Municipality"
+  ]
+}

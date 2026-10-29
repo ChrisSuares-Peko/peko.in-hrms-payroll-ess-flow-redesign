@@ -1,0 +1,342 @@
+{
+  "postpaid": {
+    "accessKey": "bbps_telecom_postpaid",
+    "category": "Telecom Payments",
+    "type": "Telecom Payments"
+  },
+  "prepaid": {
+    "accessKey": "REDACTED",
+    "category": "Telecom Payments",
+    "type": "Telecom Payments"
+  },
+  "mobileRechargeTest": {
+    "accessKey": "bbps_telecom_otme",
+    "category": "Telecom Payments"
+  },
+  "broadband": {
+    "accessKey": "bbps_utility_broadband",
+    "category": "Utility Payments",
+    "type": "Broadband"
+  },
+  "education": {
+    "accessKey": "bbps_utility_education",
+    "category": "Utility Payments",
+    "type": "Education Fees"
+  },
+  "electricity": {
+    "accessKey": "bbps_utility_electricity",
+    "category": "Utility Payments",
+    "type": "Electricity"
+  },
+  "landline": {
+    "accessKey": "bbps_utility_landline",
+    "category": "Utility Payments",
+    "type": "Landline"
+  },
+  "lpg": {
+    "accessKey": "bbps_utility_lpg",
+    "category": "Utility Payments",
+    "type": "LPG Cylinder"
+  },
+  "pipedGas": {
+    "accessKey": "bbps_utility_pipedgas",
+    "category": "Utility Payments",
+    "type": "Piped Gas"
+  },
+  "water": {
+    "accessKey": "bbps_utility_water",
+    "category": "Utility Payments",
+    "type": "Water"
+  },
+  "cableRecharge": {
+    "accessKey": "bbps_utility_cable",
+    "category": "Utility Payments"
+  },
+  "dthRecharge": {
+    "accessKey": "bbps_utility_dth",
+    "category": "Utility Payments"
+  },
+  "fastagRecharge": {
+    "accessKey": "bbps_utility_fastag",
+    "category": "Utility Payments"
+  },
+  "challan": {
+    "accessKey": "droom_traffic_challan",
+    "category": "Utility Payments"
+  },
+  "creditCard": {
+    "accessKey": "REDACTED",
+    "category": "Utility Payments"
+  },
+  "billInsurance": {
+    "accessKey": "bbps_insurance",
+    "category": "Insurance Payments"
+  },
+  "lifeInsurance": {
+    "accessKey": "bbps_insurance_life",
+    "category": "Insurance Payments"
+  },
+  "bikeInsurance": {
+    "accessKey": "bbps_insurance_bike",
+    "category": "Insurance Payments"
+  },
+  "carInsurance": {
+    "accessKey": "bbps_insurance_car",
+    "category": "Insurance Payments"
+  },
+  "loanRepayment": {
+    "accessKey": "REDACTED",
+    "category": "Financial Payments"
+  },
+  "municipalTaxes": {
+    "accessKey": "REDACTED",
+    "category": "Financial Payments"
+  },
+  "municipalServices": {
+    "accessKey": "REDACTED",
+    "category": "Financial Payments"
+  },
+  "recurringDeposit": {
+    "accessKey": "bbps_financial_deposite",
+    "category": "Financial Payments"
+  },
+  "rental": {
+    "accessKey": "bbps_financial_rental",
+    "category": "Financial Payments"
+  },
+  "donations": {
+    "accessKey": "bbps_financial_donations",
+    "category": "Financial Payments"
+  },
+  "clubsAssociations": {
+    "accessKey": "bbps_other_clubs",
+    "category": "Other Payments"
+  },
+  "hospitalPathology": {
+    "accessKey": "bbps_other_hospitals",
+    "category": "Other Payments"
+  },
+  "bbpsSubscription": {
+    "accessKey": "bbps_other_subscription",
+    "category": "Other Payments"
+  },
+  "ncmc": {
+    "accessKey": "bbps_other_ncmc",
+    "category": "Other Payments"
+  },
+  "nps": {
+    "accessKey": "bbps_other_nps",
+    "category": "Other Payments"
+  },
+  "prepaidMeter": {
+    "accessKey": "REDACTED",
+    "category": "Other Payments"
+  },
+  "housingSociety": {
+    "accessKey": "REDACTED",
+    "category": "Other Payments"
+  },
+  "complaintRegistration": {
+    "accessKey": "bbps_complaint_register",
+    "category": "Other Payments"
+  },
+  "flight": {
+    "accessKey": "tbo_airline",
+    "category": "Travel"
+  },
+  "hotel": {
+    "accessKey": "hotels_api",
+    "category": "Travel"
+  },
+  "esim": {
+    "accessKey": "esim",
+    "category": "Travel"
+  },
+  "bus": {
+    "accessKey": "bus_tickets",
+    "category": "Travel"
+  },
+  "e-commerce": {
+    "accessKey": "ecommerce",
+    "category": "Office Supplies"
+  },
+  "logistics": {
+    "accessKey": "shipment_services",
+    "category": "Shipment Services"
+  },
+  "legalService": {
+    "accessKey": "legal_service",
+    "category": "Others"
+  },
+  "subscription": {
+    "accessKey": "subscription_payments",
+    "category": "Subscriptions"
+  },
+  "giftCard": {
+    "accessKey": "quickcilver",
+    "category": "Gift Cards/Vouchers"
+  },
+  "workspace": {
+    "accessKey": "workspace",
+    "category": "Office Address"
+  },
+  "carbonFootprints": {
+    "accessKey": "carbon_footprint",
+    "category": "Others"
+  },
+  "turbo": {
+    "accessKey": "peko_garage",
+    "category": "Others"
+  },
+  "eSign": {
+    "accessKey": "REDACTED",
+    "category": "Others"
+  },
+  "pekoWallet": {
+    "accessKey": "peko_wallet",
+    "category": "Others"
+  },
+  "payroll": {
+    "accessKey": "peko_payroll",
+    "category": "Others"
+  },
+  "domainHosting": {
+    "accessKey": "domain_and_hosting",
+    "category": "Others"
+  },
+  "documentAttestation": {
+    "accessKey": "document_attestation",
+    "category": "Others"
+  },
+  "businessDocs": {
+    "accessKey": "edocs",
+    "category": "Others"
+  },
+  "paymentLinks": {
+    "accessKey": "quick_links",
+    "category": "Others"
+  },
+  "procure": {
+    "accessKey": "procure",
+    "category": "Others"
+  },
+  "payout": {
+    "accessKey": "vendor_payouts",
+    "category": "Others"
+  },
+  "pekoWorks": {
+    "accessKey": "peko_works",
+    "category": "Others"
+  },
+  "connect": {
+    "accessKey": "peko_connect",
+    "category": "Others"
+  },
+  "hike": {
+    "accessKey": "hike_service",
+    "category": "Others"
+  },
+  "businessEmails": {
+    "accessKey": "email_domain_service",
+    "category": "Others"
+  },
+  "invoicing": {
+    "accessKey": "invoices",
+    "category": "Others"
+  },
+  "whatsAppBusiness": {
+    "accessKey": "REDACTED",
+    "category": "Others"
+  },
+  "hub": {
+    "accessKey": "pekoCloud",
+    "category": "Others"
+  },
+  "ecommerceStore": {
+    "accessKey": "ecommerce_store",
+    "category": "Others"
+  },
+  "pekoPos": {
+    "accessKey": "peko_pos",
+    "category": "Others"
+  },
+  "companyIncorporation": {
+    "accessKey": "company_incorporation",
+    "category": "Corporate Services"
+  },
+  "businessRegistration": {
+    "accessKey": "business_registration",
+    "category": "Corporate Services"
+  },
+  "sales": {
+    "accessKey": "sales",
+    "category": "Other"
+  },
+  "compliance": {
+    "accessKey": "compliance",
+    "category": "Others"
+  },
+  "globalBusinessSetup": {
+    "accessKey": "global_business_setup",
+    "category": "Global Business Setup"
+  },
+  "corporateCards": {
+    "accessKey": "corporate_cards",
+    "category": "Corporate Cards",
+    "type": "Corporate Cards"
+  },
+  "verificationSuite": {
+    "accessKey": "verification_suite",
+    "category": "Verification Suite"
+  },
+  "panVerify": {
+    "accessKey": "pan_verify",
+    "category": "Verification Suite",
+    "type": "PAN Verification"
+  },
+  "aadharVerify": {
+    "accessKey": "aadhar_verify",
+    "category": "Verification Suite",
+    "type": "Aadhaar OKYC Verification"
+  },
+  "bankAccountVerify": {
+    "accessKey": "bank_account_verify",
+    "category": "Verification Suite",
+    "type": "Bank Account Verification"
+  },
+  "gstReturnCheck": {
+    "accessKey": "gst_return_check",
+    "category": "Verification Suite",
+    "type": "GST Return Compliance Check"
+  },
+  "gstinVerify": {
+    "accessKey": "gstin_verify",
+    "category": "Verification Suite",
+    "type": "GSTIN Verification"
+  },
+  "gstinPan": {
+    "accessKey": "gstin_pan",
+    "category": "Verification Suite",
+    "type": "Fetch GSTIN from PAN"
+  },
+  "gstBusinessVerify": {
+    "accessKey": "gst_business_verify",
+    "category": "Verification Suite",
+    "type": "GST Business Verification"
+  },
+  "corporateVerify": {
+    "accessKey": "corporate_verify",
+    "category": "Verification Suite",
+    "type": "Corporate Entity Verification"
+  },
+  "directorVerifyCin": {
+    "accessKey": "director_verify_cin",
+    "category": "Verification Suite",
+    "type": "Director Verification (CIN-based)"
+  },
+  "directorVerifyDin": {
+    "accessKey": "director_verify_din",
+    "category": "Verification Suite",
+    "type": "Director Verification (DIN-based)"
+  }
+}

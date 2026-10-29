@@ -1,0 +1,137 @@
+trigger:
+  branches:
+   include: 
+    - staging
+  paths:
+    include:
+      - users/*
+resources:
+- repo: self
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  # Local pipeline variables
+  - name: GOOGLE_CLOUD_PROJECT
+    value: 'peko-in-uat-484407'
+  - name: GCP_REGION
+    value: 'asia-south1'
+  - name: GCP_ARTIFACT_REPOSITORY
+    value: 'uatinrepository'
+  - name: IMAGE_NAME
+    value: 'users'
+  - name: IMAGE_TAG
+    value: '$(Build.BuildId)'
+  - name: CONTEXT_PATH
+    value: 'users'
+  - name: DOCKERFILE_PATH
+    value: 'users/dockerfile' 
+  - name: SERVICE_NAME
+    value: 'users'
+  - name: SUBNET_NAME
+    value: 'subnet-peko-uat-as1-apps'
+  - name: VNET_NAME
+    value: 'vpc-peko-uat-as1'
+  - name: SERVICE_PORT
+    value: '4445'
+  - name: ENV_FILE
+    value: 'staging-config.yaml'
+
+  # Link Global Variables
+  - group: NEO-UAT-PEKO-IN-CODE-ENV
+  #- group: special
+
+steps:
+- task: DownloadSecureFile@1
+  name: gcpKey
+  inputs:
+    secureFile: 'peko-in-uat-sa.json'  # Replace with the name of your secure file in Azure DevOps
+
+
+- script: |
+    echo "Authenticating with Google Cloud"
+    gcloud auth activate-service-account --key-file=$(gcpKey.secureFilePath)
+    gcloud config set project $(GOOGLE_CLOUD_PROJECT)
+    gcloud auth configure-docker --quiet
+    gcloud auth configure-docker asia-south1-docker.pkg.dev --quiet
+  displayName: 'Authenticate with Google Cloud'
+
+- script: |
+    echo "Checking Google Cloud Authentication"
+    gcloud auth list
+    gcloud config list
+  displayName: 'Verify Google Cloud Authentication'
+
+- script: |
+    echo "Checking if the Artifact Registry repository exists"
+    if ! gcloud artifacts repositories describe $(GCP_ARTIFACT_REPOSITORY) --location=$(GCP_REGION); then
+      echo "Repository not found. Quitting..."
+      exit 1
+    else
+      echo "Repository already exists."
+    fi
+  displayName: 'Ensure Artifact Registry Repository Exists'
+
+- script: |
+    echo "Uploading artifact to Google Artifact Registry"
+    # Replace the following with your actual commands to build and push the artifact
+    # Example for Docker image upload:
+    docker build -t $(GCP_REGION)-docker.pkg.dev/$(GOOGLE_CLOUD_PROJECT)/$(GCP_ARTIFACT_REPOSITORY)/$(IMAGE_NAME):$(IMAGE_TAG) -f $(DOCKERFILE_PATH) $(CONTEXT_PATH)
+    docker push $(GCP_REGION)-docker.pkg.dev/$(GOOGLE_CLOUD_PROJECT)/$(GCP_ARTIFACT_REPOSITORY)/$(IMAGE_NAME):$(IMAGE_TAG)
+  displayName: 'Upload Artifact to Google Artifact Registry'
+  
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      echo "Prepare Env and Deploy to Google Cloud Run"
+      # 1. Create the temporary YAML file
+      # We look for anything starting with 'GCP_' and turn it into 'KEY: "VALUE"'
+      # Using double quotes protects against special characters in passwords.
+      printenv | grep '^CFGUAT_' | sed -E 's/^CFGUAT_//' | sed -E "s/([^=]+)=(.*)/\1: '\2'/" > $ENV_FILE
+
+      # 2. Check if the file is empty (safety check)
+      if [ ! -s $ENV_FILE ]; then
+        echo "Error: No variables with prefix CFGUAT_ found. Deployment aborted."
+        exit 1
+      fi
+
+      # 3. Deploy using the file
+      # Note: This will overwrite ALL existing env vars on the service.
+      gcloud run deploy $(SERVICE_NAME) \
+        --image=$(GCP_REGION)-docker.pkg.dev/$(GOOGLE_CLOUD_PROJECT)/$(GCP_ARTIFACT_REPOSITORY)/$(IMAGE_NAME):$(IMAGE_TAG) \
+        --platform managed \
+        --port=$(SERVICE_PORT) \
+        --network=$(VNET_NAME) \
+        --subnet=$(SUBNET_NAME) \
+        --region $(GCP_REGION) \
+        --allow-unauthenticated \
+        --env-vars-file $ENV_FILE \
+        --min-instances 1  
+  env:
+    # --- MAP YOUR LIBRARY VARIABLES HERE ---
+    # Locked/Secret variables MUST be listed here to be visible to the script.
+    API_KEY: $(API_KEY)
+    APP_ID: $(APP_ID)
+    AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
+    AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)
+    DATABASE_PASSWORD: $(DATABASE_PASSWORD)
+    ELASTICSEARCH_PASSWORD: $(ELASTICSEARCH_PASSWORD)
+    KMS_KEY_ID: $(KMS_KEY_ID)
+    LOGTAIL_SOURCE_TOKEN: $(LOGTAIL_SOURCE_TOKEN)
+    REDIS_PASSWORD: $(REDIS_PASSWORD)
+  displayName: 'Prepare Env and Deploy to Cloud Run'
+
+
+- script: |
+    echo "Cleaning up old images in Google Artifact Registry"
+    # Get the list of images sorted by creation time (oldest first), skip the latest two, and delete the rest
+    IMAGES=$(gcloud artifacts docker images list $(GCP_REGION)-docker.pkg.dev/$(GOOGLE_CLOUD_PROJECT)/$(GCP_ARTIFACT_REPOSITORY)/$(IMAGE_NAME) \
+      --format="value(digest)" --sort-by="~updateTime" | tail -n +3)
+    
+    for DIGEST in $IMAGES; do
+      echo "Deleting image with digest: $DIGEST"
+      gcloud artifacts docker images delete $(GCP_REGION)-docker.pkg.dev/$(GOOGLE_CLOUD_PROJECT)/$(GCP_ARTIFACT_REPOSITORY)/$(IMAGE_NAME)@$DIGEST --quiet
+    done
+  displayName: 'Delete Old Images in Google Artifact Registry'

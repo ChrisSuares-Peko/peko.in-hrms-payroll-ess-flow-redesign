@@ -1,0 +1,31 @@
+/* media query for the paggination on the small screen Start  */
+@media only screen and (max-width:575px) {
+  div.dataTables_wrapper div.dataTables_paginate .paginate_button.next:before {
+    content: none;
+  }
+
+  div.dataTables_wrapper div.dataTables_paginate .paginate_button.previous:before {
+    content: none;
+  }
+  div.dataTables_wrapper div.dataTables_paginate .paginate_button.previous{
+    font-size: 15px;
+  }
+  div.dataTables_wrapper div.dataTables_paginate .paginate_button.next{
+    font-size: 15px;
+  }
+}
+
+/* media query for the paggination on the small screen End  */
+
+/* Media query for the footer */
+@media only screen and (min-width: 975px) {
+    .footer {
+        margin-left: 250px;
+    }
+}
+   @media only screen and (max-width: 974px) {
+    .footer {
+        margin-left: 10px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,88 @@
+{
+  "name": "peko_payroll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start:dev": "dotenvx run -f .env.local -- nodemon src/index.js",
+    "start": "dotenvx run -f .env.${NODE_ENV} -- node src/index.js",
+    "start:prod": "dotenvx run -f .env.${NODE_ENV} -- node src/index.js",
+    "lint": "npx eslint .",
+    "test": "jest --detectOpenHandles"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-kms": "^3.934.0",
+    "@aws-sdk/client-s3": "^3.934.0",
+    "@dotenvx/dotenvx": "^2.14.0",
+    "@elastic/elasticsearch": "^8.14.0",
+    "@logtail/node": "^0.4.21",
+    "@logtail/winston": "^0.4.23",
+    "@sendgrid/mail": "^8.1.6",
+    "async": "^3.2.5",
+    "axios": "^1.20.0",
+    "body-parser": "^1.20.1",
+    "bull": "^4.16.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "exceljs": "^3.4.0",
+    "express": "^4.18.2",
+    "firebase-admin": "^13.10.0",
+    "fs": "*",
+    "helmet": "^7.1.0",
+    "ioredis": "^5.10.1",
+    "joi": "^17.13.8",
+    "mockdate": "^3.0.5",
+    "moment": "^2.31.0",
+    "mongoose": "^8.0.3",
+    "morgan": "^1.12.1",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^10.0.14",
+    "redis": "^5.12.1",
+    "util": "^0.12.5",
+    "uuid": "^14.0.0",
+    "winston": "^3.13.0",
+    "winston-elasticsearch": "^0.19.0",
+    "winston-loki": "^6.1.2",
+    "wkhtmltopdf": "^0.4.0"
+  },
+  "devDependencies": {
+    "@types/multer": "^1.4.11",
+    "eslint": "^8.56.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jest": "^29.16.6",
+    "jest": "^30.5.2",
+    "nodemon": "^3.0.3",
+    "supertest": "^7.0.0"
+  },
+  "overrides": {
+    "undici": "^6.28.1",
+    "@fastify/busboy": "^3.2.2",
+    "@grpc/grpc-js": "^1.14.5",
+    "brace-expansion@5": "^5.0.12",
+    "cookie": "^0.7.0",
+    "http-proxy-agent": "^7.0.2",
+    "protobufjs": "^7.6.3",
+    "js-yaml": "^4.3.2",
+    "uuid": "^14.0.0",
+    "@opentelemetry/core": "^2.8.0",
+    "minimatch": ">=10.2.3",
+    "glob": "^10.2.2",
+    "qs": "^6.16.0",
+    "chokidar": "^4.0.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/setup.js"
+    ]
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "js,mjs,cjs,json"
+  }
+}

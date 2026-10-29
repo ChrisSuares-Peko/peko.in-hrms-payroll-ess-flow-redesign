@@ -1,0 +1,234 @@
+openapi: 3.0.0
+info:
+  title: Peko Payments India
+  version: 1.0.0
+servers:
+  - url: https://api-gateway.greencliff-35dd2bc5.centralindia.azurecontainerapps.io
+tags:
+  - name: REGISTRATION
+paths:
+  /api/v1/user/otp:
+    post:
+      tags:
+        - REGISTRATION
+      summary: Get OTP
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                mobileNo: '+914565611645'
+                email: testtt4343@gmail.com
+                gstNumber: 27AASC16460H1Z0
+                panNumber: ABCTY1231P
+                scope: both
+                resend: false
+      responses:
+        '200':
+          description: OK
+          headers:
+            x-powered-by:
+              schema:
+                type: string
+                example: Express
+            access-control-allow-origin:
+              schema:
+                type: string
+                example: '*'
+            x-dns-prefetch-control:
+              schema:
+                type: string
+                example: 'off'
+            x-frame-options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            strict-transport-security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            x-download-options:
+              schema:
+                type: string
+                example: noopen
+            x-content-type-options:
+              schema:
+                type: string
+                example: nosniff
+            x-xss-protection:
+              schema:
+                type: string
+                example: 1; mode=block
+            content-type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            etag:
+              schema:
+                type: string
+                example: W/"59-0N9X5P4aDAhly4sRelkxNsDZnUA"
+            vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            content-encoding:
+              schema:
+                type: string
+                example: gzip
+            date:
+              schema:
+                type: string
+                example: Sat, 20 Jan 2024 13:28:52 GMT
+            transfer-encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                success: true
+                data: {}
+                message: Email and mobile OTPs have been sent successfully.
+  /api/v1/user/verify-contact:
+    post:
+      tags:
+        - REGISTRATION
+      summary: Verify OTP
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: "{\r\n  \"name\": \"test company\",\r\n  \"mobileNo\": \"+914565611645\",\r\n  \"email\": \"testtt4343@gmail.com\",\r\n  \"gstNumber\": \"27AASCS2460H1Z0\",\r\n  \"panNumber\": \"ABCTY1234P\",\r\n  \"phoneOtp\": \"559672\",//from server console\r\n  \"emailOtp\": \"798988\"//from server console\r\n}"
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/user/signUp:
+    post:
+      tags:
+        - REGISTRATION
+      summary: SIGN UP
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                firstName: fsdfsd
+                lastName: fsdfadf
+                password: REDACTED
+                name: test company 233
+                designation: sdfasdfsf
+                mobileNo: '+9145567225643'
+                country: United Arab Emirates
+                countryCode: '91'
+                email: newwssss@gmail.com
+                companySize: 11-30
+                city: Other
+                gstNumber: 27AASCS2421H1Z0
+                panNumber: ABCTY0934P
+                gstOtp: '555557'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/user/login:
+    post:
+      tags:
+        - General
+      summary: USER LOGIN
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                username: '100000001'
+                password: REDACTED
+      responses:
+        '200':
+          description: OK
+          headers:
+            x-powered-by:
+              schema:
+                type: string
+                example: Express
+            access-control-allow-origin:
+              schema:
+                type: string
+                example: '*'
+            x-dns-prefetch-control:
+              schema:
+                type: string
+                example: 'off'
+            x-frame-options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            strict-transport-security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            x-download-options:
+              schema:
+                type: string
+                example: noopen
+            x-content-type-options:
+              schema:
+                type: string
+                example: nosniff
+            x-xss-protection:
+              schema:
+                type: string
+                example: 1; mode=block
+            content-type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            etag:
+              schema:
+                type: string
+                example: W/"1a2-L6G0nKNC3XA6TyTnLO+bJLs0W+s"
+            vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            content-encoding:
+              schema:
+                type: string
+                example: gzip
+            date:
+              schema:
+                type: string
+                example: Sat, 20 Jan 2024 13:26:39 GMT
+            transfer-encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: Success Login
+                  value:
+                    success: true
+                    message: Login successful
+                    data:
+                      token: >-
+                        REDACTED
+                      role: CORPORATE
+                      id: 22
+                      username: '100000001'
+                example-1:
+                  summary: Unsuccessful Login
+                  value:
+                    success: false
+                    error: Incorrect Username or Password

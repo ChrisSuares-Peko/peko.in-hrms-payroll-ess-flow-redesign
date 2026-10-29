@@ -1,0 +1,67 @@
+/* Parsley CSS */
+
+.parsley-success {
+    border: 1px solid #000000!important;
+}
+
+.parsley-success:focus {
+    border: 1px solid #000000!important;
+}
+
+.parsley-error {
+    border: 1px solid #f75b50!important;
+}
+
+.parsley-error:focus {
+    border: 1px solid #f75b50!important;
+}
+
+.parsley-errors-list {
+    margin: 2px 0 3px;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0.9em;
+    line-height: normal;
+    opacity: 0;
+    color: #f75b50;
+    transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+}
+
+.parsley-errors-list.filled {
+    opacity: 1;
+}
+
+.parsley-max {
+    line-height: normal;
+}
+
+.parsley-special {
+    padding: 2px;
+}
+
+.parsley-uppercase {
+    padding: 2px;
+}
+
+.parsley-number {
+    padding: 2px;
+}
+
+
+/* for radio button show no border */
+
+.checkbox label,
+.radio label,
+.custom-checkbox {
+    border: none!important;
+}
+
+
+/* for select2 */
+
+.parsley-error~.select2 .select2-selection {
+    border: 1px solid #f75b50!important;
+}
