@@ -13,7 +13,7 @@
 | 6 – Mobile navigation | done (no code change) | In this codebase MobileHeader already shows the hamburger for `role === CORPORATE \|\| SYSTEM` (src/components/molecular/nav-section/horizontal/MobileHeader.tsx:104), not `roleName === 'corporate sub user'`. Verified at 375px on /payroll, /ess, /onboarding/payroll/purchase: hamburger opens the drawer (Payroll, Employee Self-Service, Onboarding), icons 16x16, no horizontal overflow, no console errors. |
 | 7 – Safety net + data toggle | done | No AppErrorBoundary existed; created src/prototype/AppErrorBoundary.tsx (message + stack, resets on route change) around <Router/>, and the dashboard layout's inner ErrorBoundary now uses the same fallback instead of ServiceNotAvailable. dataModeSlice ('dummy' default, persisted) + DataModeToggle (bottom-right, once in App.tsx); verified it persists across reload. |
 | 8 – Deployment | done | vercel.json SPA rewrite; build → node --max-old-space-size=7168 ./node_modules/.bin/vite build (Linux/Vercel); build:windows → same flag via ./node_modules/vite/bin/vite.js (the .bin shim is a shell script on Windows). reportCompressedSize: false was already set. Output dir: dist (Vite default). public/serviceworker.js (MoEngage SW) removed. JSON files can't hold comments, so their PROTOTYPE-SETUP note lives here. |
-| Final verification + push | pending | |
+| Final verification + push | done | See below. Baseline findings redacted and history rewritten before the first push. |
 
 ## Notes
 - `Backend code/` was renamed to `backend-reference/`; its .env files were deleted and secrets redacted before the first commit containing it.
@@ -32,3 +32,19 @@
 
 ## Vercel environment
 No env vars are required. With every `VITE_*` blank: `SERVER_URL` becomes `undefined/api/v1`, but tokenless requests never reach the network; `FRONTEND_BASE_URL` only feeds the ESS-invite payload and the plan-purchase return URL (both inert); `VITE_PUSHER_APPKEY` goes to the Pusher stub. The rest (`VITE_USD_TO_INR/AED`, Paytm, Lean, Calendly, payment URLs, Peko Commerce, partner/SSO, Turbo flag) are only read by out-of-scope modules or have safe defaults.
+
+## Final verification (production build, no env file — same as Vercel; served with `vite preview`)
+1. `yarn type-check` pass; `yarn build:windows` pass (70s). `yarn build` uses `./node_modules/.bin/vite`, which is a shell shim on Windows, so it is for Vercel/Linux.
+2. Fresh storage: `/` → `/payroll` (HR Dashboard), no login, no tour, 0 console errors.
+3. 28 routes (all `/ess/*`, all 13 `/onboarding/payroll/*`, all 3 `/onboarding/ess/*`, `/set-password` ± `?demo=expired`, an unknown route, another service) opened directly (deep-link reload): no 404, sidebar on every dashboard route, no spinners, 0 console errors. ESS Home/Onboarding/Profile render; `/payroll` stays on the dashboard; `/onboarding/payroll/purchase` shows the purchase landing; `/set-password` valid, `?demo=expired` shows the expired view. `dist/` contains nothing from `backend-reference/`.
+4. Stale localStorage (real-looking auth with role `user` + `corporate sub user`, payroll progress 0%): same results, mock identity and seeded payroll state re-applied.
+5. 375px: hamburger opens the drawer on /payroll, /ess, /onboarding/ess/profile-completion; no horizontal overflow; icons 16x16.
+6. Dummy/Empty toggle: one instance, bottom-right; Empty survives reload and route change.
+
+## Pre-push redaction (history rewritten; nothing had been pushed)
+Applied to the commit that introduced each file (`git filter-branch --index-filter`), so no commit ever contains the values; `refs/original` and reflogs were deleted and objects pruned. `git log -p --all -S <first 8 chars>` returns nothing for the Firebase key and the AWS key ID.
+- `src/domains/dashboard/pekoConnect/config/firebaseConfig.ts:11-19`: all 7 Firebase config values → `'REDACTED-PROTOTYPE'` (keys kept, PROTOTYPE-SETUP comment). Peko Connect is outside the prototype and not mounted.
+- `src/domains/dashboard/needHelp/types/type.ts:174`: commented-out Freshdesk sample `attachment_url` (presigned S3 URL with an AWS access key ID) replaced by a PROTOTYPE-SETUP comment line.
+- `backend-reference/{kyc,officeAndBusiness,others,payment,paymentGateway,purchase,scheduler,travel,users}/configs/keys.json:2`: `jwtSecret` → `"REDACTED"`. The first scan skipped it because its value was a placeholder-looking word. JSON has no comments, so the tag is recorded here and in docs/backend-secret-scan.md.
+- Known false positives, left untouched: `AIza…`-shaped substrings inside base64 PNG data in 5 SVGs (`src/assets/icons/GiftCard.svg:7`, `src/domains/dashboard/Domain & Hosting/assets/svg/ubuntu.svg:7`, `src/domains/dashboard/GiftCards/assets/icons/{allIcon,laptop,popcorns}.svg:7`).
+- Re-verified after the rewrite: type-check, build:windows, Vercel-like build, 29 + 4 (stale) routes, 375px, toggle. All pass.
