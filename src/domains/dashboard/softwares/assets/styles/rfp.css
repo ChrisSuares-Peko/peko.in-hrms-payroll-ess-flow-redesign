@@ -1,0 +1,76 @@
+/* =========================== rpf steps ==================================== */
+
+
+/* INACTIVE  STEP icon — grey border circle */
+.custom-step-navigator .ant-steps-navigation .ant-steps-item-wait .ant-steps-item-icon {
+  background-color: #fff !important;
+  border: 1px solid #d9d9d9 !important;
+}
+
+/* Inactive number color */
+.custom-step-navigator .ant-steps-navigation .ant-steps-item-wait .ant-steps-item-icon .ant-steps-icon {
+  color: #d9d9d9 !important;
+}
+
+
+/* COMPLETED STEP (outline red, no fill) */
+.custom-step-navigator .ant-steps-navigation .ant-steps-item-finish .ant-steps-item-icon {
+  background-color: #fff !important;
+  border: 1px solid #FF4F4F !important;
+}
+
+
+/* Completed check icon color */
+.custom-step-navigator .ant-steps-navigation .ant-steps-item-finish .ant-steps-item-icon .ant-steps-icon {
+  color: #FF4F4F !important;
+}
+
+
+/* ACTIVE STEP (solid red circle) */
+.custom-step-navigator .ant-steps-navigation .ant-steps-item-process .ant-steps-item-icon {
+  background-color: #FF4F4F !important;
+  border-color: #FF4F4F !important;
+}
+
+
+/* Active number color */
+.custom-step-navigator .ant-steps-navigation .ant-steps-item-process .ant-steps-item-icon .ant-steps-icon {
+  color: #fff !important;
+}
+
+
+/* Active title text */
+.custom-step-navigator .ant-steps-navigation .ant-steps-item-process .ant-steps-item-title {
+  color: #000 !important;
+}
+
+
+/* Suppress the built-in full-width ::before underline (spans entire item incl. arrow gap) */
+.custom-step-navigator .ant-steps-navigation .ant-steps-item::before {
+  display: none !important;
+}
+
+/* ACTIVE step underline — scoped to container only (icon + title area) */
+.custom-step-navigator .ant-steps-navigation
+  .ant-steps-item.ant-steps-item-process
+  .ant-steps-item-container {
+  border-bottom: 2px solid #FF4F4F !important;
+}
+
+
+
+
+.custom-step-navigator .submit-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+.custom-step-navigator .submit-spinner {
+  text-align: center;
+}

@@ -1,0 +1,7 @@
+.selected-svg path {
+    fill: #ff4f4f;
+}
+
+.default-svg path {
+    fill: #000000;
+}

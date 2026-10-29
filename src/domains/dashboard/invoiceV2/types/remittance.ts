@@ -1,0 +1,22 @@
+export type BankAccountSetupFormValues = {
+    registeredEmail: string;
+    phoneNumber: string;
+    legalName: string;
+    marketingName: string;
+    businessWebsiteUrl: string;
+    averageTransactionValue: string;
+    averageTransactionVolume: string;
+    internationalOrganizationType: string;
+    communicationAddress: string;
+    registeredAddress: string;
+    settlementBankAccountDetails: string;
+    proofOfRegisteredAddress: File | null;
+    localTaxIdentifier: File | null;
+    certificateOfIncorporation: File | null;
+    boardResolution: File | null;
+    beneficiaryOwnerInfo: File | null;
+    pciDssCertification: File | null;
+    settlementBankAccountProof: File | null;
+    lobSpecificDocument: File | null;
+    gstCertificate: File | null;
+};

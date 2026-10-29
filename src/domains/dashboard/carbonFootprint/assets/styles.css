@@ -1,0 +1,13 @@
+@media (max-width: 767px) {
+    .centerText {
+        text-align: center;
+    }
+}
+
+main h3 {
+    margin-bottom: 2rem;
+}
+
+.htmlContent h3 {
+    margin-bottom: 0.88rem;
+}

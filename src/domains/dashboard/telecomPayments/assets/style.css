@@ -1,0 +1,8 @@
+.custom-input :where(.css-dev-only-do-not-override-c6c2ci).ant-input-group .ant-input-group-addon {
+    padding: 0;
+}
+.custom-btn.ant-btn {
+    border: 0;
+    height: 34px;
+    background: rgba(0, 0, 0, 0.0);
+}

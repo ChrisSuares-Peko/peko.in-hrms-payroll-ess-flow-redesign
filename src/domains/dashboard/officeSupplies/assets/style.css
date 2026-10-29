@@ -1,0 +1,14 @@
+.input-container {
+    border: none;
+    box-shadow: none !important;
+    border-bottom: 1px solid #ccc !important;
+    border-radius: 0;
+}
+
+@media (min-width: 1400px) {
+    .category_center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

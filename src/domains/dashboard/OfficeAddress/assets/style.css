@@ -1,0 +1,6 @@
+._scale_on_hover {
+    transition: transform 0.2s;
+}
+._scale_on_hover:hover {
+    transform: scale(1.04);
+}

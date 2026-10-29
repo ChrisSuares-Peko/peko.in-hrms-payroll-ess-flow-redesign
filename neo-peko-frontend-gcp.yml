@@ -1,0 +1,135 @@
+trigger:
+  branches:
+   include: 
+    - staging
+
+resources:
+- repo: self
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  GOOGLE_CLOUD_PROJECT: 'peko-in-uat-484407'  # Replace with your Google Cloud project ID
+  GCP_REGION: 'asia-south1'  # Replace with your region
+  GCP_ARTIFACT_REPOSITORY: 'uatinrepository'  # Replace with your Artifact Registry repository name
+  IMAGE_NAME: 'frontend'
+  IMAGE_TAG: '$(Build.BuildId)'
+  CONTEXT_PATH: '.'
+  DOCKERFILE_PATH: './Dockerfile' 
+  SERVICE_NAME: 'peko-in-uat-frontend'
+  SUBNET_NAME: 'subnet-peko-uat-as1-dmz'
+  VNET_NAME: 'vpc-peko-uat-as1'
+  SERVICE_PORT: '80'
+
+steps:
+- task: DownloadSecureFile@1
+  name: gcpKey
+  inputs:
+    secureFile: 'peko-in-uat-sa.json'  # Replace with the name of your secure file in Azure DevOps
+
+- script: |
+    echo "Authenticating with Google Cloud"
+    gcloud auth activate-service-account --key-file=$(gcpKey.secureFilePath)
+    gcloud config set project $(GOOGLE_CLOUD_PROJECT)
+    gcloud auth configure-docker --quiet
+    gcloud auth configure-docker asia-south1-docker.pkg.dev --quiet
+  displayName: 'Authenticate with Google Cloud'
+
+- script: |
+    echo "Checking Google Cloud Authentication"
+    gcloud auth list
+    gcloud config list
+  displayName: 'Verify Google Cloud Authentication'
+
+- task: UseNode@1
+  inputs:
+    version: '22.18.0'  #NODE_VERSION # Or your preferred version
+  displayName: 'Install Node.js'
+
+- script: |
+   # cd $(CONTEXT_PATH)
+   # 1. Ensure the lockfile is up to date with your peer deps fix
+    # npm install --package-lock-only
+    yarn install
+    # Use --legacy-peer-deps here to match your local fix
+    # 2. Install dependencies using the lockfile
+    # npm ci --legacy-peer-deps
+    # echo "Checking for lockfile in $(pwd):"
+    # ls -F *.lock
+
+    # 3. Run the audit (will fail the build if High or Critical found)
+    yarn audit --level high
+    EXIT_CODE=$?
+
+    # Yarn exit codes are a bitmask:
+    # 8 = High, 16 = Critical. 
+    # We check if the exit code is 8 or greater.
+    if [ $EXIT_CODE -ge 8 ]; then
+      echo "High or Critical vulnerabilities found! Failing the build."
+      exit $EXIT_CODE
+    else
+      echo "Only Low/Moderate vulnerabilities found (or none). Proceeding..."
+      exit 0
+    fi
+    #npm audit --audit-level=high --legacy-peer-deps
+  displayName: 'Security Scan: npm audit'
+  workingDirectory: $(CONTEXT_PATH)
+
+- script: |
+    cd $(CONTEXT_PATH)    
+    # Use --legacy-peer-deps here to match your local fix
+    echo "Installing dependencies..."
+    npm install --legacy-peer-deps
+    
+    echo "Running Linting..."
+    npm run lint
+  displayName: 'Quality Check'
+  env:
+    # Set the limit to 4GB; adjust to 8192 if your project is exceptionally large
+    NODE_OPTIONS: --max-old-space-size=4096
+  #continueOnError: true
+
+- script: |
+    echo "Checking if the Artifact Registry repository exists"
+    if ! gcloud artifacts repositories describe $(GCP_ARTIFACT_REPOSITORY) --location=$(GCP_REGION); then
+      echo "Repository not found. Quitting..."
+      #gcloud artifacts repositories create $(GCP_ARTIFACT_REPOSITORY) --location=$(GCP_REGION) --repository-format=docker --description="Payment repository"
+    else
+      echo "Repository already exists."
+    fi
+  displayName: 'Ensure Artifact Registry Repository Exists'
+
+- script: |
+    echo "Uploading artifact to Google Artifact Registry"
+    # Replace the following with your actual commands to build and push the artifact
+    # Example for Docker image upload:
+    docker build -t $(GCP_REGION)-docker.pkg.dev/$(GOOGLE_CLOUD_PROJECT)/$(GCP_ARTIFACT_REPOSITORY)/$(IMAGE_NAME):$(IMAGE_TAG) -f $(DOCKERFILE_PATH) $(CONTEXT_PATH)
+    docker push $(GCP_REGION)-docker.pkg.dev/$(GOOGLE_CLOUD_PROJECT)/$(GCP_ARTIFACT_REPOSITORY)/$(IMAGE_NAME):$(IMAGE_TAG)
+  displayName: 'Upload Artifact to Google Artifact Registry'
+  
+- script: |
+    echo "Deploying to Google Cloud Run"
+    gcloud run deploy $(SERVICE_NAME) \
+      --image=$(GCP_REGION)-docker.pkg.dev/$(GOOGLE_CLOUD_PROJECT)/$(GCP_ARTIFACT_REPOSITORY)/$(IMAGE_NAME):$(IMAGE_TAG) \
+      --platform managed \
+      --port=$(SERVICE_PORT) \
+      --network=$(VNET_NAME) \
+      --subnet=$(SUBNET_NAME) \
+      --region $(GCP_REGION) \
+      --allow-unauthenticated \
+      --min-instances 1 \
+      --ingress=internal-and-cloud-load-balancing
+  displayName: 'Deploy to Google Cloud Run'
+
+- script: |
+    echo "Cleaning up old images in Google Artifact Registry"
+    # Get the list of images sorted by creation time (oldest first), skip the latest two, and delete the rest
+    IMAGES=$(gcloud artifacts docker images list $(GCP_REGION)-docker.pkg.dev/$(GOOGLE_CLOUD_PROJECT)/$(GCP_ARTIFACT_REPOSITORY)/$(IMAGE_NAME) \
+      --format="value(digest)" --sort-by="~updateTime" | tail -n +3)
+    
+    for DIGEST in $IMAGES; do
+      echo "Deleting image with digest: $DIGEST"
+      gcloud artifacts docker images delete $(GCP_REGION)-docker.pkg.dev/$(GOOGLE_CLOUD_PROJECT)/$(GCP_ARTIFACT_REPOSITORY)/$(IMAGE_NAME)@$DIGEST --quiet
+    done
+  displayName: 'Delete Old Images in Google Artifact Registry'

@@ -1,0 +1,6 @@
+/* GenericTable sets cursor: pointer on the whole <tr> (via rowExpandable, needed for the
+   expand-on-overflow behavior on narrow screens) — override it back to default on every cell
+   here, then the View button restores its own pointer cursor via an inline style. */
+.visa-status-table .ant-table-tbody > tr > td {
+    cursor: default;
+}

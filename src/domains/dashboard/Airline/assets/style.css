@@ -1,0 +1,161 @@
+.custom_autocomplete .ant-select-selector .ant-select-selection-search-input {
+    font-size: 20px !important;
+}
+
+.custom_datepicker .ant-picker .ant-picker-input {
+    font-size: 18px !important;
+}
+
+/* Calendar panel should only step month-by-month — the double-arrow year-jump buttons are removed
+   so the header shows just the single prev/next month arrows. */
+.custom_datepicker_popup .ant-picker-header-super-prev-btn,
+.custom_datepicker_popup .ant-picker-header-super-next-btn {
+    display: none !important;
+}
+
+.selected-svg path {
+    fill: #ff4f4f;
+}
+
+.default-svg path {
+    fill: #000000;
+}
+
+.search-result-card {
+    transition: transform 0.2s;
+}
+.search-result-card:hover {
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
+    transform: scale(1.01);
+}
+
+.custon_select_bold .ant-select-selection-item {
+    font-weight: 700;
+}
+
+.collapse-remove-padding .ant-collapse-content-box {
+    padding-inline: 0px !important; 
+}
+
+.custom-radio-button::before {
+    display: none !important;
+}
+
+.custom-radio-button {
+    border-radius: 0.375rem !important;
+    border: 1px solid #d9d9d9;
+}
+
+
+.flight-search-result-pagination .ant-pagination-item {
+    background: transparent !important;
+}
+
+.custom-vertical-dash {
+    border-left: 3px dashed transparent;
+    border-image: repeating-linear-gradient(
+      to bottom,
+      #e7e8ec 0,
+      #e7e8ec 10px,
+      transparent 10px,
+      transparent 20px
+    ) 1;
+    margin-top: 4px;
+}
+
+.hover-pointer .ant-select-selector:hover {
+    cursor: default !important;
+}
+
+.cancellation-collapse .ant-collapse-content-box {
+    width: 100% !important;
+    padding: 0 !important;
+    margin-top: 1rem !important;
+}
+
+/* Fare rules & baggage modal — styles the raw HTML the supplier returns in FareRuleDetail
+   (tables, fieldsets, nested lists) so it reads as part of the app instead of a browser default dump. */
+.fare-rule-collapse .ant-collapse-header {
+    align-items: center !important;
+    font-weight: 600;
+}
+
+.fare-rule-detail {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #4a4a4a;
+    overflow-x: auto;
+}
+
+.fare-rule-detail b {
+    color: #1a1a1a;
+}
+
+.fare-rule-detail table {
+    width: 100%;
+    min-width: 480px;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+}
+
+.fare-rule-detail th,
+.fare-rule-detail td {
+    border: none;
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.fare-rule-detail th {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/* The supplier's markup uses rowspan for Sector/Currency, so a td-level border-bottom only
+   draws under the columns that have a real cell on that row and leaves a broken, offset line.
+   Borders on tr itself paint the full row width regardless of which cells are skipped. */
+.fare-rule-detail tr {
+    border-bottom: 1px solid #e7e8ec;
+}
+
+.fare-rule-detail tr:first-child {
+    border-bottom: 1px solid #d9dbe4;
+}
+
+.fare-rule-detail tr:last-child {
+    border-bottom: none;
+}
+
+.fare-rule-detail fieldset {
+    border: 1px solid #e7e8ec;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.fare-rule-detail legend {
+    padding: 0 6px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.fare-rule-detail ul {
+    padding-left: 20px;
+    margin: 4px 0;
+    list-style: disc;
+}
+
+.fare-rule-detail li {
+    margin-bottom: 4px;
+}
+
+.fare-rule-detail hr {
+    border: none;
+    border-top: 1px dashed #e7e8ec;
+    margin: 12px 0;
+}
+
+.fare-rule-detail br + br {
+    display: none;
+}

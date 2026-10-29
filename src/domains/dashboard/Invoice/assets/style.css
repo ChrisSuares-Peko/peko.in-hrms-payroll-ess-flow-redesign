@@ -1,0 +1,15 @@
+:where(.css-dev-only-do-not-override-1wwujzd).ant-upload-wrapper
+    .ant-upload-drag
+    p.ant-upload-drag-icon
+    .anticon
+    .fileupload {
+    color: gray !important;
+}
+
+.custom-copyable .ant-typography-copy {
+    color: red; 
+}
+
+.custom-copyable .ant-typography-copy-icon {
+    color: red !important; 
+}

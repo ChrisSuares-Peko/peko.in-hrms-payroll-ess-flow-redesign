@@ -1,0 +1,88 @@
+/* ============================= */
+/* Remove default select styling */
+/* ============================= */
+
+.custom-header-select .ant-select-selector {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0 44px 0 0 !important; /* space for arrow */
+  display: flex !important;
+  align-items: center !important;
+  cursor: pointer !important;
+}
+
+
+/* ============================= */
+/* Selected text styling */
+/* ============================= */
+
+.custom-header-select .ant-select-selection-item {
+  font-size: 25px !important;
+  font-weight: 600 !important;
+  color: #000 !important;
+  line-height: 1.2 !important;
+  display: flex;
+  align-items: center;
+}
+
+
+/* ============================= */
+/* Arrow container styling */
+/* ============================= */
+
+.custom-header-select .ant-select-arrow {
+  position: absolute !important;
+  top: 70% !important;
+  right: 0 !important;
+  transform: translateY(-50%) !important;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background: #e5e7eb;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+
+/* ============================= */
+/* Arrow icon styling */
+/* ============================= */
+
+.custom-select-arrow-icon {
+  font-size: 12px;
+  color: #4b5563;
+  transition: transform 0.2s ease;
+  }
+
+
+/* Rotate icon when open */
+.custom-header-select.ant-select-open .custom-select-arrow-icon {
+  transform: rotate(180deg);
+}
+
+
+/* ============================= */
+/* Hover effect */
+/* ============================= */
+
+.custom-header-select:hover .ant-select-arrow {
+  background: #d1d5db;
+}
+/* ------------------------------ */
+
+
+/* Smooth scroll + hide scrollbar (virtual disabled) */
+
+.custom-header-dropdown {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.custom-header-dropdown::-webkit-scrollbar {
+  display: none;
+}

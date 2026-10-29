@@ -1,0 +1,43 @@
+.selected-svg path {
+    fill: theme('colors.brandPrimary');
+}
+.default-svg path {
+    fill: #000000;
+}
+
+.custom_date:where(.css-dev-only-do-not-override-9hcf67).ant-picker .ant-picker-input > input {
+    font-size: 17px !important;
+}
+
+.custom_autocompletes .ant-select-selector .ant-select-selection-search-input {
+    font-size: 17px !important;
+}
+
+.custom_datepickers:where(.css-dev-only-do-not-override-9hcf67).ant-picker
+    .ant-picker-input
+    > input {
+    font-size: 17px !important;
+}
+
+.custom_sort:where(.css-dev-only-do-not-override-9hcf67).ant-select-single .ant-select-selector {
+    font-size: 14px !important;
+}
+
+.guest-details-collapse .ant-collapse-content {
+    border-top: none;
+}
+
+.search-result-card:hover {
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
+    transform: scale(1.01);
+}
+.custom-book-modal-drawer :where(.css-dev-only-do-not-override-133bjtm).ant-drawer .ant-drawer-header {
+    display: flex;
+    flex: 0;
+    align-items: center;
+    padding: 13px 40px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(5, 5, 5, 0.06);
+}
+

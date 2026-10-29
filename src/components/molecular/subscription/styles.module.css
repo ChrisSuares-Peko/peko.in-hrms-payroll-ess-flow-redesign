@@ -1,0 +1,5 @@
+.removeHoverBg:hover {
+    background-color: transparent !important;
+    border-color: white !important;
+    color: white !important;
+}

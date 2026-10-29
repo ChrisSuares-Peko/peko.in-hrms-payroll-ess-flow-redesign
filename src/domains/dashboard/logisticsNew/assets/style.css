@@ -1,0 +1,23 @@
+.country-code-select .ant-select-selection-item,
+.country-code-select .ant-select-selection-search-input {
+  color: black !important;
+}
+.reciver-phone-input .ant-input-group-addon {
+    padding: 0 !important;
+}
+/* Make the connector line green */
+.green-timeline .ant-timeline-item-tail {
+  border-left-color: #52c41a !important; /* Ant Design's green */
+}
+/* Increase dot size and fill with green */
+.dot-large {
+  display: inline-block;
+  width: 18px;  /* Increase for larger size */
+  height: 18px; /* Increase for larger size */
+  border-radius: 50%;
+  background-color: #52c41a; /* Ant Design green */
+}
+
+.last-timeline-item .ant-timeline-item-tail {
+  border-left-color: #FFAC33 !important;
+}

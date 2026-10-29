@@ -1,0 +1,54 @@
+/* ================================
+   TipTap / ProseMirror Editor
+   ================================ */
+
+.ProseMirror {
+  outline: none !important;
+  box-shadow: none !important;
+  caret-color: #000;
+  cursor: text;
+  min-height: 60px;
+  user-select: text;
+}
+
+/* Remove focus ring */
+.ProseMirror:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Paragraph spacing control */
+.ProseMirror p {
+  margin: 0;
+}
+
+/* Optional: selection color (safe UX polish) */
+.ProseMirror ::selection {
+  background: rgba(22, 119, 255, 0.2);
+}
+
+/* ================================
+   Banner Editor Toolbar Buttons
+   ================================ */
+
+.banner-editor-toolbar {
+  margin-bottom: 6px;
+}
+
+.banner-editor-button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d9d9d9;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.banner-editor-button.active {
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+  color: #ffffff;
+}

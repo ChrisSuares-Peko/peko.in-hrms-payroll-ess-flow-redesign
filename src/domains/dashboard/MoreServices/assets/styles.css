@@ -1,0 +1,12 @@
+.more-services,
+.more-services div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.more-services div svg {
+    width: 3.625rem;
+    height: 3.625rem;
+    object-fit: contain;
+}

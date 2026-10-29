@@ -1,0 +1,24 @@
+<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="home-line-svgrepo-com 1" clip-path="url(#clip0_1521_17402)">
+<g id="Clip path group">
+<mask id="mask0_1521_17402" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="23" height="23">
+<g id="clip0_1_106">
+<path id="Vector" d="M0.456543 0.356632L0.456543 22.4092H22.5091V0.356632H0.456543Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_1521_17402)">
+<g id="style=linear">
+<g id="home-line">
+<path id="vector" d="M17.493 21.0269H5.46433C3.94193 21.0269 2.70776 19.7927 2.70776 18.2703V11.0714C2.70776 10.0114 3.16544 9.00298 3.96328 8.30505L9.66373 3.31851C10.703 2.40945 12.2544 2.40946 13.2936 3.31851L18.9941 8.30505C19.7919 9.00298 20.2496 10.0114 20.2496 11.0714V18.2703C20.2496 19.7927 19.0154 21.0269 17.493 21.0269Z" stroke="#EA3639" stroke-width="1.96129" stroke-linecap="round"/>
+<path id="vector_2" d="M9.64526 15.8477H13.3207" stroke="#EA3639" stroke-width="1.96129" stroke-linecap="round"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_1521_17402">
+<rect width="21.7921" height="21.7921" fill="white" transform="translate(0.58667 0.496094)"/>
+</clipPath>
+</defs>
+</svg>

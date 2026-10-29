@@ -1,0 +1,11 @@
+.custom-select.ant-select {
+    border-radius: 12px !important;
+}
+
+.custom-select.ant-select-selector {
+    border-radius: 12px !important;
+}
+
+.ant-select-selector {
+    border-radius: 8px !important;
+}

@@ -1,0 +1,10 @@
+._scale_on_hover {
+    transition: transform 0.1s;
+}
+._scale_on_hover:hover {
+    transform: scale(1.05);
+}
+
+.card-container {
+    transition: transform .3s ease-in-out;
+}

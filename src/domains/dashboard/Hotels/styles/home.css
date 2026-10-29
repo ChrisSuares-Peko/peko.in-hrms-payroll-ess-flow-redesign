@@ -1,0 +1,56 @@
+.cardStyle {
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    margin-top: 40px;
+    width: 100%;
+}
+.sample {
+    font-size: 20rem;
+}
+
+.contentStyle {
+    position: relative;
+    margin: 0;
+    height: 160px;
+    width: 100%;
+    line-height: 160px;
+    text-align: center;
+    background: url('/src/domains/dashboard/Hotels/Assets/hotel1.png');
+    background-size: cover;
+}
+.textContainerStyle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (min-width: 1200px) {
+    /* xl screens and above */
+    .dateField {
+        width: 270px;
+        max-width: 270px;
+    }
+}
+
+.checkIn {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.checkout {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.modalStyle {
+    position: 'fixed';
+    top: '50%';
+    left: '50%';
+    transform: 'translate(-50%, -50%)';
+    width: 300;
+    padding: 16;
+    z-index: 1000;
+}

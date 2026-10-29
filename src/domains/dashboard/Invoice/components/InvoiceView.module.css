@@ -1,0 +1,15 @@
+.createInvoice :global(.ant-upload) {
+    width: 150px !important;
+    height: 135px !important;
+    border-radius: 10% !important;
+}
+
+.disabledUpload :global(.ant-upload-disabled .ant-btn) {
+    border: 1px solid rgba(128, 128, 128, 0.167);
+    color: rgba(0, 0, 0, 0.286); 
+}
+
+.disabledUpload :global(.ant-upload-disabled .ant-btn:hover) {
+    border: 1px solid rgba(128, 128, 128, 0.252);
+    color: rgba(0, 0, 0, 0.421); 
+}

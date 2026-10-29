@@ -1,0 +1,34 @@
+<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="37" height="37" fill="#1E1E1E"/>
+<g id="Office Supplies">
+<path d="M-1234 -662C-1234 -663.105 -1233.1 -664 -1232 -664H11060C11061.1 -664 11062 -663.105 11062 -662V3891C11062 3892.1 11061.1 3893 11060 3893H-1232C-1233.1 3893 -1234 3892.1 -1234 3891V-662Z" fill="#2B2B2B"/>
+<path d="M-1232 -663H11060V-665H-1232V-663ZM11061 -662V3891H11063V-662H11061ZM11060 3892H-1232V3894H11060V3892ZM-1233 3891V-662H-1235V3891H-1233ZM-1232 3892C-1232.55 3892 -1233 3891.55 -1233 3891H-1235C-1235 3892.66 -1233.66 3894 -1232 3894V3892ZM11061 3891C11061 3891.55 11060.6 3892 11060 3892V3894C11061.7 3894 11063 3892.66 11063 3891H11061ZM11060 -663C11060.6 -663 11061 -662.552 11061 -662H11063C11063 -663.657 11061.7 -665 11060 -665V-663ZM-1232 -665C-1233.66 -665 -1235 -663.657 -1235 -662H-1233C-1233 -662.552 -1232.55 -663 -1232 -663V-665Z" fill="black" fill-opacity="0.1"/>
+<g id="Office Supplies_2" clip-path="url(#clip0_0_1)">
+<rect width="1920" height="1309" transform="translate(-1014 -272)" fill="white"/>
+<g id="Group 181707">
+<g id="Group 181694">
+<g id="Group 181454">
+<circle id="Ellipse 86" cx="18.6991" cy="16.5029" r="40.2277" stroke="#8A8A8A" stroke-width="0.550438"/>
+</g>
+</g>
+<g id="chip-svgrepo-com 1">
+<path id="Vector" d="M13.6183 14.3955H22.6526V23.4298H13.6183V14.3955Z" stroke="black" stroke-width="1.50572" stroke-linecap="round"/>
+<path id="Vector_2" d="M7.59514 8.36914H28.6752V29.4492H7.59514V8.36914Z" stroke="#FF3A3A" stroke-width="1.20457" stroke-linecap="round"/>
+<path id="Vector_3" d="M33.1925 14.3955H28.6754" stroke="#FF3A3A" stroke-width="1.20457" stroke-linecap="round"/>
+<path id="Vector_4" d="M33.1925 23.4297H28.6754" stroke="#FF3A3A" stroke-width="1.20457" stroke-linecap="round"/>
+<path id="Vector_5" d="M7.59583 14.3955H3.07868" stroke="#FF3A3A" stroke-width="1.20457" stroke-linecap="round"/>
+<path id="Vector_6" d="M7.59583 23.4297H3.07868" stroke="#FF3A3A" stroke-width="1.20457" stroke-linecap="round"/>
+<path id="Vector_7" d="M13.6184 3.85254V8.36969" stroke="#FF3A3A" stroke-width="1.20457" stroke-linecap="round"/>
+<path id="Vector_8" d="M22.6526 3.85254V8.36969" stroke="#FF3A3A" stroke-width="1.20457" stroke-linecap="round"/>
+<path id="Vector_9" d="M13.6184 29.4551V33.9722" stroke="#FF3A3A" stroke-width="1.20457" stroke-linecap="round"/>
+<path id="Vector_10" d="M22.6526 29.4551V33.9722" stroke="#FF3A3A" stroke-width="1.20457" stroke-linecap="round"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="1920" height="1309" fill="white" transform="translate(-1014 -272)"/>
+</clipPath>
+</defs>
+</svg>

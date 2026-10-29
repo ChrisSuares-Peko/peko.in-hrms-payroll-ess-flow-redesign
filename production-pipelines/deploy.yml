@@ -1,0 +1,68 @@
+trigger:
+  branches:
+   include: 
+    - production
+
+resources:
+- repo: self
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  GOOGLE_CLOUD_PROJECT: 'peko-in-production'  # Replace with your Google Cloud project ID
+  GCP_REGION: 'asia-south1'  # Replace with your region
+  GCP_ARTIFACT_REPOSITORY: 'prodinrepository'  # Replace with your Artifact Registry repository name
+  IMAGE_NAME: 'frontend'
+  IMAGE_TAG: '$(Build.BuildId)'
+  CONTEXT_PATH: '.'
+  DOCKERFILE_PATH: './Dockerfile'
+  SERVICE_NAME: 'peko-in-prod-frontend'
+
+steps:
+- task: DownloadSecureFile@1
+  name: gcpKey
+  inputs:
+    secureFile: 'peko-in-production.json'  # Replace with the name of your secure file in Azure DevOps
+
+- script: |
+    echo "Authenticating with Google Cloud"
+    gcloud auth activate-service-account --key-file=$(gcpKey.secureFilePath)
+    gcloud config set project $(GOOGLE_CLOUD_PROJECT)
+    gcloud auth configure-docker --quiet
+    gcloud auth configure-docker asia-south1-docker.pkg.dev --quiet
+  displayName: 'Authenticate with Google Cloud'
+
+- script: |
+    echo "Checking Google Cloud Authentication"
+    gcloud auth list
+    gcloud config list
+  displayName: 'Verify Google Cloud Authentication'
+
+- script: |
+    echo "Checking if the Artifact Registry repository exists"
+    if ! gcloud artifacts repositories describe $(GCP_ARTIFACT_REPOSITORY) --location=$(GCP_REGION); then
+      echo "Repository not found. Creating repository..."
+      gcloud artifacts repositories create $(GCP_ARTIFACT_REPOSITORY) --location=$(GCP_REGION) --repository-format=docker --description="Payment repository"
+    else
+      echo "Repository already exists."
+    fi
+  displayName: 'Ensure Artifact Registry Repository Exists'
+
+- script: |
+    echo "Uploading artifact to Google Artifact Registry"
+    # Replace the following with your actual commands to build and push the artifact
+    # Example for Docker image upload:
+    docker build -t $(GCP_REGION)-docker.pkg.dev/$(GOOGLE_CLOUD_PROJECT)/$(GCP_ARTIFACT_REPOSITORY)/$(IMAGE_NAME):$(IMAGE_TAG) -f $(DOCKERFILE_PATH) $(CONTEXT_PATH)
+    docker push $(GCP_REGION)-docker.pkg.dev/$(GOOGLE_CLOUD_PROJECT)/$(GCP_ARTIFACT_REPOSITORY)/$(IMAGE_NAME):$(IMAGE_TAG)
+  displayName: 'Upload Artifact to Google Artifact Registry'
+  
+- script: |
+    echo "Deploying to Google Cloud Run"
+    gcloud run deploy $(SERVICE_NAME) \
+      --image=$(GCP_REGION)-docker.pkg.dev/$(GOOGLE_CLOUD_PROJECT)/$(GCP_ARTIFACT_REPOSITORY)/$(IMAGE_NAME):$(IMAGE_TAG) \
+      --platform managed \
+      --region $(GCP_REGION) \
+      --allow-unauthenticated \
+      --min-instances 1
+  displayName: 'Deploy to Google Cloud Run'

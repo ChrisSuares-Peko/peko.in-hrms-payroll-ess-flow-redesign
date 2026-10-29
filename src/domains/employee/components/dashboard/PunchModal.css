@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
+
+/* src/index.css forces `font-family` with !important on every element (`* { ... !important }`),
+   which beats any inline style. A class selector still loses to that on specificity ties, so
+   this also needs !important — it wins because a class selector outranks the universal one. */
+.punch-modal-timer {
+    font-family: 'Fira Code', monospace !important;
+}

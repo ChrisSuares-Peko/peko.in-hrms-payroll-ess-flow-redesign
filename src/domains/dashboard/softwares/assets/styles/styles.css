@@ -1,0 +1,6 @@
+@import url(./category.css);
+@import url(./rfp.css);
+
+.order-history-table .ant-pagination {
+    display: flex;
+}

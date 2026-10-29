@@ -1,0 +1,10 @@
+export { default as whyAct1 } from './whyAct1.svg';
+export { default as whyAct2 } from './whyAct2.svg';
+export { default as whyAct3 } from './whyAct3.svg';
+export { default as whyAct4 } from './whyAct4.svg';
+export { default as whyAct5 } from './whyAct5.svg';
+export { default as whyAct6 } from './whyAct6.svg';
+export { default as whyAct7 } from './whyAct7.svg';
+export { default as whyAct8 } from './whyAct8.svg';
+export { default as whyAct9 } from './whyAct9.svg';
+export { default as whyAct10 } from './whyAct10.svg';

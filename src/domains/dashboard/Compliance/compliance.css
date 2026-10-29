@@ -1,0 +1,15 @@
+.rejected-field .ant-input,
+.rejected-field .ant-input-affix-wrapper,
+.rejected-field .ant-select-selector,
+.rejected-field .ant-picker,
+.rejected-field .ant-input-textarea textarea {
+    border-color: #ff4d4f !important;
+}
+
+.svg-compliance-active path {
+    stroke: #FF4F4F;
+}
+
+.svg-compliance-inactive path {
+    stroke: #64748B;
+}

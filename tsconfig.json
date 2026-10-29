@@ -1,0 +1,56 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "useDefineForClassFields": true,
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+        "noFallthroughCasesInSwitch": true,
+        "useUnknownInCatchVariables": false,
+        "allowJs": false,
+        "skipLibCheck": true,
+        "esModuleInterop": false,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": false,
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "strict": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "types": ["node", "vite/client"],
+        "baseUrl": "./",
+        "typeRoots": ["./node_modules/@types", "./types"],
+        "paths": {
+            "@assets/*": ["src/assets/*"],
+            "@store/*": ["src/store/*"],
+            "@components/*": ["src/components/*"],
+            "@customtypes/*": ["src/types/*"],
+            "@utils/*": ["src/utils/*"],
+            "@src/*": ["src/*"],
+            "@hooks/*": ["src/hooks/*"],
+            "@routes/*": ["src/routes/*"],
+            "@layouts/*": ["src/layouts/*"],
+            "@domains/*": ["src/domains/*"]
+        }
+    },
+    "exclude": ["node_modules", "vite.config.mts"],
+    "include": [
+        "**/*.ts",
+        "**/*.tsx",
+        "src/**/*",
+        "tests/**/*",
+        "commitlint.config.js",
+        "tailwind.config.js",
+        "webpack.config.js",
+        "postcss.config.js",
+        "vitest.setup.ts"
+    ],
+    "references": [
+        {
+            "path": "./tsconfig.node.json"
+        }
+    ]
+}

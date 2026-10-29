@@ -1,0 +1,9 @@
+.rpv-thumbnail__items--selected .rpv-thumbnail__item {
+    background-color: #F9FAFC
+}
+.rpv-thumbnail__items--selected .rpv-thumbnail__item:hover {
+    background-color: #F9FAFC
+}
+.rpv-thumbnail__item:hover {
+    background-color: #F9FAFC
+}

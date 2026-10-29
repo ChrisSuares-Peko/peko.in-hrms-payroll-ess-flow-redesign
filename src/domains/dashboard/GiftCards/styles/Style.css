@@ -1,0 +1,194 @@
+/* Scrollbar Styles */
+#scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #d9d9d9 transparent;
+    overflow-x: auto;
+  }
+
+  #scrollbar::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+  }
+
+  #scrollbar::-webkit-scrollbar-thumb {
+    background-color: #d9d9d9;
+    border-radius: 999px;
+  }
+
+  #scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  #scrollbar::-webkit-scrollbar-button {
+    display: none;
+  }
+  
+  .input-container {
+    border: none;
+    border-bottom: 1px solid #CCCCCC;
+    border-radius: 0;
+    color: rgba(204, 204, 204, 1);
+  }
+
+  /* Bullets are rendered as an explicit flex item + dot (see HowToUseTab),
+     not native list markers, so wrapped lines reliably indent under the text
+     instead of under the bullet/number. */
+  .gift-card-html-content {
+    list-style: none;
+  }
+
+  .gift-card-html-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .gift-card-html-content li > span:first-child {
+    border-radius: 9999px !important;
+  }
+
+  .gift-card-html-content a,
+  .gift-card-html-content a span,
+  .gift-card-html-content span[style*="color"] {
+    color: inherit !important;
+  }
+
+  /* Order-type selector: render Radio.Button group as individual icon cards */
+  .giftcard-order-type-group {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.875rem;
+    width: 100%;
+  }
+
+  .giftcard-order-type-group .ant-radio-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: 3.55rem;
+    width: 100%;
+    padding: 0.5rem 0.375rem;
+    border-radius: 0.75rem !important;
+    border: 1.5px solid #d7d7d7;
+    background: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    /* Matches the icons' own baked-in fill so switching to currentColor is a no-op until checked */
+    color: #1e293b;
+  }
+
+  /* Ant Design merges adjacent radio-button borders by default; undo that so each card is separate */
+  .giftcard-order-type-group .ant-radio-button-wrapper::before {
+    display: none;
+  }
+
+  .giftcard-order-type-group .ant-radio-button-label {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    text-align: center;
+    line-height: 1.15;
+  }
+
+  .giftcard-order-type-group .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+    border-color: theme('colors.brandPrimary') !important;
+    color: theme('colors.brandPrimary');
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  .giftcard-order-type-group .giftcard-order-type-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  /* Denomination pills */
+  .giftcard-price-tag {
+    height: 3rem;
+    width: 100%;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem !important;
+    font-size: 0.9375rem;
+    font-weight: 600;
+  }
+
+
+  .giftcard-price-tag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(4.5rem, 1fr));
+    gap: 0.625rem;
+    width: 100%;
+  }
+
+
+  @media (max-width: 480px) {
+    .giftcard-price-tag-grid {
+      grid-template-columns: repeat(auto-fit, minmax(3.5rem, 1fr));
+    }
+
+    .giftcard-price-tag {
+      font-size: 0.8125rem;
+    }
+  }
+
+  /* Quantity stepper */
+  .giftcard-quantity-input.ant-input-number {
+    border-radius: 0.75rem;
+    border: 1.5px solid #d7d7d7;
+    width: 100%;
+    height: 3rem;
+  }
+
+  .giftcard-quantity-input.ant-input-number:hover,
+  .giftcard-quantity-input.ant-input-number-focused {
+    border-color: theme('colors.brandPrimary');
+  }
+
+  .giftcard-quantity-input .ant-input-number-input {
+    height: 100%;
+    font-size: 1rem;
+  }
+
+  .giftcard-quantity-input .ant-input-number-handler-wrap {
+    height: 100%;
+    border-radius: 0 0.75rem 0.75rem 0;
+  }
+
+  /* Company Details / Terms & Conditions accordion on the gift card details page */
+  .giftcard-info-collapse.ant-collapse {
+    background: transparent;
+    border: none;
+  }
+
+  .giftcard-info-collapse .ant-collapse-item {
+    background: #fff;
+    /* Same border as the outer card (border-[#cccccc80] in Details.tsx) */
+    border: 1px solid #cccccc80 !important;
+    border-radius: 1.125rem !important;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+  }
+
+  .giftcard-info-collapse .ant-collapse-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .giftcard-info-collapse .ant-collapse-header,
+  .giftcard-info-collapse .ant-collapse-content,
+  .giftcard-info-collapse .ant-collapse-content-box {
+    border-radius: inherit !important;
+    border: none !important;
+  }
+
+  .giftcard-info-collapse .ant-collapse-header {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #212121;
+    align-items: center !important;
+  }
