@@ -1,7 +1,7 @@
 import { ServicesListResponse } from '@customtypes/general';
-// PROTOTYPE-SETUP: local icons for the prototype-only sidebar entries.
-import EssIcon from '@src/domains/employee/assets/icons/user.svg';
-import OnboardingIcon from '@src/domains/employee/assets/icons/profile-tick.svg';
+// PROTOTYPE-SETUP: local outline icons for the prototype-only sidebar entries (same weight as the others).
+import EssIcon from '@assets/icons/Ess.svg';
+import OnboardingIcon from '@assets/icons/Onboarding.svg';
 import { staticPartnerPermissions } from '@domains/admin/settings/utils/staticPartnerPermissions';
 
 /**

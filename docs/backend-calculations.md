@@ -2,6 +2,10 @@
 
 <!-- PROTOTYPE-SETUP: reference for demo numbers; DEMO_EMPLOYEE figures (src/prototype/demoEmployee.ts) must follow these formulas. -->
 
+> **Demo assumptions (approved for the prototype; PROTOTYPE-SETUP)**
+> 1. **Professional Tax = ₹200 / month.** The backend has no state PT slabs (§4); PT is a manual deduction component that is off by default. The demo assumes HR switched it on at a fixed ₹200 (Karnataka). With the backend default, net pay is ₹200 higher.
+> 2. **Leave encashment is HR-entered.** The backend has no encashment formula (§9); HR types the amount in as a bonus. The demo's 5-day figure (₹12,379.05 = gross ÷ 31 × 5) is illustrative only.
+
 Source: `backend-reference/` (read-only copy of Peko's Node.js backend). All paths below are relative to the repo root. Line numbers refer to the files as they are in this repo.
 
 The live payroll engine is **`processEmpSalary`** in `backend-reference/payroll/src/services/salary.js:1264-1834` (engine version 4, `services/salary.js:1099-1105`). The older `processSalary` (`services/salary.js:135-285`) and the copy in `backend-reference/scheduler/services/salary.js:124` use a legacy flat `salaryInformation` model (basicPay + allowances, gross ÷ cycle days). They are not the current calculation and are not documented further. `backend-reference/users` and `backend-reference/sharedServices` contain no payroll math. The scheduler only has legacy copies and the increment cron.
@@ -246,6 +250,42 @@ Payroll treatment:
 - It is **not** in the PF or ESI base (`S/services/salary.js:1491-1495`, `:1556`, `:1658`).
 
 ---
+
+## 8a. Overtime hourly-rate bug (documented only; backend-reference is not changed)
+
+<!-- PROTOTYPE-SETUP: documents a backend bug; demo figures use the corrected rate. -->
+
+**Where:** `backend-reference/payroll/src/services/overtime.js:65-67` (inside `calculateOvertimeAmount`, lines 4-92). It is called from `backend-reference/payroll/src/controller/overTime.js:353`, `:398` and `:478` (calculate, approve, HR-create).
+
+```js
+65  const amount = basicSalaryComponent?.amountPercentage ?? 0;
+66  const hours = totalStandardWorkingHours > 0 ? totalStandardWorkingHours : 1;
+67  const hourlyRate = (amount / hours).toFixed(2);
+71  const overtimePay = (overtimeHours * (hourlyRate * overtimeRate)).toFixed(2);
+```
+
+**What the code does:**
+- It takes the Basic Salary component's raw `amountPercentage` field as if it were the monthly Basic in rupees.
+- That field holds rupees only when `calculationType === 'FIXED'`. For the default Basic (`calculationType: 'PERCENTAGE'`, 50% of Gross; `payroll/src/utils/defaultSalaryComponents.js:1-41`) it holds the **percentage, 50**.
+- Revise Salary and bulk upload keep Basic as PERCENTAGE (`payroll/src/models/use-cases/reviseSalary.js:609-618`, `payroll/src/models/use-cases/bulkEmployeeCtc.js:106-119`), so this is the common case.
+- `hourlyRate` is rounded to 2 decimals (as a string) before it is multiplied, which compounds the error at small values.
+
+**What it should do:**
+- Use the employee's monthly Basic **in rupees**: `amountPercentage` when FIXED; `monthlyGross × amountPercentage / 100` when PERCENTAGE of Gross. That is the same resolved amount `processEmpSalary` pays as Basic (`payroll/src/services/salary.js:1264-1834`).
+- Then `hourlyRate = basicMonthly / (workingDays × workingHours)`, and `overtimePay = extraHours × hourlyRate × overTimeRate`.
+- Better still, round only the final pay (keeping the 2-decimal hourly rate is fine if the product is rounded after).
+
+**Worked example (DEMO_EMPLOYEE, Oct 2026: 4 approved hours, OT rate 1.5×, 26 working days × 8 hours = 208 h):**
+
+| | Wrong (current code, PERCENTAGE Basic) | Corrected (Basic in rupees) |
+|---|---|---|
+| Basic used | `amountPercentage` = 50 | 76,750 × 50 / 100 = ₹38,375 |
+| Hourly rate | (50 / 208).toFixed(2) = 0.2403… → **0.24** | (38,375 / 208).toFixed(2) = 184.4951… → **184.50** |
+| Rate × multiplier | 0.24 × 1.5 = 0.36 | 184.50 × 1.5 = 276.75 |
+| Overtime pay (4 h) | 4 × 0.36 = **₹1.44** | 4 × 276.75 = **₹1,107.00** |
+| Net pay for Oct 2026 | round(74,274.20 − 3,200 + 1.44 + 2,450) = **₹73,526** (₹1,105 short) | **₹74,631** (as in the worked example) |
+
+The demo data uses the corrected figure (₹1,107.00). A FIXED Basic of ₹38,375 already produces the corrected result in the current code.
 
 ## 9. Leave accrual and leave encashment
 

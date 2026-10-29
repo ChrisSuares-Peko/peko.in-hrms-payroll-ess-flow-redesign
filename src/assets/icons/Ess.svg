@@ -1,0 +1,5 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- PROTOTYPE-SETUP: outline ESS sidebar icon (person), matches the 16px #212121 nav icons. -->
+<circle cx="8" cy="5.25" r="2.75" stroke="#212121" stroke-width="1"/>
+<path d="M2.75 14C2.75 11.1005 5.10051 9.25 8 9.25C10.8995 9.25 13.25 11.1005 13.25 14" stroke="#212121" stroke-width="1" stroke-linecap="round"/>
+</svg>

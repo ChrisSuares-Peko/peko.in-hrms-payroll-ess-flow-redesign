@@ -9,7 +9,8 @@ import OnboardingLayout from '@src/prototype/onboarding/OnboardingLayout';
 import PayrollOnboardingState from '@src/prototype/onboarding/PayrollOnboardingState';
 import { ESS_ONBOARDING_STEPS, PAYROLL_ONBOARDING_STEPS } from '@src/prototype/onboarding/steps';
 
-const SubscriptionLanding = lazy(() => import('@src/domains/dashboard/Payroll/pages/HomePage'));
+// PROTOTYPE-SETUP: purchase step wraps the subscription landing with an "Illustrative pricing" label.
+const PurchaseStep = lazy(() => import('@src/prototype/onboarding/PurchaseStep'));
 const SetupWizard = lazy(() => import('@src/domains/dashboard/Payroll/pages/LandingPage'));
 const PayrollAccountSetup = lazy(
     () => import('@src/domains/dashboard/Payroll/pages/PayrollAccountSetup')
@@ -43,7 +44,7 @@ const PasswordUpdated = lazy(() => import('@domains/auth/components/views/Passwo
 const EmployeeOnboarding = lazy(() => import('@src/domains/employee/pages/EmployeeOnboarding'));
 
 const payrollStepElements: Record<string, JSX.Element> = {
-    purchase: <SubscriptionLanding />,
+    purchase: <PurchaseStep />,
     'setup-wizard': <SetupWizard />,
     'account-setup': <PayrollAccountSetup />,
     'account-progress': <PayrollAccountProgress />,

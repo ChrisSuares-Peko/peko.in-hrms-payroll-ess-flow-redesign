@@ -48,3 +48,9 @@ Applied to the commit that introduced each file (`git filter-branch --index-filt
 - `backend-reference/{kyc,officeAndBusiness,others,payment,paymentGateway,purchase,scheduler,travel,users}/configs/keys.json:2`: `jwtSecret` → `"REDACTED"`. The first scan skipped it because its value was a placeholder-looking word. JSON has no comments, so the tag is recorded here and in docs/backend-secret-scan.md.
 - Known false positives, left untouched: `AIza…`-shaped substrings inside base64 PNG data in 5 SVGs (`src/assets/icons/GiftCard.svg:7`, `src/domains/dashboard/Domain & Hosting/assets/svg/ubuntu.svg:7`, `src/domains/dashboard/GiftCards/assets/icons/{allIcon,laptop,popcorns}.svg:7`).
 - Re-verified after the rewrite: type-check, build:windows, Vercel-like build, 29 + 4 (stale) routes, 375px, toggle. All pass.
+
+## Follow-ups (after first push)
+- Purchase step (`/onboarding/payroll/purchase`) shows an "Illustrative pricing" tag (`src/prototype/onboarding/PurchaseStep.tsx`); prices stay as in `payrollSeed.ts`.
+- docs/backend-calculations.md: approved demo assumptions (PT ₹200/month, HR-entered leave encashment) at the top; new §8a documents the overtime hourly-rate bug (`backend-reference/payroll/src/services/overtime.js:65-67`) with wrong (₹1.44) vs corrected (₹1,107.00) figures. backend-reference unchanged.
+- Sidebar: new 16px outline icons `src/assets/icons/Onboarding.svg` (clipboard + check) and `src/assets/icons/Ess.svg` (person). ESS was also swapped because its previous icon was hard-coded red, so it looked active on every page.
+- Re-verified: type-check, build:windows, Vercel-like build, 8-route sweep with no failures, icons 16x16.
