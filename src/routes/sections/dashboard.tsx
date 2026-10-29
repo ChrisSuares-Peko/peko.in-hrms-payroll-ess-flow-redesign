@@ -12,6 +12,7 @@ import SessionExpired from '@src/domains/failed/pages/SessionExpired';
 import AuthGuard from '@src/guard/AuthGuard';
 import CorporateAccessGuard from '@src/guard/CorporateAccessGuard';
 import CorporateUserGuard from '@src/guard/CorporateUserGuard';
+import { ErrorFallback } from '@src/prototype/AppErrorBoundary';
 import PrototypeScope from '@src/prototype/PrototypeScope';
 import { toServiceRoute } from '@utils/serviceRoute';
 
@@ -133,7 +134,8 @@ export const dashboardRoutes = [
                         {/* PROTOTYPE-SETUP: any service outside Payroll / ESS / Onboarding redirects to /payroll. */}
                         <PrototypeScope>
                             <CorporateAccessGuard>
-                                <ErrorBoundary fallback={<ServiceNotAvailable />}>
+                                {/* PROTOTYPE-SETUP: show the real error inside the layout (sidebar stays) instead of ServiceNotAvailable. */}
+                                <ErrorBoundary FallbackComponent={ErrorFallback}>
                                     <Suspense fallback={<Skeleton />}>
                                         <Outlet />
                                     </Suspense>

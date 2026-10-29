@@ -4,6 +4,8 @@ import AntdConfig from './antd.config';
 import PrivacyPolicyGate from './components/molecular/modals/PrivacyPolicyGate';
 import useCustomNotification from './hooks/useCustomNotification';
 import { useScrollToTop } from './hooks/useScrollToTop';
+import AppErrorBoundary from './prototype/AppErrorBoundary';
+import DataModeToggle from './prototype/DataModeToggle';
 import Router from './routes/sections';
 import { clearData } from './services/handleLogout';
 import { TAB_ID } from './utils/tabId';
@@ -39,8 +41,13 @@ function App() {
     return (
         <AntdConfig>
             {contextHolder}
-            <Router />
+            {/* PROTOTYPE-SETUP: render errors show the real message instead of a blank screen. */}
+            <AppErrorBoundary>
+                <Router />
+            </AppErrorBoundary>
             <PrivacyPolicyGate />
+            {/* PROTOTYPE-SETUP: floating Dummy / Empty data toggle (mounted once). */}
+            <DataModeToggle />
         </AntdConfig>
     );
 }

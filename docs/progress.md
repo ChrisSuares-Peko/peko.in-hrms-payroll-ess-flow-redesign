@@ -11,7 +11,7 @@
 | 4 – Tours and popups | done | productTour flags false. Other first-run popups (subscription first-time landing, "Complete your onboarding" banner, setup wizard) are suppressed by the Phase 2 seed on /payroll and shown on /onboarding/payroll/*. ESS has no tours. |
 | 5 – Sidebar icons | done | 47 cdn.peko.one icons → 38 local SVGs; ESS = employee user.svg, Onboarding = profile-tick.svg; NavIcon ReactSVG constrained to 16px (verified 16x16). No other cdn.peko.one URLs in src. |
 | 6 – Mobile navigation | done (no code change) | In this codebase MobileHeader already shows the hamburger for `role === CORPORATE \|\| SYSTEM` (src/components/molecular/nav-section/horizontal/MobileHeader.tsx:104), not `roleName === 'corporate sub user'`. Verified at 375px on /payroll, /ess, /onboarding/payroll/purchase: hamburger opens the drawer (Payroll, Employee Self-Service, Onboarding), icons 16x16, no horizontal overflow, no console errors. |
-| 7 – Safety net + data toggle | pending | |
+| 7 – Safety net + data toggle | done | No AppErrorBoundary existed; created src/prototype/AppErrorBoundary.tsx (message + stack, resets on route change) around <Router/>, and the dashboard layout's inner ErrorBoundary now uses the same fallback instead of ServiceNotAvailable. dataModeSlice ('dummy' default, persisted) + DataModeToggle (bottom-right, once in App.tsx); verified it persists across reload. |
 | 8 – Deployment | pending | |
 | Final verification + push | pending | |
 
