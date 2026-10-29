@@ -30,11 +30,7 @@ export const PAYROLL_ONBOARDING_STEPS: OnboardingStep[] = [
         title: 'Account activation progress',
         description: 'Application → account creation → sharing details (PayrollAccountProgress).',
     },
-    {
-        slug: 'wps-registration',
-        title: 'WPS registration',
-        description: 'Wage Protection System registration (WpsRegistration).',
-    },
+    // PROTOTYPE-FLOW: WPS registration step removed — UAE Wage Protection System, not part of India payroll.
     {
         slug: 'hr-settings',
         title: 'HR settings',

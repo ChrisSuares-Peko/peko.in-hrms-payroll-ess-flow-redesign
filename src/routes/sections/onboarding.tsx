@@ -18,7 +18,7 @@ const PayrollAccountSetup = lazy(
 const PayrollAccountProgress = lazy(
     () => import('@src/domains/dashboard/Payroll/pages/PayrollAccountProgress')
 );
-const WpsRegistration = lazy(() => import('@src/domains/dashboard/Payroll/pages/WpsRegistration'));
+// PROTOTYPE-FLOW: WpsRegistration (UAE WPS) no longer an onboarding step.
 const OrganizationSettings = lazy(
     () => import('@src/domains/dashboard/Payroll/pages/OrganizationSettings')
 );
@@ -48,7 +48,6 @@ const payrollStepElements: Record<string, JSX.Element> = {
     'setup-wizard': <SetupWizard />,
     'account-setup': <PayrollAccountSetup />,
     'account-progress': <PayrollAccountProgress />,
-    'wps-registration': <WpsRegistration />,
     'hr-settings': <OrganizationSettings />,
     'ess-settings': <EssSettings />,
     'compliance-settings': <ComplianceSettings />,
