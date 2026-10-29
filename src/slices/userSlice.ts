@@ -17,7 +17,8 @@ const MOCK_USER_INFO: UserInfoResponse = {
     roleName: MOCK_AUTHENTICATED_USER.roleName,
     username: MOCK_AUTHENTICATED_USER.username,
     logo: '',
-    productTour: { dashboard: true, payroll: true },
+    // PROTOTYPE-SETUP: product tours off (the antd <Tour> in Payroll's Dash is gated by productTour.payroll).
+    productTour: { dashboard: false, payroll: false },
     gstVerified: true,
     panVerified: true,
     contactPersonName: MOCK_AUTHENTICATED_USER.contactPersonName ?? '',
