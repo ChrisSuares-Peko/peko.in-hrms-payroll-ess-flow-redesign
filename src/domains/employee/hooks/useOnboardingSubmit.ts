@@ -1,4 +1,5 @@
-import { useAppDispatch, useAppSelector } from '@src/hooks/store';
+import { useAppDispatch } from '@src/hooks/store';
+import { useEssAuth } from '@src/prototype/essSession';
 import { showToast } from '@src/slices/apiSlice';
 
 import {
@@ -13,7 +14,8 @@ import type { EmergencyValues } from '../components/onboarding/EmergencyContactS
 
 // Submits each onboarding step (mapping FE field names to the BE contract); true on success.
 export const useOnboardingSubmit = () => {
-    const { role, id } = useAppSelector(state => state.reducer.auth);
+    // PROTOTYPE-SETUP: ESS identity comes from useEssAuth (DEMO_EMPLOYEE when there is no token).
+    const { role, id } = useEssAuth();
     const dispatch = useAppDispatch();
     const scope = { userType: role, userId: id };
 

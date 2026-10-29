@@ -1,7 +1,7 @@
 import { Avatar, Flex, Skeleton, Typography } from 'antd';
 import dayjs from 'dayjs';
 
-import { useAppSelector } from '@src/hooks/store';
+import { useEssAuth } from '@src/prototype/essSession';
 
 import { EmployeeDepartment } from '../api/onboarding';
 import BankDetailsTab from '../components/profile/BankDetailsTab';
@@ -47,7 +47,8 @@ const StatDivider = () => <div className="hidden h-12 w-px bg-[#e5e5e5] sm:block
 
 const Profile = () => {
     const { profile, loading, reload } = useEmployeeProfile();
-    const { employeeName, employeeEmail } = useAppSelector(state => state.reducer.auth);
+    // PROTOTYPE-SETUP: ESS identity comes from useEssAuth (DEMO_EMPLOYEE when there is no token).
+    const { employeeName, employeeEmail } = useEssAuth();
     const personal = profile?.personalInformation;
     const info = profile?.employeeInformation;
 

@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 
-import { useAppSelector } from '@src/hooks/store';
+import { useEssAuth } from '@src/prototype/essSession';
 
 import { getLeaveBalance } from '../api/leaves';
 
 export const useLeaveTypes = () => {
-    const { role, id } = useAppSelector(state => state.reducer.auth);
+    // PROTOTYPE-SETUP: ESS identity comes from useEssAuth (DEMO_EMPLOYEE when there is no token).
+    const { role, id } = useEssAuth();
     const [leaveTypes, setLeaveTypes] = useState<{ label: string; value: string }[]>([]);
     const [loading, setLoading] = useState(true);
 

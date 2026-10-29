@@ -12,7 +12,7 @@ import { setPayrollProgress } from '../../slices/payrollAuth';
 import { progressResponse } from '../../types/dashboardTypes';
 
 export function useProgressApi() {
-    const { role, id } = useAppSelector(state => state.reducer.auth);
+    const { role, id, token } = useAppSelector(state => state.reducer.auth);
     const { refreshBasicSalary } = useAppSelector(state => state.reducer.orgSettings);
     const [isLoading, setIsLoading] = useState(true);
     const [refresh, setRefresh] = useState(true);
@@ -33,11 +33,13 @@ export function useProgressApi() {
                     basicSalaryAmount: data?.basicSalaryAmount,
                 })
             );
-        } else {
+        } else if (token) {
+            // PROTOTYPE-SETUP: only a real session is sent to /service-not-available; the tokenless
+            // prototype keeps the seeded payrollAuth state (same pattern as /session-expired).
             navigate(paths.dashboard.serviceNotAvailable);
         }
         setIsLoading(false);
-    }, [id, role, dispatch]);
+    }, [id, role, token, dispatch]);
 
     useEffect(() => {
         getProgress();

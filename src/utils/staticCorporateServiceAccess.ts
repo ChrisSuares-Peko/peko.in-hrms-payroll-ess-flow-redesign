@@ -14,18 +14,50 @@ import { staticPartnerPermissions } from '@domains/admin/settings/utils/staticPa
  * NOTE: every service is marked `hasAccess: true` so the flattened structure is
  * fully visible during development; the backend will drive real access per user.
  */
-export const staticCorporateServiceAccess: ServicesListResponse['data'] =
-    staticPartnerPermissions.map(permission => ({
+// PROTOTYPE-SETUP: SIDEBAR_MODE "only-this-module" — only these services keep access, so the sidebar and
+// CorporateAccessGuard show Payroll, ESS and Onboarding. Every other service stays in the list (hasAccess: false).
+export const PROTOTYPE_SERVICE_LABELS = ['Payroll', 'ESS', 'Onboarding'];
+
+// PROTOTYPE-SETUP: prototype-only entries. ESS mounts the employee portal at /ess, Onboarding the setup
+// flows at /onboarding (routes derived from the label via toServiceRoute).
+const PROTOTYPE_SERVICES: ServicesListResponse['data'] = [
+    {
+        serviceCategory: 'ESS',
+        label: 'ESS',
+        alias: 'Employee Self-Service',
+        hasAccess: true,
+        services: [],
+        subServices: [],
+        enableMoreService: false,
+        icon: '',
+    },
+    {
+        serviceCategory: 'Onboarding',
+        label: 'Onboarding',
+        hasAccess: true,
+        services: [],
+        subServices: [],
+        enableMoreService: false,
+        icon: '',
+    },
+];
+
+const hasPrototypeAccess = (label: string) => PROTOTYPE_SERVICE_LABELS.includes(label);
+
+export const staticCorporateServiceAccess: ServicesListResponse['data'] = [
+    ...staticPartnerPermissions.map(permission => ({
         serviceCategory: permission.label,
         label: permission.label,
-        hasAccess: true,
+        hasAccess: hasPrototypeAccess(permission.label),
         services: [],
         subServices: (permission.subServices ?? []).map(subService => ({
             label: subService.label,
-            hasAccess: true,
+            hasAccess: hasPrototypeAccess(permission.label),
         })),
         enableMoreService: permission.enableMoreService ?? false,
         icon: permission.icon ?? '',
-    }));
+    })),
+    ...PROTOTYPE_SERVICES,
+];
 
 export default staticCorporateServiceAccess;

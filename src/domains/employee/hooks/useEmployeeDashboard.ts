@@ -2,7 +2,9 @@ import { useCallback, useEffect, useState } from 'react';
 
 import dayjs from 'dayjs';
 
-import { useAppDispatch, useAppSelector } from '@src/hooks/store';
+import { useAppDispatch } from '@src/hooks/store';
+import { DEMO_EMPLOYEE } from '@src/prototype/demoEmployee';
+import { useEssAuth } from '@src/prototype/essSession';
 import { showToast } from '@src/slices/apiSlice';
 
 import { getMyAnnouncements } from '../api/announcements';
@@ -75,7 +77,8 @@ const toRow = (record: AttendanceApiRecord): DashboardAttendanceRow => ({
 });
 
 export const useEmployeeDashboard = () => {
-    const { role, id } = useAppSelector(state => state.reducer.auth);
+    // PROTOTYPE-SETUP: ESS identity comes from useEssAuth (DEMO_EMPLOYEE when there is no token).
+    const { role, id, token } = useEssAuth();
     const dispatch = useAppDispatch();
     const [data, setData] = useState<EmployeeDashboard>(buildInitialData);
     const [isLoading, setIsLoading] = useState(true);
@@ -83,6 +86,22 @@ export const useEmployeeDashboard = () => {
     const [checkOutLoading, setCheckOutLoading] = useState(false);
 
     const load = useCallback(async () => {
+        // PROTOTYPE-SETUP: no token -> dashboard profile from DEMO_EMPLOYEE (attendance/announcements are
+        // left empty for the Phase 7 dataset task) instead of exiting on the role check.
+        if (!token) {
+            setData(prev => ({
+                ...prev,
+                profile: {
+                    ...prev.profile,
+                    name: DEMO_EMPLOYEE.name,
+                    designation: DEMO_EMPLOYEE.designation,
+                    department: DEMO_EMPLOYEE.department.departmentName,
+                    employeeId: DEMO_EMPLOYEE.employeeCode,
+                },
+            }));
+            setIsLoading(false);
+            return;
+        }
         // Avoid firing employee-only requests during a role switch.
         if (role !== 'user') return;
         const scope = { userType: role, userId: id };
@@ -153,7 +172,7 @@ export const useEmployeeDashboard = () => {
             })),
         });
         setIsLoading(false);
-    }, [role, id]);
+    }, [role, id, token]);
 
     useEffect(() => {
         load();

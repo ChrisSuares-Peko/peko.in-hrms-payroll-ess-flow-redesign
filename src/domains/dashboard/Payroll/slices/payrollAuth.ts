@@ -1,5 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
+import { PAYROLL_SEEDED_PROGRESS } from '@src/prototype/payrollSeed';
+
 interface ProgressState {
     departmentAndEmployees: boolean;
     progress: string;
@@ -17,21 +19,9 @@ interface ProgressState {
     hasSalaryRolloutSetup: boolean | null;
 }
 
-const initialState: ProgressState = {
-    departmentAndEmployees: false,
-    progress: '0%',
-    leaveandAttendance: false,
-    payrollSettings: false,
-    complianceSettings: false,
-    showDashboard: false,
-    isPurchased: false,
-    hasBasicSalaryComponent: false,
-    basicSalaryAmount: 0,
-    onBoardStatus: 0,
-    isSkippedDasboard: false,
-    numberOfDaysWorking: 0,
-    hasSalaryRolloutSetup: null,
-};
+// PROTOTYPE-SETUP: seeded as set up + purchased so /payroll opens on the dashboard without a backend
+// (original defaults: progress '0%', everything false/0, hasSalaryRolloutSetup null).
+const initialState: ProgressState = { ...PAYROLL_SEEDED_PROGRESS };
 
 export const payrollAuthSlice = createSlice({
     name: 'payrollAuth',
@@ -45,5 +35,8 @@ export const payrollAuthSlice = createSlice({
 });
 
 export const { setPayrollProgress } = payrollAuthSlice.actions;
+
+// PROTOTYPE-SETUP: exported so store.ts can re-apply the seeded state on rehydration.
+export const payrollAuthInitialState = initialState;
 
 export default payrollAuthSlice.reducer;

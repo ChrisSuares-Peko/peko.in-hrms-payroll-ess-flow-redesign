@@ -6,7 +6,6 @@ import OnlineProposalPage from '@src/domains/dashboard/Procure/components/Propos
 import OnlinePOAcknowledgePage from '@src/domains/dashboard/Procure/components/PurchaseOrderDetails/OnlinePOAcknowledgePage';
 import OndcStaticTermsPage from '@src/domains/pages/OndcStaticTermsPage';
 import PageNotFound from '@src/domains/pages/PageNotFound';
-import { useRootPath } from '@src/hooks/useRootPath';
 import { paths } from '@src/routes/paths';
 
 import { accountingAdminRoutes } from './accountingAdmin';
@@ -17,11 +16,11 @@ import { employeeRoutes } from './employee';
 import { systemUserRoutes } from './systemUser';
 
 export default function Router() {
-    const rootPath = useRootPath();
     return useRoutes([
         {
+            // PROTOTYPE-SETUP: the prototype always lands on Payroll.
             path: '/',
-            element: <Navigate to={rootPath} replace />,
+            element: <Navigate to={paths.dashboard.payroll} replace />,
         },
 
         // Public routes — must be before dashboardRoutes so they are not caught by the AuthGuard layout
@@ -53,6 +52,7 @@ export default function Router() {
 
         // No match 404
         { path: '/404', element: <PageNotFound /> },
-        { path: '*', element: <Navigate to="/404" replace /> },
+        // PROTOTYPE-SETUP: any unknown route goes to Payroll instead of the 404 page.
+        { path: '*', element: <Navigate to={paths.dashboard.payroll} replace /> },
     ]);
 }

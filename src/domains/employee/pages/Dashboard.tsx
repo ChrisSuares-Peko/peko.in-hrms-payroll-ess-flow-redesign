@@ -1,6 +1,7 @@
 import { Col, Flex, Row, Skeleton } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
+import { useEssPath } from '@src/prototype/essSession';
 import { paths } from '@src/routes/paths';
 
 import AnnouncementsPanel from '../components/dashboard/AnnouncementsPanel';
@@ -12,6 +13,8 @@ import { useEmployeeDashboard } from '../hooks/useEmployeeDashboard';
 
 const Dashboard = () => {
     const navigate = useNavigate();
+    // PROTOTYPE-SETUP: map /employee links to where the page is mounted (/ess in the prototype).
+    const essPath = useEssPath();
     const { data, isLoading, checkInLoading, checkOutLoading, handleCheckIn, handleCheckOut } =
         useEmployeeDashboard();
 
@@ -40,7 +43,7 @@ const Dashboard = () => {
                     <StatCard
                         title="Attendance"
                         stat={data.attendance}
-                        onViewMore={() => navigate(paths.employee.attendance)}
+                        onViewMore={() => navigate(essPath(paths.employee.attendance))}
                     />
                 </Col>
             </Row>

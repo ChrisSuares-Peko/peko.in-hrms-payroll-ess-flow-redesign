@@ -4,6 +4,8 @@ import { Badge, Flex, Grid, Typography } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { ReactSVG } from 'react-svg';
 
+import { useEssPath } from '@src/prototype/essSession';
+
 interface ServiceShortcutCardProps {
     icon: string;
     title: string;
@@ -25,10 +27,12 @@ const ServiceShortcutCard: React.FC<ServiceShortcutCardProps> = ({
     const { useBreakpoint } = Grid;
     const screens = useBreakpoint();
     const navigate = useNavigate();
+    // PROTOTYPE-SETUP: map /employee links to where the page is mounted (/ess in the prototype).
+    const essPath = useEssPath();
 
     const handleClick = () => {
         if (path) {
-            navigate(path);
+            navigate(essPath(path));
         } else console.log('TRIGGERED');
     };
 

@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 
-import { useAppDispatch, useAppSelector } from '@src/hooks/store';
+import { useAppDispatch } from '@src/hooks/store';
+import { useEssAuth } from '@src/prototype/essSession';
 import { showToast } from '@src/slices/apiSlice';
 
 import {
@@ -16,7 +17,8 @@ import { AvailableLeave, HolidayDoc, LeaveDoc } from '../types';
 const PAGE_SIZE = 10;
 
 export const useLeaves = () => {
-    const { role, id } = useAppSelector(state => state.reducer.auth);
+    // PROTOTYPE-SETUP: ESS identity comes from useEssAuth (DEMO_EMPLOYEE when there is no token).
+    const { role, id } = useEssAuth();
     const dispatch = useAppDispatch();
     const [availableLeaves, setAvailableLeaves] = useState<AvailableLeave[]>([]);
     const [leaves, setLeaves] = useState<LeaveDoc[]>([]);

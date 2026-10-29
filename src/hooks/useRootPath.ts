@@ -14,7 +14,8 @@ export const useRootPath = () => {
 
     switch (role) {
         case UserRole.CORPORATE:
-            return paths.dashboard.home;
+            // PROTOTYPE-SETUP: corporate root (logo, GuestGuard) is Payroll, the only module in scope.
+            return paths.dashboard.payroll;
         case UserRole.SYSTEM:
             return paths.systemUser.dashboard;
         case UserRole.EMPLOYEE:

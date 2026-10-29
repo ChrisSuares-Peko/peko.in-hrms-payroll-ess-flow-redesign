@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 
-import { useAppSelector } from '@src/hooks/store';
+import { useEssAuth } from '@src/prototype/essSession';
 
 import { getMyPayslips } from '../api/payslips';
 import { PayslipRow } from '../types';
 
 export const useMyPayslips = (year: string) => {
-    const { role, id } = useAppSelector(state => state.reducer.auth);
+    // PROTOTYPE-SETUP: ESS identity comes from useEssAuth (DEMO_EMPLOYEE when there is no token).
+    const { role, id } = useEssAuth();
     const [rows, setRows] = useState<PayslipRow[]>([]);
     const [loading, setLoading] = useState(false);
 

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Flex, Spin } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
+import { useEssPath } from '@src/prototype/essSession';
 import { paths } from '@src/routes/paths';
 
 import BankStep, { BankValues } from '../components/onboarding/BankStep';
@@ -36,6 +37,8 @@ const initialEmergency: EmergencyValues = { fullName: '', relationship: '', phon
 
 const EmployeeOnboarding = () => {
     const navigate = useNavigate();
+    // PROTOTYPE-SETUP: map /employee links to where the page is mounted (/ess in the prototype).
+    const essPath = useEssPath();
     const { profile: employeeProfile } = useOnboardingStatus();
     const { submitDocuments, submitBank, submitEmergency } = useOnboardingSubmit();
     const { documents: requiredDocs, loading: docsLoading } = useRequiredOnboardingDocuments();
@@ -94,7 +97,7 @@ const EmployeeOnboarding = () => {
         return (
             <OnboardingSuccess
                 firstName={displayName}
-                onGoToDashboard={() => navigate(paths.employee.home, { replace: true })}
+                onGoToDashboard={() => navigate(essPath(paths.employee.home), { replace: true })}
             />
         );
     }

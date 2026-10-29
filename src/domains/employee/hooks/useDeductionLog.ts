@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 
-import { useAppDispatch, useAppSelector } from '@src/hooks/store';
+import { useAppDispatch } from '@src/hooks/store';
+import { useEssAuth } from '@src/prototype/essSession';
 import { showToast } from '@src/slices/apiSlice';
 
 import { getDeductionLog } from '../api/deductionLog';
@@ -10,7 +11,8 @@ import { DeductionLogRecord } from '../types';
 const PAGE_SIZE = 10;
 
 export const useDeductionLog = () => {
-    const { role, id } = useAppSelector(state => state.reducer.auth);
+    // PROTOTYPE-SETUP: ESS identity comes from useEssAuth (DEMO_EMPLOYEE when there is no token).
+    const { role, id } = useEssAuth();
     const dispatch = useAppDispatch();
     const [records, setRecords] = useState<DeductionLogRecord[]>([]);
     const [total, setTotal] = useState(0);

@@ -2,7 +2,8 @@ import { useCallback, useState } from 'react';
 
 import dayjs from 'dayjs';
 
-import { useAppDispatch, useAppSelector } from '@src/hooks/store';
+import { useAppDispatch } from '@src/hooks/store';
+import { useEssAuth } from '@src/prototype/essSession';
 import { showToast } from '@src/slices/apiSlice';
 
 import {
@@ -36,7 +37,8 @@ const PAGE_SIZE = 10;
 const EMPTY_SUMMARY: OvertimeSummary = { totalOtHours: 0, approvedCount: 0, pendingCount: 0 };
 
 export const useOvertime = () => {
-    const { role, id } = useAppSelector(state => state.reducer.auth);
+    // PROTOTYPE-SETUP: ESS identity comes from useEssAuth (DEMO_EMPLOYEE when there is no token).
+    const { role, id } = useEssAuth();
     const dispatch = useAppDispatch();
     const [records, setRecords] = useState<OvertimeUiRow[]>([]);
     const [total, setTotal] = useState(0);

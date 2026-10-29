@@ -6,7 +6,7 @@ import {
     holdsCardMembership,
     holdsPayrollMembership,
 } from '@src/domains/dashboard/corporateCards/utils/activeRole';
-import { useAppSelector } from '@src/hooks/store';
+import { useEssAuth, useEssPath } from '@src/prototype/essSession';
 import { paths } from '@src/routes/paths';
 
 import Dashboard from './Dashboard';
@@ -14,10 +14,11 @@ import { useOnboardingStatus } from '../hooks/useOnboardingStatus';
 
 // Entry point for the ESS portal: onboarding gate, then the employee dashboard.
 const EmployeeHome = () => {
-    const { role, employeeProfileId, serviceMemberships } = useAppSelector(
-        state => state.reducer.auth
-    );
+    // PROTOTYPE-SETUP: ESS identity comes from useEssAuth (DEMO_EMPLOYEE when there is no token).
+    const { role, employeeProfileId, serviceMemberships } = useEssAuth();
     const { loading, isComplete } = useOnboardingStatus();
+    // PROTOTYPE-SETUP: map /employee links to where the page is mounted (/ess in the prototype).
+    const essPath = useEssPath();
 
     // An employee who holds Corporate Cards but not Payroll has no ESS portal to enter — gating them on
     // payroll onboarding they can never complete is what stranded them on the onboarding screen.
@@ -36,7 +37,7 @@ const EmployeeHome = () => {
     }
 
     if (!isComplete) {
-        return <Navigate to={paths.employee.onboarding} replace />;
+        return <Navigate to={essPath(paths.employee.onboarding)} replace />;
     }
 
     return <Dashboard />;

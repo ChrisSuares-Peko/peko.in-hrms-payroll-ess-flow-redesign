@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { getAvailableRoles } from '@domains/auth/api/index';
 import useSwitchRole from '@domains/auth/hooks/useSwitchRole';
 import { paths } from '@routes/paths';
-import { useAppSelector } from '@src/hooks/store';
+import { useEssAuth } from '@src/prototype/essSession';
 import { handleLogout } from '@src/services/handleLogout';
 import { getEmployeeDropdownItems } from '@utils/navbarData';
 
@@ -18,7 +18,8 @@ const EmployeeHeader = () => {
         token: { colorPrimary },
     } = theme.useToken();
     const navigate = useNavigate();
-    const { username, employeeName } = useAppSelector(state => state.reducer.auth);
+    // PROTOTYPE-SETUP: ESS identity comes from useEssAuth (DEMO_EMPLOYEE when there is no token).
+    const { username, employeeName } = useEssAuth();
     const [isLoggingOut, setIsLoggingOut] = useState(false);
     const [hasCorporateAccess, setHasCorporateAccess] = useState(false);
     const [hasSubCorporateAccess, setHasSubCorporateAccess] = useState(false);

@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { UploadOutlined } from '@ant-design/icons';
 import { Button, Tabs, Typography } from 'antd';
 
-import { useAppDispatch, useAppSelector } from '@src/hooks/store';
+import { useAppDispatch } from '@src/hooks/store';
+import { useEssAuth } from '@src/prototype/essSession';
 import { showToast } from '@src/slices/apiSlice';
 
 import { uploadUserDocument } from '../api/documents';
@@ -33,7 +34,8 @@ const Documents: React.FC = () => {
     const [uploadOpen, setUploadOpen] = useState(false);
     const [refreshKey, setRefreshKey] = useState(0);
     const dispatch = useAppDispatch();
-    const { role, id } = useAppSelector(state => state.reducer.auth);
+    // PROTOTYPE-SETUP: ESS identity comes from useEssAuth (DEMO_EMPLOYEE when there is no token).
+    const { role, id } = useEssAuth();
 
     const handleUpload = async (body: {
         name: string;

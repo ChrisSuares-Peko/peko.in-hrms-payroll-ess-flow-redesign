@@ -1,16 +1,24 @@
 import { useEffect, useState } from 'react';
 
-import { useAppSelector } from '@src/hooks/store';
+import { DEMO_REQUIRED_ONBOARDING_DOCUMENTS } from '@src/prototype/demoEmployee';
+import { useEssAuth } from '@src/prototype/essSession';
 
 import { RequiredOnboardingDocument, getRequiredOnboardingDocuments } from '../api/onboarding';
 
 // Fetches the HR-configured documents this employee must upload during onboarding.
 export const useRequiredOnboardingDocuments = () => {
-    const { role, id } = useAppSelector(state => state.reducer.auth);
+    // PROTOTYPE-SETUP: ESS identity comes from useEssAuth (DEMO_EMPLOYEE when there is no token).
+    const { role, id, token } = useEssAuth();
     const [documents, setDocuments] = useState<RequiredOnboardingDocument[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        // PROTOTYPE-SETUP: no token -> the demo HR configuration (documents + bank), so every step renders.
+        if (!token) {
+            setDocuments(DEMO_REQUIRED_ONBOARDING_DOCUMENTS);
+            setLoading(false);
+            return undefined;
+        }
         // Avoid firing employee-only requests during a role switch.
         if (role !== 'user') return undefined;
         let active = true;
@@ -22,7 +30,7 @@ export const useRequiredOnboardingDocuments = () => {
         return () => {
             active = false;
         };
-    }, [role, id]);
+    }, [role, id, token]);
 
     return { documents, loading };
 };

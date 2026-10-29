@@ -6,7 +6,8 @@ import { ColumnsType } from 'antd/lib/table';
 import dayjs from 'dayjs';
 
 import GenericTable from '@components/atomic/GenericTable';
-import { useAppDispatch, useAppSelector } from '@src/hooks/store';
+import { useAppDispatch } from '@src/hooks/store';
+import { useEssAuth } from '@src/prototype/essSession';
 import { showToast } from '@src/slices/apiSlice';
 
 import { downloadMyPayslipApi } from '../api/payslips';
@@ -82,7 +83,8 @@ const totalDeductionsOf = (row: PayslipRow): number => {
 
 const Payslips: React.FC = () => {
     const dispatch = useAppDispatch();
-    const { role, id } = useAppSelector(state => state.reducer.auth);
+    // PROTOTYPE-SETUP: ESS identity comes from useEssAuth (DEMO_EMPLOYEE when there is no token).
+    const { role, id } = useEssAuth();
     const { profile } = useEmployeeProfile();
 
     const [visibleRows, setVisibleRows] = useState<Record<string, boolean>>({});

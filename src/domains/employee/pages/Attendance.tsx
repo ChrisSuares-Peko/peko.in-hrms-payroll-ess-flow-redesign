@@ -5,7 +5,8 @@ import { Button, Pagination, Popconfirm, Tabs, Tag, Typography } from 'antd';
 import { ColumnsType } from 'antd/lib/table';
 
 import GenericTable from '@components/atomic/GenericTable';
-import { useAppDispatch, useAppSelector } from '@src/hooks/store';
+import { useAppDispatch } from '@src/hooks/store';
+import { useEssAuth } from '@src/prototype/essSession';
 import { showToast } from '@src/slices/apiSlice';
 
 import { AttendanceMetrics, getAttendanceMetrics } from '../api/attendance';
@@ -152,7 +153,8 @@ const EMPTY_METRICS: AttendanceMetrics = {
 };
 
 const HistoryTab: React.FC = () => {
-    const { role, id } = useAppSelector(state => state.reducer.auth);
+    // PROTOTYPE-SETUP: ESS identity comes from useEssAuth (DEMO_EMPLOYEE when there is no token).
+    const { role, id } = useEssAuth();
     const dispatch = useAppDispatch();
     const { records: rows, total, limit, fetchAttendance, raiseDispute } = useAttendance();
     const [status, setStatus] = useState('All');

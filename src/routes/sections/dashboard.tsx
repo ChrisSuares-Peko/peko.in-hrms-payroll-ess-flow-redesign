@@ -12,6 +12,7 @@ import SessionExpired from '@src/domains/failed/pages/SessionExpired';
 import AuthGuard from '@src/guard/AuthGuard';
 import CorporateAccessGuard from '@src/guard/CorporateAccessGuard';
 import CorporateUserGuard from '@src/guard/CorporateUserGuard';
+import PrototypeScope from '@src/prototype/PrototypeScope';
 import { toServiceRoute } from '@utils/serviceRoute';
 
 import { accountingRoutes } from './accounting';
@@ -25,6 +26,7 @@ import { corporateTravelRoutes } from './corporateTravel';
 import { domainHostingRoutes } from './domainHosting';
 import { ecommerceRoutes } from './ecommerce';
 import { emailDomainRoutes } from './emailDomain';
+import { essRoutes } from './ess';
 import { eSignRoutes } from './eSign';
 import { giftCardsRoutes } from './giftCards';
 import { GlobalBusinessSetupRoutes } from './globalBusinessSetup';
@@ -37,6 +39,7 @@ import { legalServiceRoutes } from './legalService';
 import { logisticsRoutes } from './logistics';
 import { needHelpRoutes } from './needHelp';
 import { officeAddressRoutes } from './officeAddress';
+import { onboardingRoutes } from './onboarding';
 import { officeSuppliesRoutes } from './officeSupplies';
 import { paymentLinkRoutes } from './paymentLinks';
 import { paymentRoutes } from './paymentRoutes';
@@ -127,13 +130,16 @@ export const dashboardRoutes = [
             <AuthGuard>
                 <CorporateUserGuard>
                     <DashboardLayout>
-                        <CorporateAccessGuard>
-                            <ErrorBoundary fallback={<ServiceNotAvailable />}>
-                                <Suspense fallback={<Skeleton />}>
-                                    <Outlet />
-                                </Suspense>
-                            </ErrorBoundary>
-                        </CorporateAccessGuard>
+                        {/* PROTOTYPE-SETUP: any service outside Payroll / ESS / Onboarding redirects to /payroll. */}
+                        <PrototypeScope>
+                            <CorporateAccessGuard>
+                                <ErrorBoundary fallback={<ServiceNotAvailable />}>
+                                    <Suspense fallback={<Skeleton />}>
+                                        <Outlet />
+                                    </Suspense>
+                                </ErrorBoundary>
+                            </CorporateAccessGuard>
+                        </PrototypeScope>
                     </DashboardLayout>
                 </CorporateUserGuard>
             </AuthGuard>
@@ -142,6 +148,9 @@ export const dashboardRoutes = [
             // Full route trees mounted under /more-services/<slug> for every service
             // that can be flagged enableMoreService, then a fallback redirect for
             // anything not yet listed above.
+            // PROTOTYPE-SETUP: ESS pages and onboarding flows mounted inside the dashboard layout.
+            { path: '/ess', children: essRoutes },
+            { path: '/onboarding', children: onboardingRoutes },
             ...moreServiceAliasRoutes,
             { path: '/more-services/*', element: <MoreServicesRedirect /> },
             { path: paths.dashboard.home, children: homeRoutes },

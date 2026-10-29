@@ -67,7 +67,9 @@ import employeeSettingsReducer from '@src/domains/dashboard/Payroll/slices/emplo
 import employeeReducer from '@src/domains/dashboard/Payroll/slices/employeeSlices';
 import BulkEmployeeUploadReducer from '@src/domains/dashboard/Payroll/slices/jsonSlice';
 import orgSettingsReducer from '@src/domains/dashboard/Payroll/slices/orgSettings';
-import payrollAuthReducer from '@src/domains/dashboard/Payroll/slices/payrollAuth';
+import payrollAuthReducer, {
+    payrollAuthInitialState,
+} from '@src/domains/dashboard/Payroll/slices/payrollAuth';
 import payrollSalaryReducer from '@src/domains/dashboard/Payroll/slices/payrollSalarySlice';
 import pekoWalletReducer from '@src/domains/dashboard/pekoWallet/slice/WalletSlice';
 import purchaseRequestDraftReducer from '@src/domains/dashboard/Procure/slices/purchaseRequestDraftSlice';
@@ -123,11 +125,17 @@ import apiReducer from '../slices/apiSlice';
     }
 })();
 
-// PROTOTYPE-SETUP: auth is persisted, so stale localStorage from an older run (or a real login) would
-// silently replace the mock identity. Force the mock back in on every rehydration.
+// PROTOTYPE-SETUP: auth (and payrollAuth) are persisted, so stale localStorage from an older run (or a real
+// login) would silently replace the mock identity / seeded payroll setup. Force them back on every rehydration.
 const migrate = (state: PersistedState) =>
     Promise.resolve(
-        state ? ({ ...state, auth: MOCK_AUTHENTICATED_USER } as PersistedState) : state
+        state
+            ? ({
+                  ...state,
+                  auth: MOCK_AUTHENTICATED_USER,
+                  payrollAuth: { ...payrollAuthInitialState },
+              } as PersistedState)
+            : state
     );
 
 const persistConfig = {

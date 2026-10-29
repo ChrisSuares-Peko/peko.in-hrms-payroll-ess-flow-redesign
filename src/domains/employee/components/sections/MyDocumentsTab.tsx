@@ -4,7 +4,7 @@ import { CheckCircleFilled, CloseCircleFilled, ExclamationCircleFilled } from '@
 import { Button, Empty, Typography } from 'antd';
 import dayjs from 'dayjs';
 
-import { useAppSelector } from '@src/hooks/store';
+import { useEssAuth } from '@src/prototype/essSession';
 
 import { downloadUserDocument } from '../../api/documents';
 import docFolder from '../../assets/icons/doc-folder.svg';
@@ -46,7 +46,8 @@ const badgeConfig: Record<
 };
 
 const MyDocumentsTab: React.FC = () => {
-    const { role, id } = useAppSelector(state => state.reducer.auth);
+    // PROTOTYPE-SETUP: ESS identity comes from useEssAuth (DEMO_EMPLOYEE when there is no token).
+    const { role, id } = useEssAuth();
     const { profile } = useEmployeeProfile();
     const documents = profile?.employeeDocuments ?? [];
     const [downloadingId, setDownloadingId] = useState<string | null>(null);
