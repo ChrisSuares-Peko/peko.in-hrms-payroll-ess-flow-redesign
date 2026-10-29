@@ -2,6 +2,8 @@
 
 <!-- PROTOTYPE-SETUP: reference for demo numbers; DEMO_EMPLOYEE figures (src/prototype/demoEmployee.ts) must follow these formulas. -->
 
+> **India-only (PROTOTYPE-FLOW).** The prototype covers Indian payroll only. UAE-only backend calculations (the UAE end-of-service gratuity calculator, WPS/SIF salary files) are intentionally not documented here, and the matching frontend screens were removed.
+
 > **Demo assumptions (approved for the prototype; PROTOTYPE-SETUP)**
 > 1. **Professional Tax = ₹200 / month.** The backend has no state PT slabs (§4); PT is a manual deduction component that is off by default. The demo assumes HR switched it on at a fixed ₹200 (Karnataka). With the backend default, net pay is ₹200 higher.
 > 2. **Leave encashment is HR-entered.** The backend has no encashment formula (§9); HR types the amount in as a bonus. The demo's 5-day figure (₹12,379.05 = gross ÷ 31 × 5) is illustrative only.
@@ -347,14 +349,7 @@ Seeded leave types (`S/utils/defaultLeaveComponents.js:1-53`):
 
   Old gross is taken as basicPay + hra + da + other. The sum is paid in the next unprocessed month (`S/models/use-cases/reviseSalary.js:670-725`, `:1011-1024`). Arrears add to net, enter TDS as a one-off, and attract the PF top-up (§2). They do not affect ESI.
 - **Increments (legacy module).** `adjustedBasic = componentBasic + Σ Increment.amount` (status `reflected`, effectiveDate in [DOJ, end of month]), scaled by paidShare under proration. Only Basic moves. HRA and Balancing are not re-derived (`S/services/increment.js:79-118`; `S/services/salary.js:1405-1431`). The amount is `basic × %` or flat (`S/controller/increment.js:140-199`). The cron sets status to `reflected` (`backend-reference/scheduler/services/increment.js`).
-- **Gratuity (calculator only, not in payroll or CTC).**
-
-  ```
-  dailyWage = basic / 30
-  gratuity  = min(dailyWage × 21 × min(5, yrs) + dailyWage × 30 × max(0, yrs − 5), basic × 24)
-  ```
-
-  `yrs = int(days / 365.25)` (`S/services/calculateGratuity.js:1-9`; `S/services/calculateExperience.js:1-11`; `S/controller/gratuity.js:5-30`). This is a **UAE-style** formula (the log line says "Dh"). It is **not** the Indian 15/26 × years formula.
+- **Gratuity.** The backend does not compute Indian gratuity (Payment of Gratuity Act, 15/26 × last drawn basic + DA × completed years); it is not part of payroll or CTC. The CTC calculator only notes it is payable over and above CTC. (PROTOTYPE-FLOW: the backend's UAE end-of-service gratuity calculator, `S/services/calculateGratuity.js`, is out of scope for the India-only prototype and its frontend screen was removed.)
 
 ---
 
@@ -555,7 +550,7 @@ If paid in Oct 2026 as a bonus:
 - **Periodic leave accrual job.** Accrual is computed only when a balance is created. Carry-over happens only if the code runs on 1 April.
 - **ESI on overtime/bonus.** These are excluded from the ESI wage base. ESI rates in Compliance Settings are unused (they are hard-coded).
 - **A separate EPS ₹15,000 cap.** EPS is 8.33% of the same PF wage.
-- **Indian gratuity (15/26).** The calculator uses a UAE-style formula and is not part of CTC or payroll.
+- **Indian gratuity (15/26).** Not computed by the backend and not part of CTC or payroll.
 - **One-time payments in payroll.** They are a separate bank payout.
 - **Correct overtime and bonus-% bases.**
   - Overtime uses Basic's raw `amountPercentage`, which is 50 for a percentage Basic.

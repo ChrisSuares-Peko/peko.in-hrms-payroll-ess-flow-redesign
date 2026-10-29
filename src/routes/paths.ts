@@ -544,7 +544,7 @@ export const paths = {
         bulkUpload: 'bulk-upload',
         employeeLeave: 'employee-Leaves',
         timesheet: 'timesheet',
-        wpsRegistration: 'wps-registration',
+        // PROTOTYPE-FLOW: wpsRegistration path removed (UAE WPS page deleted; India-only payroll).
         employeeSuccess: 'success',
         employeeAdded: 'employee-added',
         employeeReimbursement: 'employee-reimbursements',
