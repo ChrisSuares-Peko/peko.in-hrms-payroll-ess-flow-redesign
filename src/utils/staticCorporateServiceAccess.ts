@@ -1,4 +1,7 @@
 import { ServicesListResponse } from '@customtypes/general';
+// PROTOTYPE-SETUP: local icons for the prototype-only sidebar entries.
+import EssIcon from '@src/domains/employee/assets/icons/user.svg';
+import OnboardingIcon from '@src/domains/employee/assets/icons/profile-tick.svg';
 import { staticPartnerPermissions } from '@domains/admin/settings/utils/staticPartnerPermissions';
 
 /**
@@ -29,7 +32,7 @@ const PROTOTYPE_SERVICES: ServicesListResponse['data'] = [
         services: [],
         subServices: [],
         enableMoreService: false,
-        icon: '',
+        icon: EssIcon,
     },
     {
         serviceCategory: 'Onboarding',
@@ -38,7 +41,7 @@ const PROTOTYPE_SERVICES: ServicesListResponse['data'] = [
         services: [],
         subServices: [],
         enableMoreService: false,
-        icon: '',
+        icon: OnboardingIcon,
     },
 ];
 

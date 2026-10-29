@@ -32,7 +32,15 @@ const NavIconGlyph = ({ icon }: { icon: any }) => {
             />
         );
     }
-    return <ReactSVG data-testid="nav-icon-svg" src={icon} key={icon} />;
+    // PROTOTYPE-SETUP: constrain local SVGs to the 16px slot (react-svg forwards className to its wrapper).
+    return (
+        <ReactSVG
+            data-testid="nav-icon-svg"
+            src={icon}
+            key={icon}
+            className="flex h-4 w-4 [&_svg]:h-full [&_svg]:w-full"
+        />
+    );
 };
 
 export const NavIcon = (

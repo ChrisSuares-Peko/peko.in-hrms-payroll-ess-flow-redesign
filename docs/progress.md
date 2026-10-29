@@ -9,7 +9,7 @@
 | 2 – Landing, sidebar, mounting | done | Sidebar = Payroll, ESS, Onboarding (staticCorporateServiceAccess). /ess/* and /onboarding/{payroll,ess}/* mounted in DashboardLayout; PrototypeScope redirects other services to /payroll. |
 | 3 – Strip prod integrations | done | MoEngage loader + 94 call sites removed (AST codemod); FreshChat ChatService removed; CleverTap commented loader removed; Cashfree/Pusher aliased to inert stubs; Razorpay loader disabled; Firebase IncomingCallListener unmounted. |
 | 4 – Tours and popups | done | productTour flags false. Other first-run popups (subscription first-time landing, "Complete your onboarding" banner, setup wizard) are suppressed by the Phase 2 seed on /payroll and shown on /onboarding/payroll/*. ESS has no tours. |
-| 5 – Sidebar icons | pending | |
+| 5 – Sidebar icons | done | 47 cdn.peko.one icons → 38 local SVGs; ESS = employee user.svg, Onboarding = profile-tick.svg; NavIcon ReactSVG constrained to 16px (verified 16x16). No other cdn.peko.one URLs in src. |
 | 6 – Mobile navigation | pending | |
 | 7 – Safety net + data toggle | pending | |
 | 8 – Deployment | pending | |
