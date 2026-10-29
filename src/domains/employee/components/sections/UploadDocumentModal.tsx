@@ -18,8 +18,9 @@ const { Text } = Typography;
 
 const MAX_MB = 5;
 
-// Document types offered in the employee-side upload modal — matches IN's
-// onboarding document catalog naming (PAN/Aadhaar in place of AE's Emirates ID).
+// Document types offered in the employee-side upload modal — matches the India
+// onboarding document catalog naming (PAN/Aadhaar).
+// PROTOTYPE-FLOW: dropped the UAE (Emirates ID) reference; the prototype is India-only.
 const documentOptions = [
     { value: 'PAN Card', label: 'PAN Card' },
     { value: 'Aadhaar Card', label: 'Aadhaar Card' },
