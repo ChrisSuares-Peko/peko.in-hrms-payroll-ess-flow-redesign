@@ -1,3 +1,5 @@
+import { isCancel } from 'axios';
+
 import dayjs from 'dayjs';
 
 import { SuccessGenericResponse } from '@customtypes/general';
@@ -356,7 +358,8 @@ export const updateEmployeePersonalInfo = async (payload: any) => {
 
         return { success: true, data: resp };
     } catch (err) {
-        console.error(err, 'errorrrrrr');
+        // PROTOTYPE-SETUP: requests the tokenless prototype cancels on purpose are not logged as errors.
+        if (!isCancel(err)) console.error(err, 'errorrrrrr');
         // return err.response.data.message
         return { success: false, errorMessage: err.response.data.message };
     }

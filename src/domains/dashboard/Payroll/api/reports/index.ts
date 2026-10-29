@@ -1,3 +1,5 @@
+import { isCancel } from 'axios';
+
 import { SuccessGenericResponse, UserPayload } from '@customtypes/general';
 import { ApiClient } from '@src/services/config';
 
@@ -35,7 +37,8 @@ export const getIncomeDeclarationForm = async (
 
         return resp;
     } catch (err) {
-        console.error(err, 'error');
+        // PROTOTYPE-SETUP: requests the tokenless prototype cancels on purpose are not logged as errors.
+        if (!isCancel(err)) console.error(err, 'error');
         return false;
     }
 };

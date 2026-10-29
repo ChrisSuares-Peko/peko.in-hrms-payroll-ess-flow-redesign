@@ -1,3 +1,5 @@
+import { isCancel } from 'axios';
+
 import { SuccessGenericResponse, UserPayload } from '@customtypes/general';
 import { ApiClient } from '@src/services/config';
 
@@ -95,7 +97,8 @@ export const getOrganizationSettingsApi = async (payload: UserPayload) => {
         const { data } = resp;
         return data;
     } catch (err) {
-        console.error(err, 'error');
+        // PROTOTYPE-SETUP: requests the tokenless prototype cancels on purpose are not logged as errors.
+        if (!isCancel(err)) console.error(err, 'error');
         return false;
     }
 };
@@ -514,7 +517,8 @@ export const getCompanyProfile = async (payload: UserPayload) => {
         const { data } = resp;
         return data;
     } catch (err) {
-        console.error(err, 'error');
+        // PROTOTYPE-SETUP: requests the tokenless prototype cancels on purpose are not logged as errors.
+        if (!isCancel(err)) console.error(err, 'error');
         return false;
     }
 };
@@ -527,7 +531,8 @@ export const getPayrollCycle = async (payload: UserPayload) => {
         const { data } = resp;
         return data;
     } catch (err) {
-        console.error(err, 'error');
+        // PROTOTYPE-SETUP: requests the tokenless prototype cancels on purpose are not logged as errors.
+        if (!isCancel(err)) console.error(err, 'error');
         return false;
     }
 };
@@ -541,7 +546,8 @@ export const getPayrollActiveYears = async (payload: UserPayload) => {
         const { data } = resp;
         return data;
     } catch (err: any) {
-        console.error(err, 'hello error');
+        // PROTOTYPE-SETUP: requests the tokenless prototype cancels on purpose are not logged as errors.
+        if (!isCancel(err)) console.error(err, 'hello error');
         return { status: false, errorMessage: err?.response?.data?.message };
     }
 };

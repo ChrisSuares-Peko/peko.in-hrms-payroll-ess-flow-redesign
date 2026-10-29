@@ -1,3 +1,5 @@
+import { isCancel } from 'axios';
+
 import { SuccessGenericResponse, UserPayload } from '@customtypes/general';
 import { ApiClient } from '@src/services/config';
 
@@ -20,7 +22,8 @@ export const getEmployeeListingApi = async (payload: UserPayload) => {
         const { data } = resp;
         return data;
     } catch (err) {
-        console.error(err, 'error');
+        // PROTOTYPE-SETUP: requests the tokenless prototype cancels on purpose are not logged as errors.
+        if (!isCancel(err)) console.error(err, 'error');
         return false;
     }
 };
