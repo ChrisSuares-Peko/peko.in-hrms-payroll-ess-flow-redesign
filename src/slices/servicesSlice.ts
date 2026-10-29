@@ -1,6 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 import { ServicesListResponse } from '@customtypes/general';
+import { staticCorporateServiceAccess } from '@utils/staticCorporateServiceAccess';
 
 interface ApiState {
     services: ServicesListResponse | null;
@@ -9,7 +10,8 @@ interface ApiState {
 }
 
 const initialState: ApiState = {
-    services: null,
+    // PROTOTYPE-SETUP: seed service access locally (hasAccess: true) so guards and sidebar work with no backend.
+    services: { data: staticCorporateServiceAccess },
     servicesLoadFailed: false,
     isAdmin: false,
 };

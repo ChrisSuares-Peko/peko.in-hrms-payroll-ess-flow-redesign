@@ -1,5 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
+import { UserRole } from '@customtypes/general';
+
 interface LoginState {
     token: string;
     refreshToken: string;
@@ -56,22 +58,28 @@ export interface ServiceMembership {
     autoLogin?: boolean;
 }
 
-const initialState: LoginState = {
+// PROTOTYPE-SETUP: the app boots as this corporate user with no login and no real token.
+// Single source of truth for identity: userSlice derives from it and store.ts re-applies it on rehydration.
+export const MOCK_AUTHENTICATED_USER: LoginState = {
     token: '',
     refreshToken: '',
     sessionId: '',
-    isAuthenticated: false,
-    role: '',
-    id: 0,
-    username: '',
-    roleName: '',
+    isAuthenticated: true,
+    role: UserRole.CORPORATE,
+    id: 1,
+    username: 'demo@acmecorp.example',
+    roleName: 'corporate',
     redirectUrl: '',
-    packageName: '',
+    packageName: 'Prototype',
     acs_user_id: '',
-    corporateId: 0,
+    corporateId: 1,
     subCorporateId: 0,
     subCorporateRole: null,
     activeSubRole: null,
+    email: 'demo@acmecorp.example',
+    name: 'Acme Corp Pvt Ltd',
+    contactPersonName: 'Priya Sharma',
+    mobileNo: '9876543210',
     employeeProfileId: null,
     employeeName: null,
     employeeEmail: null,
@@ -79,6 +87,8 @@ const initialState: LoginState = {
     serviceMemberships: null,
     showPrivacyPolicyModal: false,
 };
+
+const initialState: LoginState = MOCK_AUTHENTICATED_USER;
 
 export const loginSlice = createSlice({
     name: 'login',

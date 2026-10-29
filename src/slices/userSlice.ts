@@ -1,14 +1,34 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 import { ProductTour, UserInfoResponse, notificationListResponse } from '@customtypes/general';
+import { MOCK_AUTHENTICATED_USER } from '@domains/auth/slices/loginSlice';
 
 interface ApiState {
     user: UserInfoResponse | null;
     notifications: notificationListResponse | null;
 }
 
+// PROTOTYPE-SETUP: user info is derived from the single auth mock instead of fetched from walletDetails.
+const MOCK_USER_INFO: UserInfoResponse = {
+    balance: '0',
+    credentialId: MOCK_AUTHENTICATED_USER.id,
+    role: MOCK_AUTHENTICATED_USER.role,
+    companyName: MOCK_AUTHENTICATED_USER.name ?? '',
+    roleName: MOCK_AUTHENTICATED_USER.roleName,
+    username: MOCK_AUTHENTICATED_USER.username,
+    logo: '',
+    productTour: { dashboard: true, payroll: true },
+    gstVerified: true,
+    panVerified: true,
+    contactPersonName: MOCK_AUTHENTICATED_USER.contactPersonName ?? '',
+    email: MOCK_AUTHENTICATED_USER.email ?? '',
+    mobileNo: MOCK_AUTHENTICATED_USER.mobileNo ?? '',
+    chatId: '',
+    accountType: 'corporate',
+};
+
 const initialState: ApiState = {
-    user: null,
+    user: MOCK_USER_INFO,
     notifications: null,
 };
 

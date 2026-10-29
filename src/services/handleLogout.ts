@@ -159,6 +159,8 @@ export const handleLogout = async () => {
 };
 
 export const triggerSessionExpired = () => {
+    // PROTOTYPE-SETUP: the tokenless mock session never expires (idle timer would otherwise bounce the demo).
+    if (!(store.getState() as RootState).reducer.auth.token) return;
     if (window.location.pathname === '/session-expired') return;
     window.location.href = '/session-expired';
 };

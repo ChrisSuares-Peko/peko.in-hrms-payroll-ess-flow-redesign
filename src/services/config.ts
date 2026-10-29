@@ -51,6 +51,14 @@ ApiClient.interceptors.request.use(
         const { refreshToken, token, sessionId, sessionUUID, id, username, role, isAuthenticated } =
             (store.getState() as RootState).reducer.auth;
 
+        // PROTOTYPE-SETUP: no token means the mock user (no backend). Skip auth/refresh/logout and settle the
+        // request as cancelled without touching the network, so callers take their normal failure path.
+        if (!token && !refreshToken) {
+            config.adapter = () =>
+                Promise.reject(new axios.CanceledError(`Prototype has no backend: ${config.url}`));
+            return config;
+        }
+
         let decodedToken: { exp?: number } | undefined;
         let decodedRefreshToken: { exp?: number } | undefined;
         try {

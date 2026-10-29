@@ -13,6 +13,7 @@ import { getUserInfo, getUserServices } from '@src/services/userInfo';
 import { setServices } from '@src/slices/servicesSlice';
 import { setSubscriptions } from '@src/slices/subscriptionSlice';
 import { setUserInfo } from '@src/slices/userSlice';
+import { staticCorporateServiceAccess } from '@utils/staticCorporateServiceAccess';
 
 import { useAppDispatch, useAppSelector } from './store';
 
@@ -22,7 +23,7 @@ export default function useUserInfo() {
     const location = useLocation();
     const { pathname } = location;
 
-    const { role, id } = useAppSelector(state => state.reducer.auth);
+    const { role, id, token } = useAppSelector(state => state.reducer.auth);
     const { user } = useAppSelector(state => state.reducer.user);
     const { services } = useAppSelector(state => state.reducer.services);
     const [isLoading, setIsLoading] = useState(true);
@@ -33,6 +34,8 @@ export default function useUserInfo() {
         // this service mounts it for corporate and system_user only. An employee has no such record, so the
         // call is guaranteed to fail for them; their own name and email are already on the session.
         if (role === UserRole.EMPLOYEE) return;
+        // PROTOTYPE-SETUP: no token = mock session; user info comes from userSlice's mock, not the network.
+        if (!token) return;
 
         const data: UserInfoResponse | false = await getUserInfo({
             userId: id,
@@ -41,9 +44,21 @@ export default function useUserInfo() {
         if (data) {
             dispatch(setUserInfo({ user: { ...data } }));
         }
-    }, [id, role, dispatch]);
+    }, [id, role, token, dispatch]);
 
     const getUserServicesData = useCallback(async () => {
+        // PROTOTYPE-SETUP: no token = mock session; service access is the static list seeded in servicesSlice.
+        if (!token) {
+            dispatch(
+                setServices({
+                    services: { data: staticCorporateServiceAccess },
+                    servicesLoadFailed: false,
+                    isAdmin: false,
+                })
+            );
+            setIsLoading(false);
+            return { data: staticCorporateServiceAccess };
+        }
         const pathnames = pathname.split('/').filter(item => item);
         const data: (ServicesListResponse & PurchasedListResponse) | false =
             await getUserServices();
@@ -96,7 +111,7 @@ export default function useUserInfo() {
         dispatch(setServices({ services: { data: [] }, servicesLoadFailed: true, isAdmin: false }));
         setIsLoading(false);
         return null;
-    }, [dispatch, navigate, hasNavigated, pathname, role]);
+    }, [dispatch, navigate, hasNavigated, pathname, role, token]);
 
     useEffect(() => {
         const hasNavigatedLocal = localStorage.getItem('hasNavigated') === 'true';

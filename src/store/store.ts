@@ -6,6 +6,7 @@ import {
     PAUSE,
     PERSIST,
     PURGE,
+    PersistedState,
     REGISTER,
     REHYDRATE,
     persistReducer,
@@ -16,7 +17,7 @@ import storage from 'redux-persist/lib/storage';
 import bulkProductsReducer from '@domains/admin/manage/slices/bulkProducts';
 import bulkUploadCommon from '@domains/admin/manage/slices/bulkUpload';
 import { forgotpasswordReducer } from '@domains/auth/slices/forgotpasswordSlice';
-import loginReducer from '@domains/auth/slices/loginSlice';
+import loginReducer, { MOCK_AUTHENTICATED_USER } from '@domains/auth/slices/loginSlice';
 import passwordPolicyReducer from '@domains/auth/slices/passwordPolicySlice';
 import registrationReducer from '@domains/auth/slices/registerSlice';
 import airlinesFormReducer from '@domains/dashboard/Airline/slices/airlineSlice';
@@ -122,9 +123,17 @@ import apiReducer from '../slices/apiSlice';
     }
 })();
 
+// PROTOTYPE-SETUP: auth is persisted, so stale localStorage from an older run (or a real login) would
+// silently replace the mock identity. Force the mock back in on every rehydration.
+const migrate = (state: PersistedState) =>
+    Promise.resolve(
+        state ? ({ ...state, auth: MOCK_AUTHENTICATED_USER } as PersistedState) : state
+    );
+
 const persistConfig = {
     key: 'root',
     storage,
+    migrate,
     whitelist: [
         'auth',
         'payment',
