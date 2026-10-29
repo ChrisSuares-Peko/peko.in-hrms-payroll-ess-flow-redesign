@@ -108,9 +108,7 @@ const WebSubscription = ({
                                         className="h-10 md:px-6"
                                         size="large"
                                         onClick={() => {
-                                            if (typeof Moengage?.track_event === 'function') {
-                                                Moengage.track_event('whatsapp_subscribe_clicked');
-                                            }
+                                            // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
                                             navigate(`${paths.whatsappForBusiness.planDetails}`);
                                         }}
                                     >

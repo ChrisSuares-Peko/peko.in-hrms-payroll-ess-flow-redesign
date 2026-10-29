@@ -14,25 +14,7 @@ const PaymentFailure = () => {
         // untouched on failure since the success page only clears it inside its own
         // status === 'success' branch, so it's still here to read.
         const result = sessionStorage.getItem('paymentResult');
-        if (result && typeof Moengage?.track_event === 'function') {
-            try {
-                const successData = JSON.parse(result);
-                if (successData?.isGroupPlan) {
-                    Moengage.track_event('peko_plan_payment_result', {
-                        status: 'failed',
-                        final_amount: successData?.total_amount,
-                    });
-                } else if (successData?.serviceName) {
-                    const moengageServiceName = successData.serviceName
-                        .toLowerCase()
-                        .replace(/\s+/g, '_');
-                    Moengage.track_event(`${moengageServiceName}_payment_result`, {
-                        status: 'failed',
-                        total_amount: successData?.total_amount,
-                    });
-                }
-            } catch (_) { /* ignore parse errors */ }
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         sessionStorage.removeItem('paymentResult');
     }, []);
 

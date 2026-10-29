@@ -51,11 +51,7 @@ const InitiateKyb = ({
         validationSchema={initiateKybSchema}
         validateOnMount
         onSubmit={values => {
-            if (typeof Moengage?.track_event === 'function') {
-                Moengage.track_event('initiate_kyb_clicked', {
-                    type_of_business: values.businessType,
-                });
-            }
+            // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
             onInitiate(values.businessType as string);
         }}
     >

@@ -30,12 +30,7 @@ export const signIn = async (payload: LoginRequest) => {
     } catch (err) {
         const { data } = err.response;
         store.dispatch(showToast({ description: data.message, variant: 'error' }));
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('user_login', {
-                status: 'failed',
-                failure_reason: data.message,
-            });
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         return false;
     }
 };

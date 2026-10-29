@@ -22,6 +22,9 @@ export default defineConfig({
             '@routes': path.resolve(__dirname, './src/routes'),
             '@layouts': path.resolve(__dirname, './src/layouts'),
             '@domains': path.resolve(__dirname, './src/domains'),
+            // PROTOTYPE-SETUP: payment and realtime-push SDKs need Peko's infrastructure; inert stubs instead.
+            '@cashfreepayments/cashfree-js': path.resolve(__dirname, './src/prototype/stubs/cashfree.ts'),
+            'pusher-js': path.resolve(__dirname, './src/prototype/stubs/pusher.ts'),
         },
     },
 });

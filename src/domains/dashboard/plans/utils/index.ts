@@ -26,13 +26,7 @@ export const PLAN_DETAILS_SESSION_KEY = 'PlanDetails';
 export const SUBSCRIBE_CLICKED_SERVICES = new Set(['Payroll', 'Invoicing', 'eSign', 'Turbo']);
 
 export function trackSubscribeClicked(serviceName?: string) {
-    if (
-        serviceName &&
-        SUBSCRIBE_CLICKED_SERVICES.has(serviceName) &&
-        typeof Moengage?.track_event === 'function'
-    ) {
-        Moengage.track_event(`${serviceName.toLowerCase()}_subscribe_clicked`);
-    }
+    // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
 }
 
 export function calculateDiscount(

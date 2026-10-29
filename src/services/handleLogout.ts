@@ -86,19 +86,7 @@ const decodeExp = (jwt?: string): number | null => {
 export const handleLogout = async () => {
     const authChannel = new BroadcastChannel('authChannel');
 
-    if ((window as any).fcWidget) {
-        try {
-            (window as any).fcWidget.destroy();
-        } catch (error) {
-            console.error('Error destroying fcWidget:', error);
-        }
-    }
-    if (typeof Moengage?.track_event === 'function') {
-        Moengage.track_event('user_logout');
-    }
-    if (typeof Moengage?.destroy_session === 'function') {
-        Moengage.destroy_session();
-    }
+    // PROTOTYPE-SETUP: FreshChat (fcWidget) and MoEngage session teardown removed with their SDKs.
 
     let authData: {
         token?: string;

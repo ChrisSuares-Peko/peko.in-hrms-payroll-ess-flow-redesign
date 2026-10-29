@@ -69,22 +69,7 @@ export default function useCompleteLogin() {
                 state: options.state,
             });
         }
-
-        if (
-            typeof Moengage?.track_event === 'function' &&
-            typeof Moengage?.identifyUser === 'function' &&
-            typeof Moengage?.add_user_attribute === 'function' &&
-            response.email
-        ) {
-            const userId = response.email;
-            Moengage.identifyUser(userId);
-            Moengage.add_email(response.email);
-            Moengage.add_user_attribute('branding', response.branding);
-            Moengage.add_user_attribute('packageName', response?.packageName);
-            Moengage?.track_event('user_login', {
-                status: 'success',
-            });
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
     };
 
     return { completeLogin };

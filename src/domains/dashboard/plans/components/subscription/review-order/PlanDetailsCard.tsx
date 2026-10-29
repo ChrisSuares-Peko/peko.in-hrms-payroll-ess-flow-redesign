@@ -122,44 +122,7 @@ const PlanDetailsCard = ({ planId, selectedType, isMandate }: Props) => {
             isMandate,
             isOneTime: showOneTimeOption && isOneTime,
         });
-        if (typeof Moengage?.track_event === 'function') {
-            const serviceName = data?.packageDetails?.packageName;
-            // The main Peko Go/Plus subscription is packageType GROUP; every other package
-            // (WhatsApp For Business, Turbo, eSign, Payroll, ...) is an individual à la carte
-            // service and gets its own dynamically-named event instead of peko_plan_checkout.
-            const isGroupPlan = data?.packageDetails?.packageType === 'GROUP';
-            const moengageServiceName = serviceName?.toLowerCase().replace(/\s+/g, '_');
-
-            if (isGroupPlan) {
-                Moengage.track_event('peko_plan_checkout', {
-                    Peko_plan: serviceName,
-                    coupon_code_used: isApplied,
-                    total_amount: finalPayableAmount,
-                });
-            } else if (moengageServiceName) {
-                Moengage.track_event(`${moengageServiceName}_checkout`, {
-                    [`${moengageServiceName}_plan`]: selectedType,
-                    coupon_code_used: isApplied,
-                    total_amount: finalPayableAmount,
-                });
-            }
-
-            // Moengage.track_event(`${serviceName}_checkout_IN`, {
-            //     [`${serviceName}_plan`]: selectedType,
-            //     coupon_code_used: isApplied,
-            //     total_amount: finalPayableAmount,
-            //     checkout_viewed: true,
-            // });
-            sessionStorage.removeItem('service_details');
-            sessionStorage.setItem(
-                'paymentResult',
-                JSON.stringify({
-                    total_amount: finalPayableAmount,
-                    serviceName,
-                    isGroupPlan,
-                })
-            );
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
     };
     const hasAddonPrice = Number(data.annualAddonPrice) > 0 || Number(data.monthlyAddonPrice) > 0;
     const displayTotal = isValidVoucher ? 0 : finalPayableAmount;

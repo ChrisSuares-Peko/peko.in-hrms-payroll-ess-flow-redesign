@@ -1,5 +1,5 @@
 /* eslint-disable import/order */
-import React, { Suspense, useState, useEffect } from 'react';
+import React, { Suspense } from 'react';
 
 import { Skeleton } from 'antd';
 import ReactDOM from 'react-dom/client';
@@ -12,9 +12,6 @@ import { persistor, store } from '@store/store';
 import App from './App';
 import './index.css';
 import { handleLogout } from './services/handleLogout';
-import IncomingCallListener from './domains/dashboard/pekoConnect/components/IncomingCallListener';
-import { useAppSelector } from './hooks/store';
-import './moengage-init';
 
 window.addEventListener('vite:preloadError', (event: any) => {
     console.error('Vite preload error:', event);
@@ -27,26 +24,15 @@ window.addEventListener('vite:preloadError', (event: any) => {
     // window.location.reload(); // Refresh the page in case of preload error
 });
 
-const Main = () => {
-    const [userId, setUserId] = useState('');
-    const { user } = useAppSelector(state => state.reducer.user);
-
-    useEffect(() => {
-        if (user) {
-            setUserId(user.username || '');
-        }
-    }, [user]);
-
-    return (
-        <BrowserRouter>
-            <Suspense fallback={<Skeleton />}>
-                <IncomingCallListener userId={userId}>
-                    <App />
-                </IncomingCallListener>
-            </Suspense>
-        </BrowserRouter>
-    );
-};
+// PROTOTYPE-SETUP: IncomingCallListener (Peko Connect calls over Peko's production Firebase/Firestore) is
+// no longer mounted around the app; the prototype must not open listeners on Peko's Firebase project.
+const Main = () => (
+    <BrowserRouter>
+        <Suspense fallback={<Skeleton />}>
+            <App />
+        </Suspense>
+    </BrowserRouter>
+);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <Provider store={store}>

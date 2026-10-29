@@ -190,9 +190,7 @@ const LandingPage: FC = () => {
                         type="primary"
                         size="large"
                         onClick={() => {
-                            if (typeof Moengage?.track_event === 'function') {
-                                Moengage.track_event('compliance_started');
-                            }
+                            // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
                             navigate(`${paths.dashboard.compliance}/${paths.compliance.companyIdentify}`);
                         }}
                         className="!bg-[#ff4f4f] !border-[#ff4f4f] hover:!bg-[#e03e3e] hover:!border-[#e03e3e] !rounded-xl !min-h-[52px] !h-auto !py-2 !px-[21.5px] !text-base sm:!text-[20px] !font-medium !whitespace-normal w-full sm:w-auto"

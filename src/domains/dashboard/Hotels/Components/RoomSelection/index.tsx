@@ -166,43 +166,7 @@ const RoomSelection = ({ isLoading }: { isLoading: boolean }) => {
                 setChangedPrice(data?.response.HotelResult[0]?.Rooms[0].NetAmount);
 
                 dispatch(setPrebookResponse(data?.response));
-                if (typeof Moengage?.track_event === 'function') {
-                    const totalAdults = hotelsRequest.rooms.reduce(
-                        (sum: any, item: any) => sum + item.adult,
-                        0
-                    );
-                    const totalChildren = hotelsRequest.rooms.reduce(
-                        (sum: any, item: any) => sum + item.child,
-                        0
-                    );
-                    const roomNames: string[] =
-                        data?.response.HotelResult[0]?.Rooms[0]?.Name || [];
-                    const roomNamePayload = roomNames.reduce(
-                        (acc: Record<string, string>, name: string, index: number) => {
-                            acc[`room_name_${index + 1}`] = name;
-                            return acc;
-                        },
-                        {}
-                    );
-                    const checkInDate = new Date(hotelsRequest.CheckIn);
-                    const checkOutDate = new Date(hotelsRequest.CheckOut);
-                    const stayLength = Math.ceil(
-                        (checkOutDate.getTime() - checkInDate.getTime()) / (1000 * 3600 * 24)
-                    );
-                    Moengage.track_event('hotel_room_chosen', {
-                        guest_count: totalCount,
-                        hotel_name: response.HotelDetails[0].HotelName,
-                        adults: totalAdults,
-                        children: totalChildren,
-                        city: hotelsRequest.cityName || hotelsRequest.City,
-                        ...roomNamePayload,
-                        check_in: checkInDate,
-                        check_out: checkOutDate,
-                        total_price: selectedPrice,
-                        rooms: rooms.length,
-                        stay_length: stayLength,
-                    });
-                }
+                // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
                 if (data?.response.HotelResult[0]?.Rooms[0].isPriceChanged === true) {
                     showModal();
                 } else {

@@ -92,9 +92,7 @@ const CorporateCardsPage = () => {
     };
 
     const handleGetStarted = () => {
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('corporate_cards_get_started');
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         dispatch(setKybStage('initiate'));
     };
 

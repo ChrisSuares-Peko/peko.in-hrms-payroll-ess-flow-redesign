@@ -19,18 +19,7 @@ const DeliveryCard: React.FC<{ company: DeliveryCompanyOption }> = ({ company })
 
     const handleBookNow = () => {
         dispatch(setSelectedDeliveryCompany(company));
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('logistics_book_now_clicked', {
-                length: shipmentDetails?.length,
-                breadth: shipmentDetails?.width,
-                height: shipmentDetails?.height,
-                weight: shipmentDetails?.weight,
-                orgin_city: shipmentDetails?.originCity?.city,
-                destination_city: shipmentDetails?.destinationCity?.city,
-                price: company?.price,
-                vendor_name: company?.courierName,
-            });
-        }
+// PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
 
         navigate(`/${paths.logistics.index}/${paths.logistics.details}`);
     };

@@ -49,15 +49,7 @@ const PaymentSuccess = () => {
 
     useEffect(() => {
         const result = sessionStorage.getItem('paymentResult');
-        if (typeof Moengage?.track_event === 'function' && result && transactionData) {
-            const successData = JSON.parse(result);
-
-            Moengage.track_event(`${successData?.serviceName}_payment_result`, {
-                status: 'success',
-                ...successData,
-            });
-            sessionStorage.removeItem('paymentResult');
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
     }, [transactionData]);
 
     useEffect(() => {

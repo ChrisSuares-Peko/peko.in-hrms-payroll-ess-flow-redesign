@@ -63,16 +63,7 @@ export const useCalculateRateApi = () => {
             dispatch(setCourierResults(result));
             setIsLoading(false);
             setIsInital(false);
-            if (typeof Moengage?.track_event === 'function') {
-                Moengage.track_event('logistics_price_checked', {
-                    length: values.length,
-                    breadth: values.width,
-                    height: values.height,
-                    weight: values.weight,
-                    orgin_city: shipmentDetails?.originCity?.city,
-                    destination_city: shipmentDetails?.destinationCity?.city,
-                });
-            }
+            // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
             return result;
         }
         setIsSubmmited(true);

@@ -49,26 +49,7 @@ export default function useRegistrationApi() {
 
             setCorporateId(response.id);
             setEmail(response.email);
-             if (
-                typeof Moengage?.track_event === 'function' &&
-                typeof Moengage?.identifyUser === 'function' &&
-                typeof Moengage?.add_email === 'function' &&
-                typeof Moengage?.add_mobile === 'function' &&
-                typeof Moengage?.add_user_attribute === 'function' &&
-                typeof Moengage?.add_user_name === 'function'
-            ) {
-                const userId = formData.email;
-                Moengage.identifyUser(userId);
-                Moengage.add_email(formData.email);
-                Moengage.add_mobile(formatedMobile);
-                Moengage.add_user_name(formData.contactPersonName);
-                Moengage.add_user_attribute('company_name', formData.name);
-              
-                Moengage.track_event('user_signup', {
-                    status: 'success',
-                    referral:formData.referralCode
-                });
-            }
+// PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
 
             dispatch(setLoginData({ ...response }));
             dispatch(setEmailVerificationData({ ...response }));

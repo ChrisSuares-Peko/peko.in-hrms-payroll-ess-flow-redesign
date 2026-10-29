@@ -88,9 +88,7 @@ const ManageFleet = () => {
     }
 
     const handleAddVehicleClick = () => {
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('add_vehicle_clicked');
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         dispatch(resetRcResponse());
         dispatch(resetInputParams());
         navigate(`${paths.dashboard.turbo}/${paths.turbo.addVehicle}`);

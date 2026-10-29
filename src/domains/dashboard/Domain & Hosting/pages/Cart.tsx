@@ -106,16 +106,7 @@ const CartPage = () => {
     useEffect(() => {
         if (!cartData || hasTrackedCartViewedRef.current) return;
         hasTrackedCartViewedRef.current = true;
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('domain_cart_viewed', {
-                domain: domainItems.map(i => i.productName),
-                total_price: total,
-                ...(workspaceItems.length > 0 && {
-                    seats: getWorkspaceSeats(workspaceItems[0]),
-                    tenure: workspaceItems[0].billingCycle,
-                }),
-            });
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [cartData]);
 

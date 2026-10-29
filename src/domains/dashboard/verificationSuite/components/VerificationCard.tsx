@@ -57,9 +57,7 @@ const VerificationCard = ({
             );
             return;
         }
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event(accessKeys);
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         setIsOpen(true);
     };
 

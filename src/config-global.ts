@@ -15,9 +15,7 @@ export const PAYTM_JS_Checkout_URL = `${import.meta.env.VITE_PAYTM_JS_Checkout_U
 export const FRONTEND_BASE_URL = `${import.meta.env.VITE_FRONTEND_BASE_URL}`;
 export const USD_TO_INR = `${import.meta.env.VITE_USD_TO_INR}`;
 export const PARTNER_ID = import.meta.env.VITE_PARTNER_ID;
-export const MOENGAGE_APPID = `${import.meta.env.VITE_MOENGAGE_APPID}`;
-export const MOENGAGE_DC = `${import.meta.env.VITE_MOENGAGE_DC}`;
-export const MOENGAGE_DEBUGLOGs = import.meta.env.VITE_MOENGAGE_DEBUGLOGS;
+// PROTOTYPE-SETUP: MoEngage config removed with the MoEngage SDK.
 export const CALENDLY_URL = `${import.meta.env.VITE_CALENDLY_URL}`;
 
 export const PARTNER_REDIRECT_URL = import.meta.env.VITE_PARTNER_REDIRECT_URL || '';

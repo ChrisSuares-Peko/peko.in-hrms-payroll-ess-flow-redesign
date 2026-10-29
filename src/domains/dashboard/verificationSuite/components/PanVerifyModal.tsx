@@ -65,20 +65,9 @@ const VERIFICATION_TRACKING: Record<
     director_verify_din: { prefix: 'director_din' },
 };
 
-const trackVerificationCheckoutAndResult = (accessKeys: string, data: any, values: any) => {
-    if (typeof Moengage?.track_event !== 'function') return;
-
-    const tracking = VERIFICATION_TRACKING[accessKeys];
-    const status = verificationConfigNew[accessKeys]?.getValidityStatus?.(data, undefined);
-
-    Moengage.track_event(
-        `${tracking?.prefix ?? accessKeys}_checkout`,
-        tracking?.property ? { [tracking.property]: tracking.getIdentifier?.(data, values) } : undefined
-    );
-    Moengage.track_event(`${accessKeys}_result`, {
-        status,
-    });
-};
+// PROTOTYPE-SETUP: MoEngage removed; this tracking-only helper is now a no-op.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const trackVerificationCheckoutAndResult = (_accessKeys: string, _data: any, _values: any) => {};
 
 interface AddressModalProps {
     open: boolean;

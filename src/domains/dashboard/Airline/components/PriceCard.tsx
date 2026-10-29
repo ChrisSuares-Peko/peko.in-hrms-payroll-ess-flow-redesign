@@ -326,32 +326,7 @@ export default function PriceCard({
             url: 'travel/flight/payment',
         };
 
-        if (typeof Moengage?.track_event === 'function') {
-            const parseFlightDate = (d: string) => new Date(d.split('-').reverse().join('-'));
-            const passengerPayload: Record<string, any> = {
-                from_city: searchData.fromLocation1,
-                destination_city: searchData.toLocation1,
-                depart_date: parseFlightDate(searchData.depart1),
-                cabin_class: retrieveFlightClass(searchData.class),
-                trip_type: tripMethods.find(t => t.value === searchData.tripType)?.label,
-                number_passengers: searchData.adults + searchData.children + searchData.infants,
-                airline: airlineData.journey[0]?.[0]?.Airline.AirlineName,
-                fare: airlineData.price,
-                airport_takeoff: retrieveAirportName(airlineData.journey[0]?.[0]?.Origin.Airport.AirportCode),
-                airport_landing: retrieveAirportName(airlineData.journey[0]?.[airlineData.journey[0].length - 1]?.Destination.Airport.AirportCode),
-                flight_number: airlineData.flightNumber,
-                time_takeoff: airlineData.depart.datetime,
-                time_landing: airlineData.arrive.datetime,
-                total_amount: totalAmount,
-            };
-            if (searchData.tripType === 2) passengerPayload.return_date = parseFlightDate(searchData.arrive);
-            if (searchData.tripType === 3) {
-                passengerPayload.from_city_multi = searchData.fromLocation;
-                passengerPayload.destination_city_multi = searchData.toLocation;
-            }
-            Moengage.track_event('flight_passenger_details', passengerPayload);
-        }
-
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         sessionStorage.setItem(
             'service_details',
             JSON.stringify({

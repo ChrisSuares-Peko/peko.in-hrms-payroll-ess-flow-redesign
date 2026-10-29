@@ -185,9 +185,7 @@ const PlanDetails = () => {
     };
 
     const handleBotBuilderChange = (e: CheckboxChangeEvent) => {
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('bot_builder_addon_clicked');
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         setIsBotBuilderSelected(e.target.checked);
     };
 
@@ -196,15 +194,7 @@ const PlanDetails = () => {
     };
 
     const handlePurchasePlan = async () => {
-        if (typeof Moengage?.track_event === 'function') {
-            const trackEvent =
-                selectedPlan.planMode === PlanMode.Pro
-                    ? 'pro_plan_purchase_clicked'
-                    : 'basic_plan_purchase_clicked';
-            Moengage.track_event(trackEvent, {
-                plan_price: selectedPlan.discountedAmount,
-            });
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         setButtonLoading(true);
         const details = {
             url: `${paths.dashboard.moreServices}/${paths.whatsappForBusiness.index}`,

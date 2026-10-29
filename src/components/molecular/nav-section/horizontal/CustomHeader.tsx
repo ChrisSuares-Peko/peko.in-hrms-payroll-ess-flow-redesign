@@ -18,7 +18,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import NotificationIcon from '@assets/icons/Notification.svg';
 import pekoConnect from '@assets/svg/pekoConnect.svg';
 import ClaimPekoCreditsButton from '@components/molecular/claimPekoCreditsButton';
-import ChatService from '@components/molecular/freshChat/service/ChatService';
 import SearchTree from '@components/molecular/searchTree/SearchTree';
 import ServiceSearch from '@components/molecular/searchTree/ServiceSearch';
 import UpgradePlanButton from '@components/molecular/upgradePlanButton';
@@ -216,40 +215,13 @@ const CustomHeader = () => {
         }
     };
     useEffect(() => {
-        if (
-            user?.email &&
-            typeof Moengage?.identifyUser === 'function' &&
-            typeof Moengage?.add_user_attribute === 'function' &&
-            typeof Moengage?.add_email === 'function' &&
-            typeof Moengage?.add_mobile === 'function' &&
-            typeof Moengage?.add_user_name === 'function'
-        ) {
-            Moengage.identifyUser(user?.email);
-            if (user.partnerId) {
-                Moengage.add_user_attribute('partner_id', user.partnerId);
-            }
-            const formatedMobile = user?.mobileNo;
-            Moengage.add_email(user?.email);
-            Moengage.add_mobile(formatedMobile);
-            Moengage.add_user_name(user?.contactPersonName);
-            Moengage.add_user_attribute('company_name', user?.companyName);
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [user?.mobileNo, user?.email, user?.partnerId, user?.contactPersonName]);
 
     return (
         <>
-            {userRole === 'CORPORATE' && (
-                <ChatService
-                    name={companyName}
-                    email={email}
-                    mobile={mobile}
-                    credentialId={credentialId}
-                    restoreId={restoreId}
-                    role={role}
-                    sessionId={sessionId}
-                />
-            )}
+            {/* PROTOTYPE-SETUP: FreshChat widget (ChatService loader) removed — marketing/support SDK. */}
             <Flex
                 className="hidden w-full lg:flex justify-between gap-8 min-[1402px]:gap-3"
                 align="center"

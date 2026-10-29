@@ -523,12 +523,7 @@ const VisaResults = () => {
                                     setSelectError(false);
                                     selectProduct(visa);
                                     fetchDocuments(visa.productId);
-                                    if (typeof Moengage?.track_event === 'function') {
-                                        Moengage.track_event('visa_selected', {
-                                            visa_name: visa.name,
-                                            total_price: visa.price,
-                                        });
-                                    }
+                                    // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
                                 }
                             }}
                         />

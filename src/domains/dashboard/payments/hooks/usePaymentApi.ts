@@ -329,38 +329,7 @@ export default function usePaymentApi({
                 url,
                 currentUrl: undefined,
             };
-            if (typeof Moengage?.track_event === 'function') {
-                Moengage.track_event('payment_attempted', {
-                    service_name: serviceName || 'N/A',
-                    amount: totalAmount,
-                });
-            }
-
-            if (
-                typeof Moengage?.track_event === 'function' &&
-                serviceDetails &&
-                !excludedFromCheckoutEvent
-            ) {
-                const request = JSON.parse(serviceDetails);
-                const { moengage_prefix, ...checkoutData } = request.serviceDetails ?? {};
-                const moengageServiceName = moengage_prefix || getMoengageServiceName(serviceName);
-                Moengage.track_event(`${moengageServiceName}_checkout`, {
-                    mode: selectedPayment,
-                    ...checkoutData,
-                    coupon_code_used: isCouponApplied,
-                    ...(isCouponApplied && { coupon_code_used: couponCode }),
-                    total_amount: totalAmount,
-                });
-                sessionStorage.removeItem('service_details');
-                sessionStorage.setItem(
-                    'paymentResult',
-                    JSON.stringify({
-                        total_amount: totalAmount,
-                        coupon_code_used: isCouponApplied,
-                        serviceName: moengageServiceName,
-                    })
-                );
-            }
+            // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
             let failureState: PaymentFailureState = {};
             const resp: PaymentResponse | false = await doWalletPayment(requestBody, error => {
                 failureState = {
@@ -579,12 +548,7 @@ export default function usePaymentApi({
         }
         setIsLoading(true);
         const serviceName = billSummary.find(item => item.key === 'Service name')?.value;
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('payment_attempted', {
-                service_name: serviceName || 'N/A',
-                amount: totalAmount,
-            });
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         const requestBody = {
             ...payload,
             pgAmount: totalAmount,
@@ -660,37 +624,7 @@ export default function usePaymentApi({
         const pgAmount = isChecked ? AmountAfterWallet : totalAmount;
 
         const serviceName = billSummary.find(item => item.key === 'Service name')?.value;
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('payment_attempted', {
-                service_name: serviceName || 'N/A',
-                amount: pgAmount,
-            });
-        }
-        if (
-            typeof Moengage?.track_event === 'function' &&
-            serviceDetails &&
-            !excludedFromCheckoutEvent
-        ) {
-            const request = JSON.parse(serviceDetails);
-            const { moengage_prefix, ...checkoutData } = request.serviceDetails ?? {};
-            const moengageServiceName = moengage_prefix || getMoengageServiceName(serviceName);
-            Moengage.track_event(`${moengageServiceName}_checkout`, {
-                mode: selectedPayment,
-                ...checkoutData,
-                coupon_code_used: isCouponApplied,
-                ...(isCouponApplied && { coupon_code_used: couponCode }),
-                total_amount: totalAmount,
-            });
-            sessionStorage.removeItem('service_details');
-            sessionStorage.setItem(
-                'paymentResult',
-                JSON.stringify({
-                    total_amount: totalAmount,
-                    coupon_code_used: isCouponApplied,
-                    serviceName: moengageServiceName,
-                })
-            );
-        }
+// PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
 
         const requestBody = {
             ...payload,
@@ -937,37 +871,7 @@ export default function usePaymentApi({
         if (!checkPayableAmount()) return;
         setIsLoading(true);
         const serviceName = billSummary.find(item => item.key === 'Service name')?.value;
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('payment_attempted', {
-                service_name: serviceName || 'N/A',
-                amount: totalAmount,
-            });
-        }
-        if (
-            typeof Moengage?.track_event === 'function' &&
-            serviceDetails &&
-            !excludedFromCheckoutEvent
-        ) {
-            const request = JSON.parse(serviceDetails);
-            const { moengage_prefix, ...checkoutData } = request.serviceDetails ?? {};
-            const moengageServiceName = moengage_prefix || getMoengageServiceName(serviceName);
-            Moengage.track_event(`${moengageServiceName}_checkout`, {
-                mode: selectedPayment,
-                ...checkoutData,
-                coupon_code_used: isCouponApplied,
-                ...(isCouponApplied && { coupon_code_used: couponCode }),
-                total_amount: totalAmount,
-            });
-            sessionStorage.removeItem('service_details');
-            sessionStorage.setItem(
-                'paymentResult',
-                JSON.stringify({
-                    total_amount: totalAmount,
-                    coupon_code_used: isCouponApplied,
-                    serviceName: moengageServiceName,
-                })
-            );
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         const requestBody = {
             ...payload,
             pgAmount: totalAmount,
@@ -1003,37 +907,7 @@ export default function usePaymentApi({
         setIsLoading(true);
         const pgAmount = isChecked ? totalAmount && totalAmount - balance : totalAmount;
         const serviceName = billSummary.find(item => item.key === 'Service name')?.value;
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('payment_attempted', {
-                service_name: serviceName || 'N/A',
-                amount: pgAmount,
-            });
-        }
-        if (
-            typeof Moengage?.track_event === 'function' &&
-            serviceDetails &&
-            !excludedFromCheckoutEvent
-        ) {
-            const request = JSON.parse(serviceDetails);
-            const { moengage_prefix, ...checkoutData } = request.serviceDetails ?? {};
-            const moengageServiceName = moengage_prefix || getMoengageServiceName(serviceName);
-            Moengage.track_event(`${moengageServiceName}_checkout`, {
-                mode: selectedPayment,
-                ...checkoutData,
-                coupon_code_used: isCouponApplied,
-                ...(isCouponApplied && { coupon_code_used: couponCode }),
-                total_amount: totalAmount,
-            });
-            sessionStorage.removeItem('service_details');
-            sessionStorage.setItem(
-                'paymentResult',
-                JSON.stringify({
-                    total_amount: totalAmount,
-                    coupon_code_used: isCouponApplied,
-                    serviceName: moengageServiceName,
-                })
-            );
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         const resp = await initiateMswipePayment({
             ...payload,
             pgAmount,
@@ -1107,37 +981,7 @@ export default function usePaymentApi({
         const pgAmount = isChecked ? pgAfterWallet : totalAmount;
 
         const serviceName = billSummary.find(item => item.key === 'Service name')?.value;
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('payment_attempted', {
-                service_name: serviceName || 'N/A',
-                amount: pgAmount,
-            });
-        }
-        if (
-            typeof Moengage?.track_event === 'function' &&
-            serviceDetails &&
-            !excludedFromCheckoutEvent
-        ) {
-            const request = JSON.parse(serviceDetails);
-            const { moengage_prefix, ...checkoutData } = request.serviceDetails ?? {};
-            const moengageServiceName = moengage_prefix || getMoengageServiceName(serviceName);
-            Moengage.track_event(`${moengageServiceName}_checkout`, {
-                mode: selectedPayment,
-                ...checkoutData,
-                coupon_code_used: isCouponApplied,
-                ...(isCouponApplied && { coupon_code_used: couponCode }),
-                total_amount: pgAmount,
-            });
-            sessionStorage.removeItem('service_details');
-            sessionStorage.setItem(
-                'paymentResult',
-                JSON.stringify({
-                    total_amount: pgAmount,
-                    coupon_code_used: isCouponApplied,
-                    serviceName: moengageServiceName,
-                })
-            );
-        }
+// PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
 
         const requestBody = {
             ...payload,

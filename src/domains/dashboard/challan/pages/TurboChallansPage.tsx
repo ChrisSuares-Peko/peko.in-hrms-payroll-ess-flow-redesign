@@ -83,16 +83,7 @@ const TurboChallansPage = () => {
     const goToPayment = async (toPay: Challan[]) => {
         if (!toPay.length) return;
         const challanTotal = toPay.reduce((sum, c) => sum + (c.challan_price ?? c.amount), 0);
-        if (typeof Moengage?.track_event === 'function') {
-            const [firstChallan] = toPay;
-            Moengage.track_event('challan_pay_clicked', {
-                vehicle_number: firstChallan.registration_number,
-                fleet_vehicle_count: fleetVehicleCount,
-                amount: challanTotal,
-                challan_date: firstChallan.challan_date,
-                challan_no: firstChallan.challan_number,
-            });
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         // Seeds the generic checkout/payment-result Moengage pipeline (usePaymentApi.ts /
         // PaymentSuccess.tsx / PaymentFailure.tsx) — moengage_prefix drives the
         // "challan_checkout" / "challan_payment_result" event names.

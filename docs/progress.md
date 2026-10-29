@@ -7,7 +7,7 @@
 | Backend reference | done | `backend-reference/` redacted (docs/backend-secret-scan.md), calculations in docs/backend-calculations.md. No .github/workflows exist (item 5: nothing to disable). |
 | 1 – Remove login | done | MOCK_AUTHENTICATED_USER in loginSlice; persist migrate; tokenless requests short-circuit as cancelled. |
 | 2 – Landing, sidebar, mounting | done | Sidebar = Payroll, ESS, Onboarding (staticCorporateServiceAccess). /ess/* and /onboarding/{payroll,ess}/* mounted in DashboardLayout; PrototypeScope redirects other services to /payroll. |
-| 3 – Strip prod integrations | pending | |
+| 3 – Strip prod integrations | done | MoEngage loader + 94 call sites removed (AST codemod); FreshChat ChatService removed; CleverTap commented loader removed; Cashfree/Pusher aliased to inert stubs; Razorpay loader disabled; Firebase IncomingCallListener unmounted. |
 | 4 – Tours and popups | pending | |
 | 5 – Sidebar icons | pending | |
 | 6 – Mobile navigation | pending | |

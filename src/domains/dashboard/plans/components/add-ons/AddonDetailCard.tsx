@@ -72,12 +72,7 @@ const AddonDetailCard = ({ paymentPayload }: Props) => {
             ? 'turbo_subscription'
             : title?.toLowerCase().replace(/\s+/g, '_');
         if (moengageServiceName) {
-            if (typeof Moengage?.track_event === 'function') {
-                Moengage.track_event(`${moengageServiceName}_checkout`, {
-                    coupon_code_used: false,
-                    total_amount: finalPrice,
-                });
-            }
+            // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
             sessionStorage.setItem(
                 'paymentResult',
                 JSON.stringify({

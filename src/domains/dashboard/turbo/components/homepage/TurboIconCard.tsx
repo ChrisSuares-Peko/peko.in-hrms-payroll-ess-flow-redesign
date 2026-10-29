@@ -26,9 +26,7 @@ const TurboIconCard: React.FC<IconCardProps> = ({ icon, title, onClick, url }) =
             vertical
             onClick={() => {
                 const trackEvent = TILE_CLICK_EVENT_MAP[title];
-                if (trackEvent && typeof Moengage?.track_event === 'function') {
-                    Moengage.track_event(trackEvent);
-                }
+                // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
                 if (url) navigate(url);
             }}
             gap={12}

@@ -20,17 +20,7 @@ interface Props {
 
 const BillPaymentPage: React.FC<Props> = ({ title, accessKeyName, serviceCategory }: Props) => {
     useEffect(() => {
-        // One "_clicked" event per utility sub-service, fired when its page is reached — same
-        // idea as prepaid_started/postpaid_started, generalised across every service that goes
-        // through this shared page. Reuses BILL_VIEWED_EVENT_MAP's per-service prefix (e.g.
-        // "electricity_bill_viewed") so the two event families never drift apart.
-        if (typeof Moengage?.track_event === 'function') {
-            const viewedEvent = BILL_VIEWED_EVENT_MAP[accessKeyName];
-            const clickedEvent = viewedEvent?.replace(/_viewed$/, '_clicked');
-            if (clickedEvent) {
-                Moengage.track_event(clickedEvent);
-            }
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
     }, [accessKeyName]);
 
     return (

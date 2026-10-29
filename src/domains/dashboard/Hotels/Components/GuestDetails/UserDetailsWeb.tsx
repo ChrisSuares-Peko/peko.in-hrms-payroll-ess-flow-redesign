@@ -273,32 +273,7 @@ const UserDetailsWeb = ({
             if (formRef1.current?.submitForm) {
                 await formRef1.current.submitForm();
             }
-                // Fire MoEngage event when guest info is confirmed
-        if (typeof Moengage?.track_event === 'function') {
-            let totalAdults = 0;
-            let totalChildren = 0;
-            rooms.forEach((room:any) => {
-                totalAdults += room.adult || 0;
-                totalChildren += room.child || 0;
-            });
-            const checkInDate = hotelsRequest.CheckIn ? new Date(hotelsRequest.CheckIn) : undefined;
-            const checkOutDate = hotelsRequest.CheckOut ? new Date(hotelsRequest.CheckOut) : undefined;
-            const stayLength =
-                checkInDate && checkOutDate
-                    ? Math.round(
-                          (checkOutDate.getTime() - checkInDate.getTime()) / (1000 * 60 * 60 * 24)
-                      )
-                    : undefined;
-            Moengage.track_event('hotel_guests_info', {
-                room_numbers: rooms.length,
-                city: hotelsRequest.cityName || hotelsRequest.City,
-                adults: totalAdults,
-                children: totalChildren,
-                check_in: checkInDate,
-                check_out: checkOutDate,
-                stay_length: stayLength,
-            });
-        }
+// PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
 
             navigate(paths.hotels.bookings, { state: { key: stateKey } });
         }

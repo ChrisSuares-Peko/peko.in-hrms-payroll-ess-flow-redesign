@@ -110,9 +110,7 @@ const Summary = () => {
             flightEventPayload.from_city_multi = searchData.fromLocation;
             flightEventPayload.destination_city_multi = searchData.toLocation;
         }
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('flight_summary_confirmed', flightEventPayload);
-        }
+// PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
 
         const updatedPaymentData = {
             ...paymentData,

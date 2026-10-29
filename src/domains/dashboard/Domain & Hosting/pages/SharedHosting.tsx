@@ -54,9 +54,7 @@ const SharedHostingPage = () => {
     const [serverLocation, setServerLocation] = useState<LocationType>('in');
     const [os, setOs] = useState<OsType>(searchParams.get('os') === 'windows' ? 'windows' : 'linux');
     useEffect(() => {
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('shared_hosting_viewed', {});
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
     }, []);
 
     const { plans, isLoading } = useHostingPlans('shared_hosting');
@@ -92,14 +90,7 @@ const SharedHostingPage = () => {
         planName: string,
         billingCycle: number
     ) => {
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('hosting_selected', {
-                plan: planName,
-                OS: os,
-                country: serverLocation,
-                tenure: billingCycle,
-            });
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         const result = await handleAddToCart({
             itemType: 'shared_hosting',
             productId,

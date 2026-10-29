@@ -39,9 +39,7 @@ const VpsServerPage = () => {
     const [isAdding, setIsAdding] = useState(false);
 
     useEffect(() => {
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('vps_plan_started', {});
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
     }, []);
 
     const { plans, isLoading } = useHostingPlans('vps_server');
@@ -68,15 +66,7 @@ const VpsServerPage = () => {
         setSelectedPlan(plan);
         setStep(2);
         fetchBackupPlans({ serverLocation: SERVER_LOCATION_MAP[serverLocation] });
-        if (typeof Moengage?.track_event === 'function') {
-            const tenure = tenureMap[plan.planId] ?? getDefaultTenure(plan);
-            Moengage.track_event('vps_plan_selected', {
-                plan_name: plan.planName,
-                country: SERVER_LOCATION_MAP[serverLocation],
-                tenure,
-                price: getPriceForTenure(plan, tenure),
-            });
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
     };
 
     const onBack = () => {
@@ -102,29 +92,7 @@ const VpsServerPage = () => {
 
     const onProceedToCart = async () => {
         if (!selectedPlan) return;
-        if (typeof Moengage?.track_event === 'function') {
-            const addonNames: string[] = [];
-            let addonPrice = 0;
-            if (controlPanel !== 'none') {
-                addonNames.push(controlPanel);
-                addonPrice += (selectedPlan.addons?.[controlPanel] ?? 0) * step2Tenure;
-            }
-            if (acronisEnabled) {
-                addonNames.push('acronis');
-                addonPrice += (acronisPricePerGb ?? 0) * acronisGb * step2Tenure;
-            }
-            if (whmcsEnabled) {
-                addonNames.push('whmcs');
-                addonPrice += (selectedPlan.addons?.whmcs ?? 0) * step2Tenure;
-            }
-            if (addonNames.length > 0) {
-                Moengage.track_event('vps_addons_chosen', {
-                    addon_name: addonNames.join(', '),
-                    addon_price: addonPrice,
-                    total_price: parseFloat(computedTotal()),
-                });
-            }
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         setIsAdding(true);
         const billingCycle = tenureMap[selectedPlan.planId] ?? getDefaultTenure(selectedPlan);
         const addons: string[] = [];

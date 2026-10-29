@@ -92,11 +92,7 @@ const PlanLandingPage = () => {
     );
 
     useEffect(() => {
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('service_viewed', {
-                service_name: 'peko_plan',
-            });
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
     }, []);
 
     if (roleName && roleName === 'corporate sub user') {
@@ -136,9 +132,7 @@ const PlanLandingPage = () => {
             return;
         }
         const viewedEvent = PLAN_VIEWED_EVENT_MAP[card.name];
-        if (viewedEvent && typeof Moengage?.track_event === 'function') {
-            Moengage.track_event(viewedEvent);
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         startSubscription(card.id, undefined, billing);
     };
 

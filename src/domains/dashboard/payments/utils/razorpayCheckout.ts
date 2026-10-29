@@ -3,6 +3,8 @@ const RAZORPAY_SCRIPT_URL = 'https://checkout.razorpay.com/v1/checkout.js';
 let scriptPromise: Promise<boolean> | null = null;
 
 export const loadRazorpayScript = (): Promise<boolean> => {
+    // PROTOTYPE-SETUP: payments are out of scope; never load Razorpay's checkout script (callers treat false as unavailable).
+    if (RAZORPAY_SCRIPT_URL) return Promise.resolve(false);
     if (window.Razorpay) return Promise.resolve(true);
     if (scriptPromise) return scriptPromise;
     scriptPromise = new Promise<boolean>(resolve => {

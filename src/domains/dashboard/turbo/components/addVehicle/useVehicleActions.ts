@@ -99,13 +99,7 @@ const useVehicleActions = ({ inputParams, verifyRcResponse, id, setRefresh, fast
     };
 
     const handleSubmit = async () => {
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('add_vehicle_to_fleet_clicked', {
-                vehicle_number: verifyRcResponse?.vehicleNumber,
-                vehicle_age: getVehicleAge(verifyRcResponse?.regDate),
-                class: verifyRcResponse?.rawData?.class,
-            });
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         const res = await addDocApi(inputParams);
         if (res) {
             // Save any FASTag details entered before the vehicle existed in the fleet.

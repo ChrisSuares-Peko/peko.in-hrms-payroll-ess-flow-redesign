@@ -25,12 +25,7 @@ const Sidebar = () => {
     const { packageName, role } = useAppSelector(state => state.reducer.auth);
     const handleClick = (key: string) => {
         const path = key.replace(/^\//, '');
-
-        if (role === RoleName.CORPORATE && typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('service_viewed', {
-                service_name: path,
-            });
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
     };
 
     const activeKey = useMemo(

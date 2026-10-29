@@ -1,17 +1,6 @@
-import { useEffect } from 'react';
-
-const useHideWidgetOnDrawer = (open: boolean) => {
-    useEffect(() => {
-        if (open && (window as any).fcWidget) {
-            (window as any).fcWidget.hide();
-        }
-
-        return () => {
-            if ((window as any).fcWidget) {
-                (window as any).fcWidget.show();
-            }
-        };
-    }, [open]);
-};
+// PROTOTYPE-SETUP: the FreshChat widget is removed, so there is nothing to hide; kept as a no-op so the
+// ~20 call sites in other modules stay untouched.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const useHideWidgetOnDrawer = (_open: boolean) => {};
 
 export default useHideWidgetOnDrawer;

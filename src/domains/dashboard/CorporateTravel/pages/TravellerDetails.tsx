@@ -732,9 +732,7 @@ const TravellerDetails = () => {
     } | null;
 
     useEffect(() => {
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('visa_traveller_details');
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
     }, []);
 
     const dispatch = useAppDispatch();

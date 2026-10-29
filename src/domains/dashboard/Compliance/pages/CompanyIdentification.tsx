@@ -16,11 +16,7 @@ const CompanyIdentification: FC = () => {
     const navigate = useNavigate();
 
     const handleFetch = (values: { cin: string }) => {
-        if (typeof Moengage?.track_event === 'function') {
-            Moengage.track_event('company_identification_done', {
-                cin_no: values.cin,
-            });
-        }
+        // PROTOTYPE-SETUP: MoEngage analytics call removed (SDK stripped).
         navigate(`${paths.dashboard.compliance}/${paths.compliance.confirmCompanyDetails}`, {
             state: { cinData: {}, cin: values.cin },
             replace: true,
