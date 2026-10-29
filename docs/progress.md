@@ -12,7 +12,7 @@
 | 5 – Sidebar icons | done | 47 cdn.peko.one icons → 38 local SVGs; ESS = employee user.svg, Onboarding = profile-tick.svg; NavIcon ReactSVG constrained to 16px (verified 16x16). No other cdn.peko.one URLs in src. |
 | 6 – Mobile navigation | done (no code change) | In this codebase MobileHeader already shows the hamburger for `role === CORPORATE \|\| SYSTEM` (src/components/molecular/nav-section/horizontal/MobileHeader.tsx:104), not `roleName === 'corporate sub user'`. Verified at 375px on /payroll, /ess, /onboarding/payroll/purchase: hamburger opens the drawer (Payroll, Employee Self-Service, Onboarding), icons 16x16, no horizontal overflow, no console errors. |
 | 7 – Safety net + data toggle | done | No AppErrorBoundary existed; created src/prototype/AppErrorBoundary.tsx (message + stack, resets on route change) around <Router/>, and the dashboard layout's inner ErrorBoundary now uses the same fallback instead of ServiceNotAvailable. dataModeSlice ('dummy' default, persisted) + DataModeToggle (bottom-right, once in App.tsx); verified it persists across reload. |
-| 8 – Deployment | pending | |
+| 8 – Deployment | done | vercel.json SPA rewrite; build → node --max-old-space-size=7168 ./node_modules/.bin/vite build (Linux/Vercel); build:windows → same flag via ./node_modules/vite/bin/vite.js (the .bin shim is a shell script on Windows). reportCompressedSize: false was already set. Output dir: dist (Vite default). public/serviceworker.js (MoEngage SW) removed. JSON files can't hold comments, so their PROTOTYPE-SETUP note lives here. |
 | Final verification + push | pending | |
 
 ## Notes
@@ -29,3 +29,6 @@
 ## Payroll seed
 - `src/prototype/payrollSeed.ts`: `PAYROLL_SEEDED_PROGRESS` (payrollAuth initial state, re-applied on rehydration) and `buildDemoSubscription()` (used by `useGetDetailsSubscription` when there is no token). `/onboarding/payroll/*` switches to `PAYROLL_ONBOARDING_PROGRESS` + pre-purchase subscription while open.
 - Payroll package prices in the demo subscription are illustrative (no package seed exists in backend-reference).
+
+## Vercel environment
+No env vars are required. With every `VITE_*` blank: `SERVER_URL` becomes `undefined/api/v1`, but tokenless requests never reach the network; `FRONTEND_BASE_URL` only feeds the ESS-invite payload and the plan-purchase return URL (both inert); `VITE_PUSHER_APPKEY` goes to the Pusher stub. The rest (`VITE_USD_TO_INR/AED`, Paytm, Lean, Calendly, payment URLs, Peko Commerce, partner/SSO, Turbo flag) are only read by out-of-scope modules or have safe defaults.
